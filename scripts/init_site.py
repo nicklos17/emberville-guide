@@ -2229,7 +2229,9 @@ npm run deploy       # Cloudflare Workers（需 wrangler 登录）
 3. `AGENT.md` §1.2 数据源白名单按主题重写；§0.2 SITE 常量核对（开发商/品类等留空项）
 4. GA4：`src/config/site.ts` 填 `ga4MeasurementId`（仅内容页统计，政策页不统计）
 5. 广告：默认关闭；开启改 `.env.production` + 在 `src/lib/ads.ts` 配 invoke key（`docs/ADS.md`）
-6. `docs/CHANGELOG.md` 逐日记录——它是所有页面日期戳的源头
+6. Cloudflare 面板：部署后按 `docs/REDIRECT.md` 配置 HTTP→HTTPS 与 www→裸域 301，
+   并用其 §5 命令验证
+7. `docs/CHANGELOG.md` 逐日记录——它是所有页面日期戳的源头
 
 ## 内容红线（AGENT.md §1，最高优先级）
 

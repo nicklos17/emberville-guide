@@ -22,6 +22,7 @@ site-template/
     ├── ADS.md         广告位规范：白名单制、三个固定位、CLS=0
     ├── DESIGN.md      设计规范：色彩 token、断点、必备组件、a11y、性能预算
     ├── SITEMAP.md     sitemap / lastmod 规范：routes.json 单一来源、bump 规则
+    ├── REDIRECT.md    跳转规则：HTTP→HTTPS 与 www→裸域（Cloudflare 面板配置，全站通用）
     ├── SEO-AUDIT.md   SEO 审核存档（空骨架）
     └── CHANGELOG.md   站点更新日志（所有页面日期戳的源头）
 ```
