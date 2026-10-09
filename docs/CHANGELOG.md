@@ -23,6 +23,20 @@ YYYY-MM-DD
 
 ```
 2026-10-09
+[全部内容页] 重写首页及 9 个内容路由为 1,200–1,800 词的英文资料页：以 Steam 官方商店页为唯一游戏事实来源，扩展世界设定、战斗与职业、采集制作、村庄重建、EA 范围及 PC 配置等内容；将地图/物品/角色/配装页改为有实用内容的系统指南与来源边界说明，不再以空态占位。移除未经 Steam 页面核验的 GOG、精确解锁时刻、愿望单、主播/配音/试玩、特定生物群落数量、角色好感等说法；同步修正 10 个路由的标题和摘要，避免旧元数据继续宣称测试 builds、物品数据、掉落位置或 15:00 UTC。来源：Steam 商店页（Verified: 2026-10-09）。
+2026-10-09
+[/] P0+审计整改：H1 收成 Emberville Wiki & Guides；正文按 8 段骨架重写为 1305 词已知事实综述
+       （Vitromotus/kymia 设定、核心循环、Cygnus Cross 与 CohhCarnage、配音名单表、
+       平台/配置/语言三表、Stardew×Diablo 对比、4 条真实 PAA FAQ、Last verified 行）；
+       栏目卡片退为文末辅助。来源：Steam 商店页 + CGMagazine/WayTooManyGames/ComicBook
+       （媒体源已入 AGENT.md §1.2 白名单）。
+2026-10-09
+[/wiki] P1 审计整改：删「为什么是空的」，改为「目前确认了什么」——世界设定、确认事实表、
+       四分组各写已确认机制与 press-reported 条目预告。来源：Steam + 媒体 preview。
+2026-10-09
+[/news] P1 审计整改：时间线换为 Emberville 官方消息 5 条（01-30 EA 窗口 / 07-16 日期公布 /
+       09-11 demo / 10-05 细节 / 10-27 计划上线），站务日志迁至 /about Site log 节。
+2026-10-09
 [全站] 建站初始化：scripts/init_site.py 生成 Next.js 15 + TS + Tailwind v4 + OpenNext/Cloudflare 工程骨架；
        22 个路由全部静态预渲染，首屏 JS 103KB（预算 150KB）。来源：AGENT.md + docs/ 规范。
 2026-10-09

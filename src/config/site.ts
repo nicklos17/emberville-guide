@@ -13,7 +13,7 @@ export const SITE = {
   platform: "PC (Steam)",
   genre: "Action RPG",
   contactEmail: "support@emberville-guide.wiki",
-  ga4MeasurementId: "G-17G4G9SZVN", // GA4 测量 ID（仅内容页、仅生产域名生效，AGENT.md §4.5）
+  ga4MeasurementId: "G-ZWWDTDLD1X", // GA4 测量 ID（仅内容页、仅生产域名生效，AGENT.md §4.5）
   primaryColor: "#5AAEED",
 } as const;
 

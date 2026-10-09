@@ -25,6 +25,15 @@ export default function AboutPage() {
       <p>Every number, date and code carries a source and the day it was verified. Rumors are not published. Community reports are labeled Community-reported until an official source confirms them, and rankings appear only after hands-on testing with the test conditions listed.</p>
       <h2>Independence</h2>
       <p>Emberville Guide is not affiliated with Cygnus Cross. No official logo is used, and official artwork appears only as officially released press material with attribution. Trademark ownership stays with the rights holders.</p>
+      <h2>Site log</h2>
+      <p>Build notes for the site itself — the news page only carries announcements about Emberville.</p>
+      <p>
+        <b>2026-10-09</b> — Recorded the confirmed Early Access date and time from the Steam store
+        page, and published the wiki index structure (weapons, items, characters, bosses).<br />
+        <b>2026-10-08</b> — Set the site structure and sourcing policy: every page carries its source
+        and verification date, and anything traced to community testing is labelled as such rather
+        than presented as fact.
+      </p>
       <h2>Contact</h2>
       <p>Corrections, tips and business questions go to support@emberville-guide.wiki — see the <Link href="/contact" title="Contact: Support &amp; Corrections | Emberville Guide">contact page</Link>.</p>
     </article>
