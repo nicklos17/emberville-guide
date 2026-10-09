@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 
 const SEO_TITLE = "Emberville Builds: Tested by Patch & Mode";
@@ -34,7 +33,6 @@ export default function BuildsPage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Builds", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Build Hub — Tested Setups</h1>
       <p className="answer">Emberville builds appear here only after hands-on testing, each listing its patch, mode and test conditions. No ratings before launch — an empty hub beats an invented one.</p>
       <h2>Emberville builds</h2>

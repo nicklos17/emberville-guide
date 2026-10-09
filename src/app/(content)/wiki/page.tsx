@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
 
@@ -72,7 +71,6 @@ export default function WikiPage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Wiki", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Wiki</h1>
       <p className="answer">
         The Emberville wiki is the total index of entries on this site, grouped into weapons,

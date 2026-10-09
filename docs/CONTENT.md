@@ -5,8 +5,8 @@
 
 ```tsx
 <DataBlock
-  source="Official — {{官方域名}}"
-  url="{{官方URL}}"
+  source="Official — Steam store page"
+  url="https://store.steampowered.com/app/2295170/Emberville/"
   verified="YYYY-MM-DD"
 >
   ...数据...
@@ -19,7 +19,7 @@
 3. `Not yet available` — 未公开，写明原因与何时可得，不许留空留白
 
 ## 时间敏感内容
-- 时效页（tier list / patch notes / codes / server status 类）Title 带月份或版本号
+- 时效页（release date / countdown / patch notes 类）Title 带月份或版本号
 - 每次更新：改 `dateModified` + 页顶 `Updated:` + 在 `docs/CHANGELOG.md` 写一行，
   三处必须一致（实际由 routes.json 单点联动，见 `SITEMAP.md`）
 - 开服/事件期间的状态、公告只转述官方渠道，未经二次确认不得发布
@@ -32,7 +32,7 @@
 ## 页面模板要点（按页型套骨架）
 
 ### 栏目页（枢纽）
-1. 一句话答案块："{{主题}} launches with N items: …"
+1. 一句话答案块："Emberville launches with N survivors: …"
 2. N 项对照表：名称 / 角色 / 关键属性 / 难度 / 模式
 3. N 个 H2 简述：定位 / 核心机制 / 优缺点 / 适合谁 + 内链到详情页
 4. "该选哪个"段
@@ -47,9 +47,11 @@
 
 ### 深度页（build 类）
 版本与日期戳 → 要素表 → 装备与属性优先级 → 操作循环 → 模式分支 → FAQ
-（Title 统一模板 "{{主题}} {X} Build ({mode}): …"，一词一页让位见 SEO.md / AGENT.md §7）
+（Title 统一模板 `Emberville {X} Build ({mode}): …`，一词一页让位见 SEO.md / AGENT.md §7）
 
 ### 排名页（tier list 类）
+> **本站当前不需要**：无实测样本时一律标`Pending launch`，不写排名（AGENT.md §1.5）。
+> 游戏上线后若要建，先在 `SITE.md` 登记再动手。
 - 按**角色/用途**分档：不止按字母 S/A/B
 - 按模式分表（PvE / PvP / 大型玩法）
 - **每条评级必须写理由**（这是对竞品排名页的核心差异点）
@@ -58,16 +60,17 @@
 - 更新日志表 + FAQ
 
 ### 状态页（server-status / maintenance 类）
+> **本站当前不需要**：游戏未上线，无官方状态源。若上线后要建，先在 `SITE.md` 登记。
 只展示官方状态与公告转述，`revalidate = 300`；历史记录按日期倒序，带时间戳；
 无官方数据源时如实写"无"，并给读者自查渠道清单（这是差异化，不是缺陷）。
 
 ## 内链建设（页面开发时执行，固定清单）
 
-> 执行细则与自检清单见 `INTERNAL-LINKS.md`（写内容页必读，发布前逐条跑其第 9 节），
+> 执行细则与自检清单见 `INTERNAL-LINKS.md`（写内容页必读，发布前逐条跑其第 11 节），
 > 哥飞方法论见 `ONPAGE.md` §5，层级判据见 `栏目.md`；本节是开发落地版。
-> `scripts/init_site.py` 生成的初始站已内置该结构，后续加页照此维护。
+> 栏目清单以 `SITE.md` 为准；`scripts/init_site.py` 生成的初始站已内置该结构，后续加页照此维护。
 
-- **三向齐备**（缺一不可）：首页 → 每个子页（真实 `<a>`）；子页 → 上级（面包屑）；全站 → 首页（Logo + 面包屑首节）。
+- **三向齐备**（缺一不可）：首页 → 每个栏目页（真实 `<a>`）；栏目页 → 子页（面包屑）；全站 → 首页（Logo + 面包屑首节）。
 - **锚文本 = 目标页主词**（按 `KEYWORDS.md` 登记），禁用 click here / read more / learn more。
 - **首页双锚**：每个内页在首页挂 2 个链接、传 2 个不同词形（哥飞手法）；`<a>` 一律带 `title` 属性，
   title 镜像目标页完整 SEO title（与 routes.json 条目逐字一致）。

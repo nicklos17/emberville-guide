@@ -1191,8 +1191,10 @@ export const metadata: Metadata = { metadataBase: new URL(SITE.url) };
 export const viewport: Viewport = { themeColor: SITE.primaryColor };
 
 type NavLink = { label: string; href: string };
-type NavGroup = { label: string; links: NavLink[] };
-const NAV_GROUPS = navJson.navGroups as NavGroup[];
+
+// 顶部导航是扁平单行链接：分组标签只增加噪音、不增加信息，且与页脚全集高度重复。
+// 完整站点地图由页脚承担（INTERNAL-LINKS.md §7：导航做分组，页脚做全集）。
+const NAV_LINKS = navJson.navLinks as NavLink[];
 const FOOTER_LINKS = navJson.footerLinks as NavLink[];
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -1202,22 +1204,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* 全站 WebSite + SearchAction（SEO.md；JSON-LD 必须在初始 HTML） */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema()) }} />
         <header className="bg-linear-to-r from-night to-night-2 text-white">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-6 gap-y-2 px-4 py-3">
-            <Link href="/" title={SITE.name} className="text-lg font-bold text-white no-underline hover:text-white">
+          <div className="mx-auto flex max-w-6xl items-center gap-x-6 px-4 py-3">
+            <Link href="/" title={SITE.name} className="shrink-0 text-lg font-bold text-white no-underline hover:text-white">
               {SITE.name}
             </Link>
-            {/* 导航按用户任务分组，与页脚全集分工（栏目.md §9） */}
-            <nav aria-label="Primary" className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
-              {NAV_GROUPS.map((group) => (
-                <div key={group.label} className="flex items-baseline gap-3">
-                  <span className="text-white/60">{group.label}</span>
-                  {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} title={routeTitle(link.href)}
-                      className="text-white/90 no-underline hover:text-white">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+            {/* 单行扁平导航，整体靠右（ml-auto 把导航推到行尾）。
+                窄屏横向滚动而非换行；不用 justify-end 是因为溢出时靠左的项会滚不到。 */}
+            <nav
+              aria-label="Primary"
+              className="ml-auto flex min-w-0 shrink items-center gap-x-5 overflow-x-auto text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {NAV_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} title={routeTitle(link.href)}
+                  className="shrink-0 whitespace-nowrap text-white/90 no-underline hover:text-white">
+                  {link.label}
+                </Link>
               ))}
             </nav>
           </div>
@@ -2048,25 +2049,16 @@ def make_navigation_json() -> str:
     def link(s: str) -> dict:
         return {"label": SECTION_LABELS[s], "href": f"/{s}"}
 
-    nav: list[dict] = []
-    launch = [link(s) for s in ("release-date", "countdown") if s in SITE["sections"]]
-    database = [link(s) for s in ("codes", "item-database") if s in SITE["sections"]]
-    guides = [link(s) for s in ("guides", "builds") if s in SITE["sections"]]
-    if launch:
-        nav.append({"label": "Launch", "links": launch})
-    if database:
-        nav.append({"label": "Database", "links": database})
-    if guides:
-        nav.append({"label": "Guides", "links": guides})
-
-    footer = [link(s) for s in SECTION_ORDER if s in SITE["sections"]]
+    # 顶部导航：扁平单行，按用户任务优先级排序，不带分组标签（分组只增加视觉噪音）
+    nav = [link(s) for s in SECTION_ORDER if s in SITE["sections"]]
+    footer = list(nav)
     footer += [
         {"label": "About", "href": "/about"},
         {"label": "Contact", "href": "/contact"},
         {"label": "Privacy Policy", "href": "/privacy"},
         {"label": "Terms", "href": "/terms"},
     ]  # RSS 是 feed 不是页面，不进 routes.json/页脚（routeTitle 严格校验登记路由）
-    return json.dumps({"navGroups": nav, "footerLinks": footer}, ensure_ascii=False, indent=2) + "\n"
+    return json.dumps({"navLinks": nav, "footerLinks": footer}, ensure_ascii=False, indent=2) + "\n"
 
 
 # ---------------------------------------------------------------- docs 复制与占位符填充

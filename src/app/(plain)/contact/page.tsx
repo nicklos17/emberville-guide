@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 
 const SEO_TITLE = "Contact: Support & Corrections";
 const route = getRoute("/contact");
@@ -18,7 +17,6 @@ export default function ContactPage() {
   return (
     <article className="article">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Contact", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Contact Emberville Guide</h1>
       <p className="answer">The fastest way to reach Emberville Guide is email: <a href="mailto:support@emberville-guide.wiki">support@emberville-guide.wiki</a>.</p>
       <h2>Corrections and content issues</h2>

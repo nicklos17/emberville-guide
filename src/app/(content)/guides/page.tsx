@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 
 const SEO_TITLE = "Emberville Guides: Basics, Systems & Tips";
@@ -34,7 +33,6 @@ export default function GuidesPage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Guides", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Guide Hub</h1>
       <p className="answer">Emberville guides land in this hub once the game can be played — each guide states the patch it was verified on. Pre-launch, the hub holds the plan, not guesses.</p>
       <h2>Emberville guides</h2>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 
 const SEO_TITLE = "About the Unofficial Emberville Fan Hub";
 const route = getRoute("/about");
@@ -18,7 +17,6 @@ export default function AboutPage() {
   return (
     <article className="article">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "About", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>About Emberville Guide</h1>
       <p className="answer">Emberville Guide is an independent fan project covering Emberville — what is confirmed, what is not, and where every claim comes from.</p>
       <h2>What Emberville Guide covers</h2>

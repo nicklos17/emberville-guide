@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 
 const SEO_TITLE = "Terms of Service \u2014 Use, IP & Liability";
 const route = getRoute("/terms");
@@ -17,7 +16,6 @@ export default function TermsPage() {
   return (
     <article className="article">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Terms", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Guide Terms of Service</h1>
       <p className="answer">By using Emberville Guide you accept these terms: an unofficial fan project, best-effort accuracy, and content licensed for personal, non-commercial use.</p>
       <h2>Unofficial fan project</h2>

@@ -3,6 +3,7 @@
 > 核心原则：**只要改到的文件，lastmod 都要有所改动**——新增页面要登记，页面更改要更新记录。
 > 本文件是该规则的唯一完整版本；`src/app/sitemap.ts` 头注与 `SEO.md` sitemap 节是其摘要，
 > 冲突时以本文件为准。
+> 栏目与 URL 口径见 `docs/SITE.md`（权威顺序见 `docs/README.md`）。
 
 ## 单一来源
 
@@ -21,7 +22,9 @@
    - `title` / `description` 与页面 TDK **逐字一致**（TDK 四处同步面见 `SEO.md`）；
    - `lastModified` = 上线当日；
    - `changeFrequency` / `priority` 按下文分档表。
-4. 需要入口时更新 `navigation.json`（导航组或 footer）。
+4. 需要入口时更新 `navigation.json`（顶部 `navLinks` 或页脚 `footerLinks`）。
+   **入口归属按 `SITE.md` 的栏目表判断**——不是每个新页都要进顶部导航，
+   导航只放 7 栏目 + 2 从属页，其余入口走页脚全集或父栏目正文。
 5. `docs/CHANGELOG.md` 当日记一行——**该文件是所有日期戳的源头**。
 6. 数据文件驱动的详情页走例外流程：不进 routes.json，翻对应数据文件的 `pageLive`，
    并核对核验日常量是否需要前移。
@@ -61,12 +64,11 @@
 | 页型 | priority | changeFrequency |
 | --- | --- | --- |
 | `/` | 1.0 | daily |
-| 核心内容页（一级导航 lead 页） | 0.9 | daily |
-| 次级内容页 | 0.8 | daily |
-| 深度详情页（build 类） | 0.7 | daily |
-| 数据驱动详情页（sitemap.ts 内写死） | 0.7 | weekly |
-| 政策页 /about /contact /disclaimer | 0.3 | monthly |
-| /privacy /terms | 0.2 | yearly |
+| 核心栏目页（SITE.md 7 栏目 `/wiki` `/guides` `/release-date` `/map` `/builds` `/characters` `/news`） | 0.9 | daily |
+| 从属页（`/countdown` `/item-database`） | 0.9 | daily |
+| 深度详情页（L2，当前不存在） | 0.7 | daily |
+| 政策页 `/about` `/contact` | 0.3 | monthly |
+| `/privacy` `/terms` | 0.2 | yearly |
 
 - 新页默认向同层级现页看齐。
 - URL 超 5000 条 sitemap 自动分片（实现见 `app/sitemap.ts`，背景见 `SEO.md`）。

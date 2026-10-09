@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 
 const SEO_TITLE = "Emberville News & Updates: Patch Notes & Roadmap";
@@ -57,7 +56,6 @@ export default function NewsPage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "News", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville News</h1>
       <p className="answer">
         Emberville news, in reverse chronological order: official announcements and Early Access patch
@@ -75,7 +73,7 @@ export default function NewsPage() {
       <div className="my-4">
         {TIMELINE.map((entry) => (
           <div key={`${entry.date}-${entry.title}`} className="my-4 border-l-2 border-line pl-4">
-            <p className="font-display text-xs tracking-widest text-accent uppercase">{entry.date}</p>
+            <p className="text-xs font-medium tracking-wide text-accent">{entry.date}</p>
             <h3 className="mt-1 mb-1">{entry.title}</h3>
             <p className="m-0">{entry.body}</p>
           </div>

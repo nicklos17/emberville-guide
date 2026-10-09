@@ -6,7 +6,8 @@
 > 栏目页（枢纽页）的建页判据、URL 禁改与栏目 TDK 模板另见 `栏目.md`；
 > 写内容前先确认该页属哪一层（导航 / 栏目页 / 内容页）。
 > 内链的具体义务（层级模型、各页型链接义务、锚文本、Related 区、页脚、禁则）以 `INTERNAL-LINKS.md`
-> 为准，写页/改页时必须遵守，发布前跑其第 9 节自检清单。
+> 为准，写页/改页时必须遵守，发布前跑其第 11 节自检清单。
+> **本文例子已换成 Emberville 实际结构；栏目清单以 `docs/SITE.md` 为准。**
 
 ## 0. 核心口径：TDH，不是 TDK
 
@@ -31,13 +32,13 @@
    都可以拼凑上去。"**
    → 落到本站：日期 + 实体名 + 类别 + 数据 + 更新日期，都是可拼装的修饰词，
    **但每个都必须真实可搜**，不许瞎拼。
-4. **时效页带年份/月份**（release date / tier list / patch notes / codes）
+4. **时效页带年份/月份**（release date / countdown / patch notes 类）
 5. **品牌后缀只加内页**，首页不加（首页 60 字符预算要全给关键词）
 
 ### 1.3 常见反例
 | 反例 | 问题 | 改法 |
 |---|---|---|
-| `{{主题}} Release Date, Early Access & Guide` | 缺年份，时效页无时间信号 | `{{主题}} Release Date 2026: Early Access & Launch` |
+| `Emberville Release Date, Early Access & Guide` | 缺年份，时效页无时间信号 | `Emberville Early Access Date 2026: Platforms & Launch` |
 | 404 页复用首页 Title | 404 页无独立 TD | 给 404 页独立 TD，保留 noindex |
 | 无登记先写 Title | 主词冲突/遗漏 | 每个新页面必须先在 `docs/KEYWORDS.md` 登记核心词，再写 Title |
 
@@ -46,11 +47,12 @@
 否则父子互抢同一个词。
 
 - 机制：父页数据加可选 `seoTitle` 覆盖，父页 `[slug]` 模板按 `item.seoTitle ?? 默认模板` 渲染
-- 同步面：指向该页的内链 `title` 属性经映射镜像新 Title
+- 同步面：指向该页的内链 `title` 属性经映射镜像新Title
   （站内约定：内链 title 镜像目标页完整 SEO title）
 - **详情页每次上线，回头检查对应父页 Title 是否需要让位**（AGENT.md §7 固定规则）
 - 词形取舍：保留规划里有量的词形；规划未收录的连写变体果断弃用——
-  拆写保主词（`{{主题}} X Build (PvE)` 而非 `{{主题}} X PvE Build`），超线但关键的年份词可沿先例超限
+  拆写保主词（`X Build (PvE)` 而非 `X PvE Build`），超线但关键的年份词可沿先例超限
+  （本站先例：`/builds` 父页与将来的单build 详情页靠`{实体} build` 词形划界）
 
 ## 2. D — Description 规则
 
@@ -74,7 +76,7 @@
 - **H1 里必须出现核心关键词，且尽量靠前。**
 - ❌ 反例：问句式 H1（`When does X launch?`）把页面主轴钉在一个长尾问句上，核心词被稀释。
   问句需求交给 H2 或 FAQ 承接。
-- ✅ 改法：名词短语，如 `{{主题}} Global Launch — Release Date and Early Access`
+- ✅ 改法：名词短语，如 `Emberville Global Launch — Release Date and Early Access`
 
 ### 3.2 H2 / H3
 - **每一个 H2 都必须是关键词表里的一个真实可搜的词**，不是编辑自拟的标题。
@@ -82,8 +84,9 @@
 - H2 之间**层级并列、不交叉**；H3 挂在 H2 下面细分。
 - **禁止**用 `Introduction` / `Overview` / `Conclusion` / `Why This Matters`
   这类零搜索价值、零信息量的空话标题。
-- ✅ H2 示范（栏目页）：`{{主题}} Classes and Roles` · `{{主题}} Class Tier List` ·
-  `{{主题}} Class Builds` · `Which Class Should You Main` · `{{主题}} Classes FAQ`
+- ✅ H2 示范（栏目页）：`Emberville Weapons and Gear` · `Emberville Item Stats` ·
+  `Emberville Characters and Companions` · `Which Survivor Should You Recruit` ·
+  `Emberville Items FAQ`
 
 ### 3.3 典型网页结构（照这个搭，不要自由发挥）
 ```
@@ -103,7 +106,7 @@ h3
 - **p 装正文**，图片也放在 p 里
 - **img 必须写 alt**：**"img 标签一定要写 alt 属性，这是对图片的描述，专门写给搜索引擎看的。"**
 - **图片用大图**：哥飞原话 **"图片尽量用大图，也就是300x300以上的"**
-  → 高价值图片（图标、地图、截图）的 **alt 写清"是什么"**，不要写"{{主题}} image"
+  → 高价值图片（图标、地图、截图）的 **alt 写清"是什么"**，不要写"Emberville image"
 
 ## 4. 写作技巧（约束 AI 的正面清单）
 
@@ -144,10 +147,10 @@ h3
 
 | 层级 | 关键词例 | 页面 |
 |---|---|---|
-| 主词 | {{主题}} | `/` |
-| 二级 | {{主题}} categories | `/categories`（栏目页） |
-| 三级 | {{主题}} category item build | `/builds/{item}` |
-| 内页 | 长尾 | `/wiki/{item}`、`/dungeons/{name}` |
+| 主词 | Emberville wiki | `/` |
+| 二级 | Emberville map | `/map`（栏目页） |
+| 三级 | Emberville map {region} | `/map/{region}` |
+| 内页 | 长尾 | `/wiki/{item}`、`/builds/{build}` |
 
 ### 5.2 内链的定义（哥飞原话）
 > **"内链建设的意思是，既要能够从首页有链接到每个二级、三级关键词，也要每个页面都有链接
@@ -157,8 +160,8 @@ h3
 
 | 方向 | 规则 | 落法 |
 |---|---|---|
-| 首页 → 下级 | 首页必须链到每个二级、三级页面 | 首页分类网格**必须是真的 `<a>`**，不能是纯文字 |
-| 下级 → 上级 | 每个页面都要有链回上级 | 面包屑：首页 → `/categories` → `/categories/{item}` |
+| 首页 → 下级 | 首页必须链到每个二级、三级页面 | 首页栏目卡片**必须是真的 `<a>`**，不能是纯文字 |
+| 下级 → 上级 | 每个页面都要有链回上级 | 面包屑：首页 → `/wiki` → `/wiki/{item}` |
 | 全站 → 首页 | 所有页面都有指向首页的链接 | Logo + 面包屑首节 |
 
 ### 5.3 一个内页配两个锚文本变体（哥飞的具体手法）
@@ -166,8 +169,8 @@ h3
 > 原话：**"这样我们首页就给每个国家的内页都增加了2个链接，分别传递了'xxx Phone Number
 > Generator'、'Generate xxx Phone Number'两个关键词的权重到对应的国家内页。"**
 
-落到本站（以 `/categories/{item}` 为例）：
-- 锚文本 1：`{{主题}} {Item}`
+落到本站（以 `/wiki/{item}` 为例）：
+- 锚文本 1：`Emberville {Item}`
 - 锚文本 2：`{Item} guide`
 
 **且要给 `<a>` 加 `title` 属性**——哥飞原文里首页 h1、导航、列表的每个 a 标签都加了 title。
@@ -177,12 +180,12 @@ h3
 
 他给的首页结构就是**按类别分 H2、类别下罗列 H3 + 列表/图片**：
 ```
-h1 {{主题}}
-h2 {{主题}} Classes → N 个 H3（各链到详情页），每项 2 个锚文本
-h2 {{主题}} Builds → 各 build 页
-h2 {{主题}} Dungeons → …
-h2 {{主题}} Tier List
-h2 {{主题}} Patch Notes
+h1 Emberville Wiki & Guides
+h2 Emberville Wiki→ 各大分组入口（N 个 H3，每项 2 个锚文本）
+h2 Emberville Builds → 各build 页
+h2 Emberville Map → 各区域页
+h2 Emberville News → 时效条目
+h2 Emberville Release Date → 日期与平台表
 ```
 
 ### 5.5 内链红线
@@ -193,7 +196,7 @@ h2 {{主题}} Patch Notes
 - ❌ 不许为了凑内链给无关页面加链接（相关性 > 数量）。
 - ✅ 每页正文内 **3–5 条**兄弟或下行链接。
 - ✅ 父页只写总览与对照表，**不写完整的子页内容**（父子页自相竞争要特别防——
-  `/categories` 与 `/categories/{item}` 天然重叠）。
+  `/wiki` 与 `/wiki/{item}` 天然重叠）。
 
 ## 6. 后端渲染与 URL 唯一（不可协商）
 

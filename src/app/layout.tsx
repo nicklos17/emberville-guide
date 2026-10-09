@@ -5,53 +5,63 @@ import { DISCLAIMER, SITE } from "@/config/site";
 import { routeTitle } from "@/lib/routes";
 import { webSiteSchema } from "@/lib/schema";
 import navJson from "@/content/navigation.json";
-import localFont from "next/font/local";
 import "./globals.css";
 
-// 自托管字体，最多 2 个字重（DESIGN.md 性能预算）；禁外链 Google Fonts CDN。
-// Silkscreen = 像素体，呼应官方截图内的像素字体（docs/CONFLICTS.md C-07）。
-// 仅用于标题/标签；正文长段落用 body 的系统无衬线体，保证可读性。
-const silkscreen = localFont({
-  src: [
-    { path: "../../public/fonts/silkscreen-400.woff2", weight: "400", style: "normal" },
-    { path: "../../public/fonts/silkscreen-700.woff2", weight: "700", style: "normal" },
-  ],
-  display: "swap",
-  variable: "--font-silkscreen",
-});
+// 字体：全站统一系统 UI 无衬线，零字体文件请求。
+// C-12：原 Silkscreen 像素体已下线——深底上「像素字 + 全大写 + 宽字距」三者叠加
+// 产生明显光晕与边缘颤动，长文阅读累眼；像素体在 17px 正文与移动端小字号下
+// 可读性也差。DESIGN.md 原「像素体不用于正文」的限制升级为「像素体全站下线」。
+// 见 docs/CONFLICTS.md C-12。
 
-export const metadata: Metadata = { metadataBase: new URL(SITE.url) };
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+};
 
-export const viewport: Viewport = { themeColor: "#0E181E" };
+export const viewport: Viewport = { themeColor: "#101C23" };
 
 type NavLink = { label: string; href: string };
-type NavGroup = { label: string; links: NavLink[] };
-const NAV_GROUPS = navJson.navGroups as NavGroup[];
+
+// 顶部导航是扁平单行链接：分组标签（Start here / Explore / Launch / Builds）在视觉上
+// 只增加噪音、不增加信息，且与页脚全集高度重复。完整站点地图由页脚承担
+// （INTERNAL-LINKS.md §7「导航做分组，页脚做全集」的分工在扁平化后依然成立）。
+const NAV_LINKS = navJson.navLinks as NavLink[];
 const FOOTER_LINKS = navJson.footerLinks as NavLink[];
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={silkscreen.variable}>
+    <html lang="en">
       <body>
         {/* 全站 WebSite + SearchAction（SEO.md；JSON-LD 必须在初始 HTML） */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema()) }} />
         <header className="border-b border-line bg-canvas-deep">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-6 gap-y-2 px-4 py-3">
-            <Link href="/" title={SITE.name} className="font-display text-lg font-bold text-ink no-underline hover:text-accent">
+          <div className="mx-auto flex max-w-6xl items-center gap-x-6 px-4 py-3">
+            <Link href="/" title={SITE.name} className="shrink-0 text-lg font-bold tracking-tight text-ink no-underline hover:text-accent">
               {SITE.name}
             </Link>
-            {/* 导航按用户任务分组，与页脚全集分工（栏目.md §9） */}
-            <nav aria-label="Primary" className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
-              {NAV_GROUPS.map((group) => (
-                <div key={group.label} className="flex items-baseline gap-3">
-                  <span className="font-display text-xs tracking-widest text-ink-dim uppercase">{group.label}</span>
-                  {group.links.map((link) => (
-                    <Link key={link.href} href={link.href} title={routeTitle(link.href)}
-                      className="text-ink-muted no-underline hover:text-primary">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+            {/* 单行扁平导航，整体靠右（ml-auto 把导航推到行尾）。
+                窄屏横向滚动而非换行；不用 justify-end 是因为溢出时靠左的项会滚不到。 */}
+            <nav
+              aria-label="Primary"
+              className="ml-auto flex min-w-0 shrink items-center gap-x-5 overflow-x-auto text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  title={routeTitle(link.href)}
+                  className="text-ink-muted shrink-0 whitespace-nowrap no-underline hover:text-primary"
+                >
+                  {link.label}
+                </Link>
               ))}
             </nav>
           </div>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 
 const SEO_TITLE = "Privacy Policy \u2014 Data, Cookies & Ads";
 const route = getRoute("/privacy");
@@ -17,7 +16,6 @@ export default function PrivacyPage() {
   return (
     <article className="article">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Privacy Policy", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Guide Privacy Policy</h1>
       <p className="answer">Emberville Guide collects as little as a fan site can: server logs, optional analytics on content pages, and whatever you choose to email us.</p>
       <h2>What this site collects</h2>

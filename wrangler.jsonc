@@ -4,6 +4,13 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-03-01",
   "compatibility_flags": ["nodejs_compat"],
+  // 裸域 custom_domain：www 不挂 Worker（会吐同内容造成重复收录），
+  // www→裸域 跳转在 Cloudflare 面板用 Redirect Rules 配（见 docs/REDIRECT.md §2）
+  "routes": [
+    { "pattern": "emberville-guide.wiki", "custom_domain": true }
+  ],
+  // 预渲染 HTML 与静态资源的缓存策略配在 open-next.config.ts（incrementalCache），
+  // 不在此处声明——wrangler.jsonc 的 assets 字段不识别该键，会报 Unexpected fields。
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"

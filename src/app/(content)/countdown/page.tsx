@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { CountdownTimer } from "@/components/CountdownTimer";
 
@@ -35,7 +34,6 @@ export default function CountdownPage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Countdown", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Early Access Countdown</h1>
       <p className="answer">This countdown tracks the time until Emberville enters Early Access on 27 October 2026 at 15:00 UTC, the timestamp listed on the Steam store page. A full-release date has not been announced.</p>
       <CountdownTimer target="2026-10-27T15:00:00Z" launched={false} />

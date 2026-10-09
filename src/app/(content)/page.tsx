@@ -4,7 +4,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { routeTitle } from "@/lib/routes";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { SITE } from "@/config/site";
 
@@ -90,18 +89,18 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-70"
+          className="object-cover"
         />
-        {/* 压暗层：保证白字对比度 ≥ 4.5:1（DESIGN.md a11y） */}
+        {/* 压暗层：左侧保持不透明护文字对比度，右侧减轻让背景图透出（DESIGN.md a11y） */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-linear-to-r from-canvas via-canvas/92 to-canvas/55"
+          className="absolute inset-0 bg-linear-to-r from-canvas via-canvas/85 to-canvas/35"
         />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20">
-          <p className="font-display mb-4 inline-block border border-accent/40 bg-accent/10 px-3 py-1.5 text-xs tracking-[0.2em] text-accent uppercase">
+          <p className="mb-4 inline-block rounded-full border border-accent/35 bg-canvas/60 px-3.5 py-1.5 text-xs font-medium tracking-wide text-accent">
             Early Access — 27 October 2026, 15:00 UTC
           </p>
-          <h1 className="font-display mb-5 max-w-3xl text-4xl leading-tight font-bold text-white sm:text-5xl">
+          <h1 className="mb-5 max-w-3xl text-4xl leading-tight font-bold tracking-tight text-white sm:text-5xl">
             Emberville Wiki &amp; Guides for the whole dungeon
           </h1>
           <p className="mb-7 max-w-2xl text-lg leading-relaxed text-ink">
@@ -113,14 +112,14 @@ export default function HomePage() {
             <Link
               href="/wiki"
               title={routeTitle("/wiki")}
-              className="rounded-md bg-primary px-6 py-3 font-display text-xs font-bold tracking-[0.1em] text-canvas-deep uppercase no-underline transition-transform hover:-translate-y-0.5"
+              className="rounded-md border border-line bg-canvas/80 px-6 py-3 text-sm font-semibold text-ink no-underline transition-colors hover:border-primary hover:text-primary"
             >
               Browse the Wiki ↓
             </Link>
             <Link
               href="/guides"
               title={routeTitle("/guides")}
-              className="rounded-md border border-line bg-canvas/80 px-6 py-3 font-display text-xs font-bold tracking-[0.1em] text-ink uppercase no-underline transition-colors hover:border-primary hover:text-primary"
+              className="rounded-md border border-line bg-canvas/80 px-6 py-3 text-sm font-semibold text-ink no-underline transition-colors hover:border-primary hover:text-primary"
             >
               Start the beginner guide
             </Link>
@@ -132,12 +131,19 @@ export default function HomePage() {
       <section className="w-full border-b border-line bg-canvas" aria-label="Early Access countdown">
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-8 px-4 py-8">
           <div className="min-w-56 flex-1">
-            <p className="font-display mb-2 text-xs tracking-[0.2em] text-ink-dim uppercase">
+            <p className="mb-2 text-xs font-medium tracking-wide text-ink-dim">
               Early Access launch
             </p>
-            <p className="font-display text-xl font-bold text-white">27 October 2026 · 15:00 UTC</p>
+            <p className="text-xl font-semibold text-white">27 October 2026 · 15:00 UTC</p>
             <p className="mt-1 text-sm text-ink-muted">
-              Recorded from the Steam store page. Full-release date not yet announced.
+              Recorded from the Steam store page. Full-release date not yet announced.{" "}
+              <Link
+                href="/release-date"
+                title={routeTitle("/release-date")}
+                className="text-link no-underline hover:text-primary"
+              >
+                Emberville release date &amp; platforms →
+              </Link>
             </p>
           </div>
           <div>
@@ -150,7 +156,6 @@ export default function HomePage() {
       </section>
 
       <article className="article mx-auto w-full max-w-6xl px-4 py-12">
-        <UpdatedStamp lastModified={route.lastModified} />
         <h2 className="mt-0">Explore Emberville by section</h2>
         <p className="answer">
           {SITE.name} is an unofficial Emberville hub covering the Early Access date, the wiki index,
@@ -180,19 +185,19 @@ export default function HomePage() {
                 />
               </div>
               <div className="flex flex-1 flex-col p-4">
-                <h3 className="font-display mb-2 text-base font-bold text-white">{s.title}</h3>
+                <h3 className="mb-2 text-base font-semibold text-white">{s.title}</h3>
                 <p className="flex-1 text-sm leading-relaxed text-ink-muted">{s.blurb}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5 border-t border-line-soft pt-3">
                   {s.keywords.map((k) => (
                     <span
                       key={k}
-                      className="font-display rounded-sm bg-canvas-deep px-2 py-1 text-[10px] tracking-wider text-ink-dim"
+                      className="rounded-sm bg-canvas-deep px-2 py-1 text-[11px] text-ink-dim"
                     >
                       {k}
                     </span>
                   ))}
                 </div>
-                <span className="font-display mt-3 text-[10px] tracking-[0.12em] text-link uppercase group-hover:text-primary">
+                <span className="mt-3 text-xs font-medium text-link group-hover:text-primary">
                   Open {s.title.replace("Emberville ", "")} →
                 </span>
               </div>

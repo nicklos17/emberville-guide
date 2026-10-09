@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
 
@@ -35,7 +34,6 @@ export default function ReleaseDatePage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Release Date", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Early Access Date and Launch Status</h1>
       <p className="answer">Emberville enters Early Access on October 27, 2026 at 15:00 UTC, per the Steam store page. A full release date has not been announced. This page tracks the confirmed platforms and every official announcement — sourced and dated.</p>
       <h2>Emberville early access date status</h2>

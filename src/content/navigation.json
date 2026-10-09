@@ -1,34 +1,14 @@
 {
-  "navGroups": [
-    {
-      "label": "Start here",
-      "links": [
-        { "label": "Wiki", "href": "/wiki" },
-        { "label": "Guides", "href": "/guides" }
-      ]
-    },
-    {
-      "label": "Explore",
-      "links": [
-        { "label": "Map & Areas", "href": "/map" },
-        { "label": "Items", "href": "/item-database" },
-        { "label": "Characters", "href": "/characters" }
-      ]
-    },
-    {
-      "label": "Launch",
-      "links": [
-        { "label": "Early Access", "href": "/release-date" },
-        { "label": "Countdown", "href": "/countdown" },
-        { "label": "News", "href": "/news" }
-      ]
-    },
-    {
-      "label": "Builds",
-      "links": [
-        { "label": "Builds & Items", "href": "/builds" }
-      ]
-    }
+  "navLinks": [
+    { "label": "Wiki", "href": "/wiki" },
+    { "label": "Guides", "href": "/guides" },
+    { "label": "Map", "href": "/map" },
+    { "label": "Items", "href": "/item-database" },
+    { "label": "Builds", "href": "/builds" },
+    { "label": "Characters", "href": "/characters" },
+    { "label": "Release", "href": "/release-date" },
+    { "label": "Countdown", "href": "/countdown" },
+    { "label": "News", "href": "/news" }
   ],
   "footerLinks": [
     { "label": "Wiki", "href": "/wiki" },

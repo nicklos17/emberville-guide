@@ -1,9 +1,12 @@
 # 技术 SEO 细则
 
+> 栏目与 URL 口径以 `docs/SITE.md` 为准；本页只讲技术实现。
+
 ## Metadata
 - 每页 `generateMetadata()` 返回唯一 title / description / canonical / openGraph
-- canonical 用绝对路径 `{{站点URL}}/...`，结尾规则与 `trailingSlash` 保持一致（本模板：无尾斜杠）
-- 品牌后缀 `| {{站名}}` **只加内页**；首页 Title 已接近 60 字符，加了会被截
+- canonical 用绝对路径 `https://emberville-guide.wiki/...`，结尾规则与 `trailingSlash`
+  保持一致（本项目：无尾斜杠）
+- 品牌后缀 `| Emberville Guide` **只加内页**；首页 Title 已接近 60 字符，加了会被截
 - Title 45–60 字符，Description ≤ 155 字符，H1 与 Title 措辞必须区分
 - **TDK 改动的同步面（改一处 = 改四处）**：①`pageMetadata({title, description})`
   ②页面内 `articleSchema(...)` 里重复的 description ③`src/content/routes.json` 同页条目
@@ -51,7 +54,8 @@
 - `app/robots.ts` 只屏蔽后台与预览路径，**不屏蔽任何内容页**
 
 ## 内链
-> 层级模型、各页型链接义务、锚文本、Related 区、页脚与禁则以 `INTERNAL-LINKS.md` 为准。
+> 层级模型、各页型链接义务、锚文本、Related 区、页脚与禁则以 `INTERNAL-LINKS.md` 为准
+> （其自检清单在第 11 节）。
 
 - 面包屑：首页 → 栏目 → 详情
 - 每页正文内 3–5 条兄弟或下行链接

@@ -95,6 +95,12 @@ export const SITE = {
   构建时已打包——ISR 定时重渲染只会产出相同 HTML、白白消耗 Worker CPU，在 Workers 免费版上
   触发 Cloudflare 1102（"Worker exceeded resource limits"）。OpenNext 侧对应
   `staticAssetsIncrementalCache`（见 `open-next.config.ts`）
+  > **[待人工批准 · 2026-10-09 实测修正]** 本行的 `staticAssetsIncrementalCache` 写法经实测不成立
+  > （`@opennextjs/cloudflare@1.20.10`）：①该键不能写在 `wrangler.jsonc` 的 `assets` 字段；
+  > ②正确位置是 `open-next.config.ts` 的 `defineCloudflareConfig({...})`；
+  > ③值域仅 `"dummy" | function`，传该字符串会直接 throw。全静态站应用 `"dummy"`
+  > ——预渲染 HTML 落在 `.open-next/cache/**/*.cache`，Worker 读缓存返回，SSR 完整。
+  > 详见 `docs/CONFLICTS.md` C-08。**改本行需人工批准**，暂保留原文。
 - 未来若新增运行时取数页面（真 ISR），须切换 `r2IncrementalCache` + `NEXT_INC_CACHE_R2_BUCKET`
   （R2 需在 Dashboard 先开通），并考虑 Workers Paid；高频刷新页 → `revalidate = 300`
 - 每页必须 `generateMetadata()`，产出唯一 title / description / canonical / openGraph
@@ -103,6 +109,11 @@ export const SITE = {
   攻略文加 `Article`（时点事件可加 `Event`）
 - `datePublished` 与 `dateModified` 分开，不得混用；页面上必须显示 `Updated: YYYY-MM-DD`
   且与 `dateModified` 一致
+  > **[待人工批准 · 2026-10-09 人工决策]** 本行「页面必须显示 Updated」已不执行：
+  > 全站 14 页已移除可见的 Updated 戳（组件保留待恢复）。日期戳改由
+  > `sitemap.xml` `<lastmod>` 与 `routes.json.lastModified` 承载，两者均未改动，
+  > 机器可读出口完整。**§8 第 196 行的对应验收项同样已失效。**
+  > 详见 `docs/CONFLICTS.md` C-09。**修订本行需人工批准**，暂保留原文。
 - 详见 `docs/SEO.md`
 
 ## 4. 广告位
@@ -188,6 +199,9 @@ GA4 **只在内容页统计**，声明/静态页（about / privacy / terms 等�
 - [ ] 正文 ≥ 1200 字符，含至少一张对照表或数据块
 - [ ] 每个数据块带来源与核验日期
 - [ ] 页面显示 `Updated: YYYY-MM-DD`，与 `dateModified` 一致
+  > **[已失效 · 2026-10-09]** 本项已停用：全站不再显示可见的 Updated 戳。
+  > 改为核对 `routes.json` 的 `lastModified` 与 `sitemap.xml` 的 `<lastmod>` 一致即可
+  > （两者同源于 routes.json）。见 `docs/CONFLICTS.md` C-09。**正式修订需人工批准。**
 - [ ] 已在 `docs/CHANGELOG.md` 记一行
 - [ ] 广告只在内容页出现，三个位固定尺寸，移动端只留 Banner
 - [ ] 内链三向齐备，锚文本用目标页主词；已逐条通过 `docs/INTERNAL-LINKS.md` 第 9 节自检清单

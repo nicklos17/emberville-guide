@@ -3,53 +3,78 @@
 > 视觉定案以**官方美术实测取样**为准，模板派生色仅作参考。
 > 冲突记录与裁决见 `docs/CONFLICTS.md`；本文与 `src/app/globals.css` 的 `@theme` 必须一致。
 
-## 色彩（暗色地牢系 · 源自官方首张截图实测）
+## 色彩（暗色地牢系 · 源自官方首张截图实测 · C-12 降刺激）
 
 取样方法：对官方首张截图（`public/images/program/hero-forest-camp.webp`）1920×1080
 做分区域色频统计，锁定暗部基调、湖水蓝、灯火琥珀三族。
 
-| 用途 | Token | 色值 | 来源 / 对比度 |
-| --- | --- | --- | --- |
-| 页面最深底 / 页脚 | `--color-canvas-deep` | `#0E181E` | 暗部压暗 |
-| 页面主底 | `--color-canvas` | `#16232B` | 主频色延伸（9.3%） |
-| 卡片表面 | `--color-surface` | `#1D2E38` | 表面提亮一档 |
-| 表头 / hover | `--color-surface-2` | `#243947` | 表面再提亮 |
-| 分隔线 / 边框 | `--color-line` | `#2A3F4C` | 表面边界 |
-| 更弱分隔线 | `--color-line-soft` | `#22333E` | 表格行分隔 |
-| 正文 | `--color-ink` | `#E9EFF3` | 12.07:1 on surface（AAA） |
-| 次要文字 | `--color-ink-muted` | `#9DB2BD` | 6.36:1 on surface（AA） |
-| 更弱注释 | `--color-ink-dim` | `#7C929D` | 非正文，仅辅助信息 |
-| 主色（湖蓝） | `--color-primary` | `#5AAEED` | 由 `#317DC9` 提亮；5.81:1 on surface（AA） |
-| 主色深 | `--color-primary-deep` | `#317DC9` | 截图原值 |
-| 强调（灯火琥珀） | `--color-accent` | `#E9A63F` | 由 `#CA9454` 提亮；6.66:1 on surface（AA） |
-| 强调深 | `--color-accent-deep` | `#CA9454` | 截图原值 |
-| 链接 | `--color-link` | `#6FBBF0` | 7.67:1 on canvas（AAA），**带下划线** |
-| 成功 / 已核验 | `--color-success` | `#6FBF73` | 7.16:1 on canvas |
-| 警示 / 未核验 | `--color-danger` | `#E4707F` | 5.29:1 on canvas |
+**C-12（2026-10-09 上线后视觉复核）调整**：暗色地牢基调不变，但整体系**降刺激**——
+上线后实测反馈「看着眼睛很痛」，定位到三个叠加因素：高饱和琥珀当标题色铺满全屏、
+亮蓝链接与橙色同屏对抗、近白正文压深底产生光晕。处置为：正文 ink 降明度、
+主色/强调色降饱和、H2 改白字加左边界线、表头改ink-muted、像素体全站下线。
 
-**全站对比度均达 WCAG AA，多数达 AAA**（实测数据见 `docs/CONFLICTS.md` C-06）。
+| 用途 | Token | 色值 | 来源 / 对比度（on canvas） |
+| --- | --- | --- | --- |
+| 页面最深底 / 页脚 | `--color-canvas-deep` | `#101C23` | 暗部压暗 |
+| 页面主底 | `--color-canvas` | `#18262F` | 主频色延伸 |
+| 卡片表面 | `--color-surface` | `#1F3039` | 表面提亮一档 |
+| 表头 / hover | `--color-surface-2` | `#263B46` | 表面再提亮 |
+| 分隔线 / 边框 | `--color-line` | `#2C414E` | 表面边界 |
+| 更弱分隔线 | `--color-line-soft` | `#253641` | 表格行分隔 |
+| 正文 | `--color-ink` | `#DBE4EA` | 12.01:1（AAA）；C-12 由 `#E9EFF3` 降明度以消光晕 |
+| 次要文字 | `--color-ink-muted` | `#A6B8C2` | 7.56:1（AA 以上） |
+| 更弱注释 | `--color-ink-dim` | `#8A9BA5` | 5.39:1（AA） |
+| 主色（湖蓝） | `--color-primary` | `#74B3D6` | 6.75:1；C-12 饱和度 80%→54% |
+| 主色深 | `--color-primary-deep` | `#3F7FA8` | 装饰位|
+| 链接 | `--color-link` | `#8CBEDE` | 7.76:1，**带下划线**（下划线用半透明 link 色，见 globals.css） |
+| 强调（灯火琥珀） | `--color-accent` | `#D3A06A` | 6.64:1；C-12 饱和度 79%→54% |
+| 强调深 | `--color-accent-deep` | `#B98D5A` | 截图原色系 |
+| 成功 / 已核验 | `--color-success` | `#86C98A` | 7.91:1 |
+| 警示 / 未核验 | `--color-danger` | `#DD8B96` | 6.05:1 |
+
+**全站文字对比度 ≥ 4.5:1（AA），正文达 AAA**（实测数据见 `docs/CONFLICTS.md` C-06/C-12）。
 全部 token 集中在 `globals.css` 的 `@theme`，**不得页面内散落硬编码**。
+
+### 降刺激规则（C-12，写页时必须遵守）
+
+1. **橙色是点缀色，不是标题色**。`--color-accent` 只用于：H2 左侧 3px 边界线、
+   焦点环、少量装饰标签。**禁止**整行/整块大面积使用。
+2. **正文不用近白**。`--color-ink` 上限即当前值，不再往`#F0F5F8` 方向提。
+3. **高饱和色不同屏对抗**。橙(accent)与蓝(primary/link)已同步降饱和至 ~54%，
+   不要单独把其中一个调回高饱和。
+4. **正文色块面积控制**。深底上不要出现成片高对比色块（如整表表头铺橙）。
+5. 标题层级靠**字重 + 字距 + 左侧细线**建立，不靠颜色。
 
 ### 像素美术的渲染约定
 官方截图为像素画（Steam 标签 `Pixel Graphics`），图片容器一律
 `image-rendering: pixelated`，禁止平滑插值导致糊边。
 
+>图片仍是像素美术，但**站内文字不再用像素字体**（C-12，见下）。
+
 ## 字体
 
 | 用途 | 字体 | 来源 | 说明 |
 | --- | --- | --- | --- |
-| 标题 / 标签 / 导航 / 徽章 | **Silkscreen** 400/700 | `public/fonts/silkscreen-{400,700}.woff2` | 圆润像素体，与官方截图内文字（场景提示等）造型一致；OFL 许可，`next/font/local` 自托管 |
-| 正文长文 | 系统 UI 无衬线（`--font-sans`） | 系统 | **像素体不用于正文**：长段落阅读性差、移动端小字号不可读 |
+| 全站（标题 / 正文 / 标签） | 系统 UI 无衬线（`--font-sans`） | 系统 | C-12 起统一，零字体文件请求、零 FOUT |
 
-- 禁外链 Google Fonts CDN（AGENT.md §2）；**不得用 `next/font/google`**（联网拉取，违反自托管约束）
-- 最多 2 个字重（DESIGN.md 性能预算）
-- 页面 `themeColor` 用 `#0E181E`（与 `--color-canvas-deep` 一致）
+- **C-12：Silkscreen 像素体已全站下线**。原因：深底上「像素字 + 全大写 + 宽字距」
+  三者叠加产生明显光晕与边缘颤动，长文阅读累眼（上线后实测反馈）；
+  且像素体在 17px 正文与移动端小字号下可读性差。原 DESIGN.md「像素体不用于正文」
+  的限制升级为「像素体全站不用」。
+- 禁外链 Google Fonts CDN（AGENT.md §2）；**不得用 `next/font/google`**（联网拉取）
+- `public/fonts/silkscreen-*.woff2` 已不再被任何代码引用，可择机删除
+- 页面 `themeColor` 用 `#101C23`（与 `--color-canvas-deep` 一致）
 
 ## 断点与排版
 - 断点：`sm 640` / `md 768` / `lg 1024` / `xl 1280`（**1280 是广告分界**，与 ADS.md 同步）
 - 正文 `max-w-3xl`，行高 1.75，字号 17px；首页宽版区用 `max-w-6xl`
-- H1 仅一个/页；H2 用于分节（H2 统一 `--color-accent` 琥珀色），不得跳级
-- 像素体标题视觉重量更大，H1 用 1.9rem、H2 用 1.4rem 以取得与正文的平衡
+- H1 仅一个/页；H2 用于分节，不得跳级
+- **H2 样式（C-12）**：1.45rem / weight 650 / `-0.01em` 字距 / `--color-ink` 近白 /
+  左侧 3px `--color-accent` 边界线 / 上下留白 `2.5rem 0 0.75rem`。
+  **不再使用整行琥珀大字**（原 1.4rem 像素体 accent 色）
+- H1：2.1rem / weight 700 / `-0.015em`；H3：1.12rem / weight 650
+- 表头（C-12）：`--color-ink-muted`，0.82rem，weight 650，**取消** uppercase +
+  宽字距 + 像素体（原为 accent 色 0.8rem uppercase tracking .08em）
 
 ## 图片规范
 
@@ -74,7 +99,7 @@
 ## 必备组件
 | 组件 | 说明 |
 | --- | --- |
-| `UpdatedStamp` | 渲染 `Updated: YYYY-MM-DD`，取 `dateModified`（routes.json 派生），全站统一 |
+| `UpdatedStamp` | **已停用**（2026-10-09 人工决策，14 页全部移除调用；组件文件保留待恢复）。日期戳统一由 `sitemap.xml` `<lastmod>` 与 `routes.json.lastModified` 承载，不在页面正文展示 —— 见 `docs/CONFLICTS.md` C-12 |
 | `DataBlock` | 数据块 + 来源 + 核验日期 |
 | `ItemCard` | 条目卡片（首页网格、栏目页复用；支持背景图 + 渐变压暗 + 文字层） |
 | `TierTable` | 分档表，支持按角色 / 模式切换 |

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { UpdatedStamp } from "@/components/UpdatedStamp";
 import { FaqList, type Faq } from "@/components/FaqList";
 
 const SEO_TITLE = "Emberville Items: Full Database & Stats";
@@ -34,7 +33,6 @@ export default function ItemDatabasePage() {
   return (
     <article className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Item Database", href: route.path }]} />
-      <UpdatedStamp lastModified={route.lastModified} />
       <h1>Emberville Item Database</h1>
       <p className="answer">The Emberville item database fills after launch: every entry lists the official name, acquisition source and verified stats. Datamined placeholders are not published.</p>
       <h2>Emberville item database</h2>
