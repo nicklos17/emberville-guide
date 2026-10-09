@@ -6,7 +6,7 @@ v1.1 增补（导航搭好之后生效）：栏目横向互链、面包屑、页
 
 ## 1. 层级模型（本站固定 4 层）
 - L0 首页 `/`
-- L1 枢纽页：`/classes`、`/builds`、`/pets`、`/guides`、`/tools`
+- L1 栏目页：参考 `SITE.md`
 - L1 一级内容页：Launch 组（early-access / countdown / founders-pack / download / servers / player-count / twitch-drops）、Start Here 组（beginner-guide / leveling-guide / free-to-play）、tier-list、factions、progression、flight、crafting、dungeons、pvp
 - L2 子页：`/classes/*`（8 个）、`/builds/*`（8 个）、`/pets/*`（5 个）、`/tools/*`（3 个）
 - 规则：**L2 可以链接到 L0/L1/L2；L1 不得放进导航组里当子项**（导航只放 L0 + L1）
@@ -18,6 +18,8 @@ v1.1 增补（导航搭好之后生效）：栏目横向互链、面包屑、页
 | L1 枢纽页 | **其下所有 L2 子页，一个不漏** | 首页 1 条 | 子页数 + 2 |
 | L1 内容页 | 相关 L1/L2 各 1–2 条 | 首页 1 条（页脚兜住即可）+ **相关枢纽 1 条（必须正文内链）** | 3 |
 | L2 子页 | 同层兄弟页 1–2 条 | **所属枢纽页 1 条 + 首页 1 条** | 4 |
+
+所有页面都必须有一条指向首页的内链。
 
 横向规则（与上表并行，硬性）：
 1. **同级栏目页互相横向链**（Guides ↔ Wiki ↔ Crafting 式）：枢纽 ↔ 枢纽、内容页 ↔ 内容页、枢纽 ↔ 相关内容页均可。

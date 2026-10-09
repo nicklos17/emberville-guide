@@ -1,0 +1,128 @@
+[
+  {
+    "path": "/",
+    "title": "Emberville Wiki & Guides – Maps, Builds, Release Date",
+    "description": "The complete Emberville wiki and guides hub: Early Access date, map regions, item database, builds, characters and news. Every entry sourced and dated.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/wiki",
+    "title": "Emberville Wiki: Weapons, Items, Characters & Bosses",
+    "description": "The Emberville wiki indexes every entry on this site — weapons, items, characters and bosses. Each group opens once its entries can be verified in play.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/guides",
+    "title": "Emberville Guides: Basics, Systems & Tips | Emberville Guide",
+    "description": "Emberville guides in one hub: launch-week basics, system explainers and tested tips. Published only after firsthand verification — no datamined guesses.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/release-date",
+    "title": "Emberville Early Access Date 2026 | Emberville Guide",
+    "description": "Emberville enters Early Access on 27 October 2026, 15:00 UTC, per Steam. Confirmed platforms, full-release status and every dated announcement — sourced.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/countdown",
+    "title": "Emberville Early Access Countdown 2026 | Emberville Guide",
+    "description": "Live Emberville Early Access countdown to 27 October 2026, 15:00 UTC — the timestamp on the Steam store page. No 1.0 date recorded until one is announced.",
+    "lastModified": "2026-10-09",
+    "priority": 0.8,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/map",
+    "title": "Emberville Map & Areas: Regions, Dungeons & Loot",
+    "description": "The Emberville map by region: where each entrance is, what lives there and what it drops, re-checked whenever a patch moves something.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/builds",
+    "title": "Emberville Builds: Tested by Patch & Mode | Emberville Guide",
+    "description": "Tested Emberville builds with patch, mode and test conditions listed for every entry. No pre-launch ratings — builds appear once they can be played.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/item-database",
+    "title": "Emberville Items: Full Database & Stats | Emberville Guide",
+    "description": "The Emberville item database: confirmed items with official names, sources and verified stats. No datamined placeholders — every entry has a source.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/characters",
+    "title": "Emberville Characters: Survivors & Companions",
+    "description": "Emberville characters: who each survivor is, where they are met and how affinity works — written from observed play, with names as the game writes them.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/news",
+    "title": "Emberville News & Updates: Patch Notes & Roadmap",
+    "description": "Emberville news in reverse chronological order: official announcements and Early Access patch notes, each dated and sourced. No leaks, no datamined data.",
+    "lastModified": "2026-10-09",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/about",
+    "title": "About the Unofficial Emberville Fan Hub | Emberville Guide",
+    "description": "What Emberville Guide covers, how it sources Emberville information, and why every date, code and build on the site carries a source and verification date.",
+    "lastModified": "2026-10-09",
+    "priority": 0.3,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
+    "path": "/contact",
+    "title": "Contact: Support & Corrections | Emberville Guide",
+    "description": "Email the Emberville Guide team at support@emberville-guide.wiki for corrections, build write-ups and copyright questions.",
+    "lastModified": "2026-10-09",
+    "priority": 0.3,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
+    "path": "/privacy",
+    "title": "Privacy Policy — Data, Cookies & Ads | Emberville Guide",
+    "description": "How Emberville Guide handles analytics, ad cookies and the data you email us — what is collected on content pages and what never leaves your browser.",
+    "lastModified": "2026-10-09",
+    "priority": 0.2,
+    "changeFrequency": "yearly",
+    "pageLive": true
+  },
+  {
+    "path": "/terms",
+    "title": "Terms of Service — Use, IP & Liability | Emberville Guide",
+    "description": "The rules for using Emberville Guide: unofficial fan-site status, trademark acknowledgment, content licensing and liability limits.",
+    "lastModified": "2026-10-09",
+    "priority": 0.2,
+    "changeFrequency": "yearly",
+    "pageLive": true
+  }
+]

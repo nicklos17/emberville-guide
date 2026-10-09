@@ -1,21 +1,21 @@
-# AGENT.md — {{站名}} 开发约束
+# AGENT.md — Emberville Guide 开发约束
 
 > 本文件的优先级高于任何一次性指令。与它冲突的实现，改实现，不改本文件。
 > 修改本文件需人工批准。
 
 ## 0. 项目身份
-
-- 站名（唯一写法）：{{站名}}
-- 域名：{{站点URL}}
-- 定位：{{主题}}的攻略与资料库（按主题改写），非官方粉丝站
+- 项目自定：每个站点都会有所差异，因此以docs/SITE.md为准。在项目初始化之前，都应该配置SITE.md，使其符合每个站点的特殊需求
+- 项目类型：非官方粉丝站
+- 站名（唯一写法）：Emberville Guide
+- 域名：https://emberville-guide.wiki
+- 定位：Emberville 的攻略与资料库，非官方粉丝站
 - 语言：仅 en（单语言站，不做多语言版本，不加 hreflang）
-- 内容方向：classes / builds / tier list / dungeons / items / map / server status / patch notes
-  （按主题改写为核心栏目清单）
+- 内容方向：wiki / guides / release / map / builds & items / characters / news
+  （7 个核心栏目，详见 docs/SITE.md）
 - 浏览器兼容性：需要支持 PC 和手机移动端
 
 ### 0.1 合规（不可省略）
-- 页脚常驻免责声明：`{{免责声明}}`
-  （粉丝站句式参考：`{{站名}} is an unofficial fan site. {{主题}} is a trademark of {{发行商}}. We are not affiliated with or endorsed by {{发行商}}.`）
+- 页脚常驻免责声明：`Emberville Guide is an unofficial fan site. Emberville is a trademark of Cygnus Cross. We are not affiliated with or endorsed by Cygnus Cross.`
 - 禁止使用官方 / 发行商 Logo；除官方公开截图外不得使用官方美术资源；官方美术做底时页面须有 © 署名
 - 禁止把站点包装成官方网站：Title、H1、og:site_name 一律不得出现 "Official"
 - 品牌名一律用全称，**不要缩写**（若全称与竞品域名仅差几字母，必须靠全称区分）
@@ -23,16 +23,15 @@
 ### 0.2 站点常量（写进 src/config/site.ts，全站引用，禁止散落硬编码）
 ```ts
 export const SITE = {
-  name: "{{站名}}",
-  domain: "{{域名}}",
-  url: "{{站点URL}}",
-  tagline: "{{一句话定位}}",
+  name: "Emberville Guide",
+  domain: "emberville-guide.wiki",
+  url: "https://emberville-guide.wiki",
+  tagline: "The complete Emberville wiki & guides — maps, gear, characters and bosses.",
   locale: "en",
-  launchDate: "{{发布日 YYYY-MM-DD}}",        // 主题无关站可删
-  earlyAccessDate: "{{早进日}}",              // 主题无关站可删
-  developer: "{{开发商/作者}}",
-  platform: "{{平台}}",
-  genre: "{{品类}}",
+  earlyAccessDate: "2026-10-27",   // 计划 EA 发售日，Steam 官方（Verified: 2026-10-09）；正式版日期官方未定，不设 launchDate
+  developer: "Cygnus Cross",
+  platform: "PC (Steam)",
+  genre: "Action RPG",
 } as const;
 ```
 
@@ -43,11 +42,10 @@ export const SITE = {
 宁可页面短，不可页面假。
 
 ### 1.2 数据源白名单（按优先级，建站时按主题重写）
-1. `{{官方域名}}` — 官方站
-2. `{{官方商店/发布页}}` — 官方发行页
-3. 官方 patch notes / 官方公告
-4. 官方 YouTube / 官方社媒
-5. `{{可信第三方统计源}}` — **限定数据类型**（如仅玩家并发在线读数），引用必须带取数日期
+1. Steam 商店页 `https://store.steampowered.com/app/2295170/Emberville/` — 官方发行页（无独立官网，此为唯一官方事实源入口）
+2. Steam News（商店页公告区）— 官方 patch notes / 官方公告
+3. 官方 YouTube / 官方社媒 — 以 Steam 商店页外链为准；未逐项核验的账号不得引用
+4. SteamDB / Steam Charts — **限定数据类型**（仅玩家并发在线读数），引用必须带取数日期
    （as-of 口径），页面写明口径限制；禁嵌图表资源，只引数字
 
 **灰名单**（可用，但必须标注为社区来源，不得作唯一依据）：Reddit、官方 Discord、社群实测帖。
@@ -162,7 +160,7 @@ GA4 **只在内容页统计**，声明/静态页（about / privacy / terms 等�
 - ❌ `output: 'export'`、客户端渲染正文、`'use client'` 包 layout
 - ❌ 在非内容页加广告；用路径黑名单判断是否加广告
 - ❌ 广告导致布局位移
-- ❌ 使用 "{{主题}} Official" 一类表述
+- ❌ 使用 "Emberville Official" 一类表述
 - ❌ 未实测就给排名
 - ❌ 用 `noindex` 处理内容不完整的页面 —— 不完整就不发布
 - ❌ 复制粘贴第三方站点正文

@@ -1,0 +1,48 @@
+{
+  "navGroups": [
+    {
+      "label": "Start here",
+      "links": [
+        { "label": "Wiki", "href": "/wiki" },
+        { "label": "Guides", "href": "/guides" }
+      ]
+    },
+    {
+      "label": "Explore",
+      "links": [
+        { "label": "Map & Areas", "href": "/map" },
+        { "label": "Items", "href": "/item-database" },
+        { "label": "Characters", "href": "/characters" }
+      ]
+    },
+    {
+      "label": "Launch",
+      "links": [
+        { "label": "Early Access", "href": "/release-date" },
+        { "label": "Countdown", "href": "/countdown" },
+        { "label": "News", "href": "/news" }
+      ]
+    },
+    {
+      "label": "Builds",
+      "links": [
+        { "label": "Builds & Items", "href": "/builds" }
+      ]
+    }
+  ],
+  "footerLinks": [
+    { "label": "Wiki", "href": "/wiki" },
+    { "label": "Guides", "href": "/guides" },
+    { "label": "Release & Platforms", "href": "/release-date" },
+    { "label": "Countdown", "href": "/countdown" },
+    { "label": "Map & Areas", "href": "/map" },
+    { "label": "Builds & Items", "href": "/builds" },
+    { "label": "Item Database", "href": "/item-database" },
+    { "label": "Characters", "href": "/characters" },
+    { "label": "News", "href": "/news" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Privacy Policy", "href": "/privacy" },
+    { "label": "Terms", "href": "/terms" }
+  ]
+}
