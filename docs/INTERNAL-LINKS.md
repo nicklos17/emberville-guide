@@ -13,7 +13,7 @@ v1.1 增补（导航搭好之后生效）：栏目横向互链、面包屑、页
 - **L1 栏目页**：8 个核心栏目`/wiki`、`/guides`、`/release-date`、`/platforms`、`/map`、`/builds`、
   `/characters`、`/news`（定义见 `SITE.md`）
 - **L1 从属页**：`/item-database`（Wiki 附属）、`/price`（Release 附属）——层级等同 L1，
-  但主词让给父栏目，不独立承接栏目词（`/countdown` 已于 2026-10-10 撤页，不设 301）
+  但主词让给父栏目，不独立承接栏目词（`/countdown` 已于 2026-10-10 撤页，旧 URL 301 → `/release-date`）
 - **L1 专题页**：`/voice-cast`、`/studio`、`/stardew-valley-diablo`、`/games-like-emberville`——
   从栏目页拆出的独立搜索需求，层级等同 L1，**不进导航**，靠首页与相关栏目页正文内链进入
 - **L2 栏目子页**：`/platforms/multiplayer`（Platforms 附属）——不进导航，由 `/platforms` 正文内链进入
@@ -85,7 +85,7 @@ L2 子页将来不进页脚（栏目页已全链，20+ 条会撑爆页脚）。
 3. **不给同一目标在同一页出现两次链接**（导航、页脚、面包屑除外）
 4. **不在导航里塞 L2 子页**：子页只走枢纽页正文（本站当前就是这个设计，保持）
 5. **不改已上线 URL 路径**：内链调整只改 href，不动 slug（`栏目.md` §3）。
-   唯一例外是撤页（`/countdown`，2026-10-10 人工决策，直接删页不设 301）——
+   唯一例外是撤页（`/countdown`，2026-10-10 人工决策，删页并 301 到承接页）——
    这类操作须记入 `docs/CONFLICTS.md`；其余情况一律禁改
 
 ## 10. 本轮实测状态（2026-10-10 快照）
@@ -93,7 +93,7 @@ L2 子页将来不进页脚（栏目页已全链，20+ 条会撑爆页脚）。
 - ✅ 顶部导航 9 项（Wiki / Guides / Map / Items / Builds / Characters / Release / Platforms / News）均为真 `<a>` 且带 `title`
 - ✅ 页脚内容全集落地（16 项，含法务与来源说明页）
 - ✅ 新增页内链已接入：`/platforms` ↔ `/platforms/multiplayer`（父→子、子→父）、`/price` ↔ `/release-date`、`/games-like-emberville` ↔ `/stardew-valley-diablo`
-- ✅ `/countdown` 撤页：页面已删、全站内链已清理（首页 / `/guides` / `/release-date` / `/about`）、sitemap 已移除；按决策**不设 301**，旧 URL 返回 404
+- ✅ `/countdown` 撤页：页面已删、全站内链已清理（首页 / `/guides` / `/release-date` / `/about`）、sitemap 已移除；同日决策反转：旧 URL **301 → `/release-date`**（`next.config.ts` redirects()，已线上验证）
 - ⏳ L2 详情页：游戏未上线，游戏内具体条目仍须有可核验数据后再开（`KEYWORDS.md` L3 表；`/news/emberville-demo` 已登记）
 - ⏳ 面包屑：`Breadcrumbs` 组件已就绪，新页（`/platforms` 两级、`/platforms/multiplayer` 三级）已接入，其余页面接入情况待逐页核
 

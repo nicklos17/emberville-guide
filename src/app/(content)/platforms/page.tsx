@@ -41,12 +41,6 @@ export default function PlatformsPage() {
         Windows, and no PlayStation, Xbox, Switch or mobile version has been announced. That gives every console
         question — PS5, Switch, Switch 2 or Xbox — the same answer: not announced, and not ruled out either.
       </p>
-      <p>
-        This page replaces five near-identical searches with one status table. A PlayStation question, a Switch
-        question and an Xbox question all point to the same absence of an official announcement, so splitting them
-        into separate pages would only repeat the same sentence. Here you can see what each storefront lists, why
-        console rumours keep circulating, and how the answer would change the day it stops being “not announced”.
-      </p>
 
       <h2>Emberville platforms: what is confirmed</h2>
       <p>

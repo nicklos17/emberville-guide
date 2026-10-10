@@ -87,3 +87,36 @@ curl -sI "https://$DOMAIN$PATH"             | grep -i "^HTTP"              # 期
 GSC 侧：地址检查工具抽查 http / www 变体确认 301；之后无需额外操作，旧记录会随重抓自然收敛。
 
 执行后在**该站**的 `docs/CHANGELOG.md` 记一行（含当日），审计发现项同步回填 `docs/SEO-AUDIT.md` 整改结果。
+
+## 6. 撤页路径 301（2026-10-10 新增，以 /countdown → /release-date 为首例）
+
+撤页（删页 + 清内链 + 移出 sitemap）时，若旧 URL 已可能被收录或存在外链，应设 301 跳到承接页，
+而不是直接 404。优先级与层位：
+
+1. **首选仍是边缘 Redirect Rule**（§2 同层）：Rules → Redirect Rules，`http.request.uri.path eq "/countdown"`
+   → Dynamic redirect `concat("https://{{域名}}", "/release-date")`，301，Preserve query string。
+   零 Worker 调用，且与 §0「跳转统一在边缘层」一致。
+2. **代码层 `next.config.ts` redirects() 是有效替代**（本站当前实际采用，因配置时面板 API 会话不可用）：
+   `async redirects() { return [{ source: "/countdown", destination: "/release-date", statusCode: 301 }] }`。
+   它由 Next server 路由生效，**只对无对应静态资产的路径有效**——撤页路径恰好没有资产，
+   请求必达 Worker（404 响应带 `x-opennext: 1` 可证），所以能全量覆盖。
+   与 §0 的禁令不冲突：§0 禁的是 http→https 这类**全站 middleware**（会被资产直服务绕过），
+   不是针对具体撤页路径的路由级 redirect。
+
+已知行为（实测 2026-10-10）：
+
+| 请求 | 结果 |
+| --- | --- |
+| `https://{{域名}}/countdown` | 301 → `https://{{域名}}/release-date` |
+| `https://{{域名}}/countdown/?x=1` | 308 归一到无尾斜杠 → 301 → `/release-date?x=1`（query 透传） |
+| `https://www.{{域名}}/countdown` | 两跳：www 规则先 301 到裸域，再 301 到承接页（与 §2 行为一致） |
+
+验证：
+
+```bash
+curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" "https://{{域名}}/countdown"   # 期望 301
+curl -s -o /dev/null -w "%{http_code}\n" "https://{{域名}}/release-date"                    # 期望 200
+```
+
+> 注：站内已无任何指向 `/countdown` 的内链，sitemap 也不再输出；该 301 只服务外部旧 URL。
+> 若将来改回边缘 Redirect Rule，删除 `next.config.ts` redirects() 中的对应条目即可，二者勿同时生效（无害但冗余）。
