@@ -9,6 +9,14 @@
   "routes": [
     { "pattern": "emberville-guide.wiki", "custom_domain": true }
   ],
+  // Workers Caching（wrangler ≥4.69）：全站 HTML 由 Worker 产出且带 s-maxage=31536000，
+  // 开启后边缘按 RFC 9111 缓存响应（cf-cache-status: HIT），命中不再进 Worker——
+  // TTFB 降到边缘命中延迟，也进一步远离免费版 1102 CPU 限制。
+  // 缓存键默认含 Worker 版本：每次部署自动用新缓存，无需部署后清缓存。
+  // zone 级 Cache Rules 对 Worker 响应无效（见 docs/CHANGELOG 2026-10-10），别往那边配。
+  "cache": {
+    "enabled": true
+  },
   // 预渲染 HTML 与静态资源的缓存策略配在 open-next.config.ts（incrementalCache），
   // 不在此处声明——wrangler.jsonc 的 assets 字段不识别该键，会报 Unexpected fields。
   "assets": {

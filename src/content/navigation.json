@@ -21,6 +21,7 @@
     { "label": "Characters", "href": "/characters" },
     { "label": "News", "href": "/news" },
     { "label": "About", "href": "/about" },
+    { "label": "Sources & Methodology", "href": "/about/methodology" },
     { "label": "Contact", "href": "/contact" },
     { "label": "Privacy Policy", "href": "/privacy" },
     { "label": "Terms", "href": "/terms" }

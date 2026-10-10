@@ -1,12 +1,12 @@
 # 广告位规范
 
-供应商（源站用 Adsterra，banner 格式，iframe 输出；可替换）。invoke key 属公开页面值，
-配置在 `src/lib/ads.ts`（`ADSTERRA_FORMATS`），不走构建环境变量。
+供应商：Bicea，iframe 格式；160×600 对联和 728×90 横幅的公开 key 配置在 `src/lib/ads.ts`。
+两个横幅位使用同一广告单元；多个展示位通过串行队列依次注入，避免 `atOptions` 配置互相覆盖。
 
 ## 开关
 - 总开关：仓库内 `.env.production` 的 `NEXT_PUBLIC_ADS_ENABLED`（加 `.gitignore` 白名单，
   随仓库走）。改成 `true` 重新构建即开启；`false` 即关闭
-- 默认 `false`（关闭）；开发环境 `next dev` 强制关闭，无论此值如何
+- 当前生产构建开启（`true`）；开发环境 `next dev` 强制关闭，无论此值如何
 
 ## 渲染规则（白名单）
 广告只在内容页渲染，默认不加：

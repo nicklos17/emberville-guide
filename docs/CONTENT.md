@@ -13,10 +13,14 @@
 </DataBlock>
 ```
 
-## 来源标注三档
-1. `Official` — 官网 / 官方商店 / 官方公告（必须是白名单第一方页面，逐项核对）
-2. `Community-reported` — Reddit、Discord、社群实测（必须带此标注）
-3. `Not yet available` — 未公开，写明原因与何时可得，不许留空留白
+## 来源标注与多源核验
+1. `Official — Cygnus Cross` / `Official — Steam` / `Official — GOG` — 按所引页面所属方准确标记；不能把一个发行商或商店的页面泛称为另一方官方声明。
+2. `Developer press release — hosted by GamesPress` — 仅用于开发者署名的原始新闻稿；它不是一份独立的 GamesPress 编辑报道。同一新闻稿在多个站点转载只算一个来源。
+3. `IGN report` / `IGN hands-on preview` — 明确区分媒体报道与记者试玩观察；试玩文章只支持文章记载的观察，不代表开发者承诺或最终版本数据。
+4. `Community-reported` — Reddit、Discord、社群实测；必须链接原帖并明确标记未经官方确认，不能用作唯一事实依据。未能核验的帖子不引用。
+5. `Not yet available` — 未公开，写明目前可得范围与尚缺的事实，不许留空留白。
+
+内容页须按各自主题检索并引用相关一手来源；适用时增加独立媒体报道/试玩作为不同性质的证据。相同原始声明的新闻稿转载不是多源。不要为了凑来源而放无关引用；来源不得取代对游戏机制的实质说明。
 
 ## 时间敏感内容
 - 时效页（release date / countdown / patch notes 类）Title 带月份或版本号

@@ -70,7 +70,7 @@
 ## 政策页（合规页，不参与关键词竞争）
 | 页面 | 主词 | 备注 |
 | --- | --- | --- |
-| /about /contact /privacy /terms | — | 站内合规页，不打搜索词（/contact 是 AdSense 信任页要求）。已建 |
+| /about /about/methodology /contact /privacy /terms | — | 站内合规与来源说明页，不打搜索词（/contact 是 AdSense 信任页要求）。已建 |
 
 > **不建 `/disclaimer` 独立页**：非官方声明以页脚常驻DISCLAIMER 句承载
 > （`AGENT.md` §0.1 底线，`src/app/layout.tsx` 已落地），无需单独占一个 URL。

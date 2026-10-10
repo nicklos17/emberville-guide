@@ -22,6 +22,18 @@ YYYY-MM-DD
 ## 站点日志
 
 ```
+2026-10-10
+[/ /wiki /characters] 补入三项此前遗漏的独家内容（回应「配音阵容/主播背景/对比段没用上」）：① 官方 22 人配音阵容全表（Cygnus Cross 官网，Alex Jordan 任 Voice Acting Director），并标出 IGN 试玩已点名的两个角色（Alex Jordan 配 Adeos、Matthew Mercer 配 Gumu）；② Cygnus Cross 工作室与 CohhCarnage 背景段（独立工作室、爱尔兰 Cork、首发作品、Brynjar Gigja 任 founder/lead game director、Ben「CohhCarnage」Cassell 任 co-founder/co-game director；并显式纠正社区帖流传的「creative lead」说法）；③ Stardew Valley / Diablo 对比段（IGN 1/27「Diablo Lite meets Stardew Valley」、GameSpot 1/28、IGN 9/11 试玩对双键连招与采集循环的具体对照）。首页新增 3 个 H2 与 3 条 FAQ，/wiki 新增 2 节，/characters 扩写配音阵容并补工作室段；新增来源 GameSpot、GamingTrend、Gamer Social Club（均为署名媒体）。来源：Cygnus Cross 官网、Cygnus Cross 新闻稿（GamesPress 托管）、IGN 试玩/公告、GameSpot、GamingTrend、Gamer Social Club（Verified: 2026-10-10）。
+2026-10-10
+[全部内容页] 多信源改造（回应「10 页脚注同源」问题）：按各页主题从不同一手/署名来源取材并各自标注，取代原先「全站唯一来源=Steam 商店页」的写法。来源分配——首页/维基/指南取 Cygnus Cross 官网（Memento、配音表）、7/16 开发者新闻稿（双键连招、动态 HUD、技能继承、动态世界、材料/蓝图/配方）与 IGN 9/11 试玩（精通树、掉落、属性点）；定档页/倒计时页取 IGN 1/27 公告与 7/15 定档报道、GOG 官方产品页（10/27/2026、Windows、DRM-free 离线安装）；新闻页取四条带日期时间线（1/27 IGN、7/15 IGN、7/16 新闻稿、10/8 demo）。术语与原文对齐（craftable outputs：equipment/potions/food/tools/**trinkets**，全站原 accessories 已改回 trinkets）；平台口径由「仅 Steam」修正为「Steam 与 GOG 均列 Windows」；各页结尾「已按 Steam 商店页核验」改为多源核验表述。同日可读性收尾：压缩 /countdown、/release-date、/wiki 与首页的重复否定句（如「does not / is not / rather than」），改为一次陈述的正向表述，保留全部事实边界（无精确解锁时刻、无定价、无 1.0 日期、无主机平台、无具名配方/数值、无区域上线次序）。来源：Cygnus Cross 官网、Steam/Steam News、GOG 官方产品页、Cygnus Cross 新闻稿（GamesPress 托管）、IGN 公告/定档/试玩报道（Verified: 2026-10-10）。
+2026-10-10
+[全站·性能] CDN 与加载速度优化（页面内容与日期戳不变）：wrangler 开启 Workers Caching——HTML 在边缘按 s-maxage 缓存（cf-cache-status HIT，命中不进 Worker），缓存键含 Worker 版本、部署即自动失效；验证 zone 级 Cache Rules 对 Worker 响应无效，已回退；首页 hero 直出静态图，跳过 /_next/image 302 一跳；WebP 重压（hero 352→160KB，section 图 108-184→63-115KB）与 PNG 图标量化（android-512 448→58KB、apple-touch 128→12KB）；7 张源 JPG、og 源图、遗留 favicon.png 共约 4.9MB 移出 public（收至 assets-source/，不再随部署上传）；zone 开启 0-RTT 与 Early Hints（HTTP/3、Brotli 已开启，Rocket Loader 保持关闭）。
+2026-10-10
+[全站内容页] 接入 160×600 对联及 728×90 横幅广告：正文首段后横幅、≥1280px 左右对联、<1280px 正文末尾横幅；生产开关启用，开发环境仍关闭。广告配置按位串行注入并在无创意/加载失败时收起。
+2026-10-10
+[/about/methodology] 新增来源与核验说明页，集中解释 Steam/Steam News 等来源、社区信息与实测口径；页脚新增入口。
+2026-10-10
+[/characters /map /builds /item-database] 重写栏目正文，改为介绍 Steam 已确认的救援与村民机制、Vitromotus 世界空间、武器连招与职业继承、道具分类与制作循环；删除字段清单和大段未知项说明，加入精简的开服后更新承诺及相关页面链接。新增纯说明页 [/about/methodology] 集中说明来源、核验和测试规则，并更新页脚、路由、TDK 与站点结构。
 2026-10-09
 [全部内容页] 重写首页及 9 个内容路由为 1,200–1,800 词的英文资料页：以 Steam 官方商店页为唯一游戏事实来源，扩展世界设定、战斗与职业、采集制作、村庄重建、EA 范围及 PC 配置等内容；将地图/物品/角色/配装页改为有实用内容的系统指南与来源边界说明，不再以空态占位。移除未经 Steam 页面核验的 GOG、精确解锁时刻、愿望单、主播/配音/试玩、特定生物群落数量、角色好感等说法；同步修正 10 个路由的标题和摘要，避免旧元数据继续宣称测试 builds、物品数据、掉落位置或 15:00 UTC。来源：Steam 商店页（Verified: 2026-10-09）。
 2026-10-09

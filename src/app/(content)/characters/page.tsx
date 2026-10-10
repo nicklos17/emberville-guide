@@ -5,23 +5,32 @@ import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
+import { AdArticle } from "@/components/ads/AdArticle";
 
-const SEO_TITLE = "Emberville Characters: Survivors & Village Stories"
+const SEO_TITLE = "Emberville Characters: Survivors & Village Stories";
 const route = getRoute("/characters");
 
 const FAQS: Faq[] = [
   {
-    q: "Can players customize the protagonist's appearance?",
-    a: "Yes. The store page describes dozens of character-creation options, including hairstyles, beards, facial features, and colors. It does not connect those options to a resident or rescue reward."
+    q: "What can rescued villagers contribute to Emberville?",
+    a: "The Steam description says residents help rebuild through gathering and crafting professions, lend skills, and offer rewards or useful teachings.",
   },
   {
-    q: "Does the store page map each rebuilding profession to one specific resident?",
-    a: "No character-to-profession roster is provided. The description says villagers help rebuild through gathering and crafting professions, but does not publish a one-to-one assignment."
+    q: "Can players customize their own character?",
+    a: "Yes. The store page describes dozens of character-creation options, including hairstyles, beards, facial features, and colors.",
   },
   {
-    q: "Can readers tell whether diaries affect quest outcomes?",
-    a: "The official description mentions diaries and quests, but does not state that reading a diary changes a quest or its outcome."
-  }
+    q: "Does Emberville confirm romance routes?",
+    a: "The Steam description mentions stories, diaries, quests, and interaction with townsfolk, but does not confirm romance routes or an affinity system.",
+  },
+  {
+    q: "Who voices the characters in Emberville?",
+    a: "The official site lists a 22-name cast led by voice-acting director Alex Jordan, including Doug Cockle, Matthew Mercer, Jennifer English, Ben Starr, Abubakar Salim and Jane Perry. Alex Jordan voices Adeos and Matthew Mercer voices the shopkeeper Gumu; the rest are not yet mapped to roles.",
+  },
+  {
+    q: "Who is developing Emberville?",
+    a: "Cygnus Cross, an independent studio based in Cork, Ireland, for which Emberville is the debut title. It is led by founder and lead game director Brynjar Gigja, with Twitch streamer Ben \u201CCohhCarnage\u201D Cassell as co-founder and co-game director.",
+  },
 ];
 
 export const revalidate = false;
@@ -32,80 +41,159 @@ export function generateMetadata(): Metadata {
 
 export default function CharactersPage() {
   return (
-    <article className="article mx-auto w-full max-w-3xl px-4 py-10">
+    <AdArticle className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Characters", href: route.path }]} />
-      <h1>Emberville Characters, Survivors, and Village Stories</h1>
+      <h1>Emberville Characters: Survivors and Villagers</h1>
       <p className="answer">
-        Emberville's story centers on a memoryless protagonist in the Vitromotus and the survivors of a ravaged town who need help. The Steam description confirms rescue, quests, resident stories and diaries, rebuilding, professions, and rewards or teachings. It does not disclose specific character names, affinity values, or romance mechanics. This guide covers the roles the official page describes without inventing biographies or relationship systems.
+        Emberville characters are part of the rescue-and-rebuilding loop: the protagonist meets imprisoned survivors,
+        helps restore their ravaged town, and can receive rewards, teachings, and practical help from residents. The
+        Steam description confirms quests, stories, diaries, gathering and crafting professions, and villagers who
+        lend skills. It has not yet published a named character roster, so this guide focuses on what those roles do.
       </p>
 
-      <h2>Why residents matter to the story</h2>
+      <h2>Emberville survivors and the rescue story</h2>
       <p>
-        The official premise begins with a protagonist waking in darkness inside the Vitromotus, a magical prison where death no longer lasts. Memories are clouded, and escape appears to be the immediate goal. As despair grows, the player encounters people from a once-thriving town, now ravaged by hostile forces. They are among the denizens left imprisoned, and the store description frames helping them as a meaningful alternative to simply pressing toward escape.
+        The protagonist wakes without clear memories inside the Vitromotus, a magical prison where prisoners return
+        to life through kymia, an energy born from emotions. Escape is one goal, but the story also brings the player
+        into contact with residents of a town ravaged by hostile forces. Rescuing them gives the journey a second
+        direction: people encountered in the prison can return to a community that needs rebuilding.
       </p>
       <p>
-        The energy called kymia is described as a mysterious power born from emotions that brings those trapped in the Vitromotus back to life. This is part of the world's premise and helps explain why the prison and its inhabitants are unusual. The store page does not provide a detailed character-by-character account of how kymia affects a resident, so this guide does not assign it a personal history, personality trait, or relationship consequence.
-      </p>
-      <p>
-        The player is invited to rescue a range of characters along the way. Those rescued people show gratitude through rewards and useful teachings, and the description says they can lend their skills and help rebuild their homes. That makes residents part of both the narrative and the town's restoration. The page does not establish that every resident is rescued in the same manner, appears in a fixed order, or becomes a combat companion.
-      </p>
-
-      <h2>Rescue and rebuilding form a connected loop</h2>
-      <p>
-        Emberville's restoration is described as a community effort. Residents help rebuild their town through gathering and crafting professions; as the town restores itself, it becomes a living hub shaped by the player's deeds. This links exploration beyond the town with visible reconstruction at home. It also gives this character page a practical focus: future entries should distinguish a person's narrative role from the help or profession explicitly attributed to them.
-      </p>
-      <p>
-        The personal estate is a separate confirmed customization feature within Emberville. The player can shape that space with buildings, furniture, plants, and decorations, and craft items useful for the journey. The description does not say that a named resident owns a particular building or that estate decoration is a character affinity reward. Those connections should not be added unless an official source states them.
-      </p>
-      <p>
-        Help from villagers also appears in character development: the store page says weapons and skills can be improved through leveling, items, and assistance from rescued villagers. It does not disclose the effect, amount, prerequisites, or identity of the helper. A character entry can record that residents contribute to progression at a broad system level, but cannot responsibly promise a stat increase or combat bonus based on this description alone.
+        The store page describes a range of characters to rescue, not a fixed order or a list of named companions.
+        It presents those people as townsfolk with stories and useful roles, rather than confirming that every rescue
+        becomes a combat party member. The distinction matters: “survivor” describes the story and rescue loop, while
+        the confirmed practical contributions are help with restoration, skills, quests, rewards, and teachings.
       </p>
 
-      <h2>Stories, diaries, quests, and rewards</h2>
+      <h2>Villager skills, professions, and rebuilding</h2>
       <p>
-        The official page says players can hear the denizens' stories and read their diaries, and can fulfill quests, engage with townsfolk, and unlock mechanics. It also describes assisting residents in their many quests. These details suggest several different kinds of interaction: narrative material, tasks, contact with townspeople, and system unlocks. The source does not map each activity to a specific character or explain whether a diary is required for a quest.
+        Residents help rebuild Emberville through gathering and crafting professions. Their skills are not only a
+        piece of town background: the Steam description also says rescued villagers can help improve weapons and
+        skills. This connects character progression with the people the player brings back, alongside leveling and
+        items. The source does not give profession names or quantify a resident’s benefit, but it does establish that
+        rebuilding and character growth are linked systems.
       </p>
       <p>
-        Rewards and teachings are described as things rescued characters offer in gratitude. The wording supports documenting those outcomes when an official source connects one to a person, but it does not identify a reward list or define “teaching” as a particular skill tree. Similarly, unlocking mechanics is confirmed as part of engaging with townsfolk, but no unlock sequence or prerequisite is supplied. This page keeps the broader promise separate from a detailed walkthrough that the source cannot support.
+        That link gives the town a practical role between expeditions. Exploration takes the protagonist into the
+        prison; rescued residents bring skills and work back to Emberville; rebuilding restores homes and develops
+        the hub. The game also describes gathering and crafting professions as part of that effort. For the confirmed
+        craftable categories that support the wider journey, see the <Link href="/item-database" title="Emberville Items: Crafting &amp; Database Reference">Emberville item database</Link>.
       </p>
 
-      <h2>Professions and the role of a villager</h2>
-      <p>
-        Gathering and crafting professions help rebuild the town, according to the store description. Residents also lend skills, teach the player, and take part in quests. The official material therefore supports several useful editorial tags for a future character index: rescue, rebuilding, profession, quest, story, diary, teaching, and reward. These are descriptions of source topics, not a claim that the game uses those exact interface labels or that every resident belongs to each category.
-      </p>
-      <p>
-        A profession record should not turn into an unsupported location guide. The Steam page does not list the profession names, the materials they gather, the goods they produce, or their work schedules. For confirmed crafting categories and how item records should handle missing details, consult the <Link href="/item-database" title="Emberville Items: Crafting &amp; Database Reference">crafting and item database guide</Link>. The <Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">world and map guide</Link> explains why this source also cannot yet assign residents to named settlements or precise map coordinates.
-      </p>
-
-      <h2>What a responsible character entry can record</h2>
-      <p>
-        The Steam page gives a strong framework for a people-focused guide but not a cast list. A future sourced entry should contain only facts connected to an identifiable person in an official first-party description. Until the source supplies such a name and detail, a generic description of “survivors” or “townsfolk” is more accurate than a filled profile with invented likes, dialogue, or personal history.
-      </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-09">
-        <div className="overflow-x-auto my-4">
+      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
+        <div className="my-4 overflow-x-auto">
           <table>
-            <thead><tr><th scope="col">Possible record field</th><th scope="col">What the source currently supports</th><th scope="col">Keep unfilled unless disclosed</th></tr></thead>
+            <thead><tr><th scope="col">Character connection</th><th scope="col">Confirmed role in the game</th></tr></thead>
             <tbody>
-              <tr><td><b>Name and description</b></td><td>An array of characters and the town's denizens exist</td><td>Individual names, appearance, and biographies</td></tr>
-              <tr><td><b>Rescue context</b></td><td>Characters can be rescued during the journey</td><td>Exact rescue location, order, conditions, and failure rules</td></tr>
-              <tr><td><b>Story interaction</b></td><td>Stories, diaries, quests, and townsfolk engagement are described</td><td>Character-specific dialogue, quest text, and diary contents</td></tr>
-              <tr><td><b>Town contribution</b></td><td>Residents help rebuild homes and contribute professions or skills</td><td>Named profession, schedule, output, or quantified benefit</td></tr>
-              <tr><td><b>Relationship system</b></td><td>No character-specific relationship mechanic is disclosed</td><td>Affinity scores, romance routes, choices, or relationship outcomes</td></tr>
+              <tr><td>Rescue</td><td>Meet and rescue characters imprisoned in the Vitromotus</td></tr>
+              <tr><td>Town restoration</td><td>Residents help rebuild homes through gathering and crafting professions</td></tr>
+              <tr><td>Progression</td><td>Rescued villagers can lend skills and help improve weapons and skills</td></tr>
+              <tr><td>Story and quests</td><td>Hear residents’ stories, read diaries, fulfill quests, and engage with townsfolk</td></tr>
+              <tr><td>Rewards</td><td>Rescued characters may offer rewards and useful teachings</td></tr>
             </tbody>
           </table>
         </div>
       </DataBlock>
 
-      <h2>Character facts that are not disclosed</h2>
+      <h2>The Memento and Emberville’s voice cast</h2>
       <p>
-        The store page does not identify individual residents by name. It also does not describe an affinity meter, numerical affection values, romance routes, or relationship thresholds. No particular resident, dialogue choice, romance outcome, or gift preference can be verified from this source. The presence of stories, diaries, quests, and interactions with townsfolk is not evidence of a specific romance system, so this guide does not infer one.
+        The Cygnus Cross studio introduction names the protagonist’s luminous companion as the Memento, adding a
+        specific story figure to the otherwise unnamed rescue-and-rebuilding cast. The studio also publishes a
+        22-name voice cast — unusually large for a debut indie — led by voice-acting director Alex Jordan, who
+        performs in the game as well. The roster spans established game actors and creators: Doug Cockle (Geralt in
+        The Witcher), Matthew Mercer (Critical Role, Baldur’s Gate 3), Jennifer English and Ben Starr (Baldur’s
+        Gate 3, Clair Obscur: Expedition 33), Abubakar Salim (Bayek in Assassin’s Creed Origins), Amelia Tyler
+        (Baldur’s Gate 3) and Elias Toufexis (Deus Ex).
+      </p>
+      <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
+        <div className="my-4 overflow-x-auto">
+          <table>
+            <thead><tr><th scope="col">Role</th><th scope="col">Name</th></tr></thead>
+            <tbody>
+              <tr><td>Voice Acting Director</td><td>Alex Jordan</td></tr>
+              <tr><td>Voice actor</td><td>Doug Cockle</td></tr>
+              <tr><td>Voice actor</td><td>Abubakar Salim</td></tr>
+              <tr><td>Voice actor</td><td>Lucy Elliott</td></tr>
+              <tr><td>Voice actor</td><td>Amelia Tyler</td></tr>
+              <tr><td>Voice actor</td><td>Jennifer English</td></tr>
+              <tr><td>Voice actor</td><td>Ben Starr</td></tr>
+              <tr><td>Voice actor</td><td>Matthew Mercer</td></tr>
+              <tr><td>Voice actor</td><td>Alex Ponton</td></tr>
+              <tr><td>Voice actor</td><td>Jane Perry</td></tr>
+              <tr><td>Voice actor</td><td>Elias Toufexis</td></tr>
+              <tr><td>Voice actor</td><td>Kirsty Rider</td></tr>
+              <tr><td>Voice actor</td><td>Nick Apostolides</td></tr>
+              <tr><td>Voice actor</td><td>Anjali Bhimani</td></tr>
+              <tr><td>Voice actor</td><td>Cahla Thorman</td></tr>
+              <tr><td>Voice actor</td><td>Briana White</td></tr>
+              <tr><td>Voice actor</td><td>Rich Keeble</td></tr>
+              <tr><td>Voice actor</td><td>Michael Bryan</td></tr>
+              <tr><td>Voice actor</td><td>David Menkin</td></tr>
+              <tr><td>Voice actor</td><td>Harry McEntire</td></tr>
+              <tr><td>Voice actor</td><td>LilyPichu</td></tr>
+              <tr><td>Voice actor</td><td>Dillon Francis</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </DataBlock>
+      <p>
+        Only two character roles have been named in published coverage so far: Alex Jordan voices Adeos, an elderly
+        and not-quite-all-there figure, and Matthew Mercer voices Gumu, a gremlin-like shopkeeper. The official
+        roster does not map the remaining performers to survivor names, and this page does not infer those pairings
+        from the cast list alone.
+      </p>
+      <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
+        <p>IGN’s September 11 preview heard Alex Jordan’s performance as the elderly Adeos and Matt Mercer’s shopkeeper Gumu in the prologue.</p>
+      </DataBlock>
+      <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
+        <p>The July 16 press release lists the cast with sample credits and identifies Jane Perry as cinematic narrator; it does not assign performers to specific villagers.</p>
+      </DataBlock>
+      <p>
+        The cast is assembled by Cygnus Cross, the independent studio behind the game — Emberville is its debut
+        title, based in Cork, Ireland and led by founder and lead game director Brynjar Gigja, with Twitch streamer
+        Ben “CohhCarnage” Cassell as co-founder and co-game director.
+      </p>
+      <DataBlock source="GamingTrend" url="https://gamingtrend.com/news/get-a-look-at-emberville-before-it-launches-into-early-access-this-october" verified="2026-10-10">
+        <p>GamingTrend names Cygnus Cross’s “Co-founder and Co-Game Director CohhCarnage” and “Lead Game Director Bynja Gigja.”</p>
+      </DataBlock>
+
+      <h2>Character stories, diaries, and quests</h2>
+      <p>
+        The announced interactions span more than a rescue event. Players can hear denizens’ stories, read their
+        diaries, fulfill quests, and engage with townsfolk. The Steam page also says that interaction can unlock
+        mechanics. Together, these details make residents part of the game’s narrative and progression: their stories
+        give context to the prison and town, while quests and teachings connect that context to play.
       </p>
       <p>
-        Combat build discussions should likewise avoid assigning a named villager a weapon bonus or an exclusive skill. The confirmed relationship is general: rescued villagers can help improve weapons and skills, and residents lend skills while the town is rebuilt. For confirmed combat mechanics, see the <Link href="/builds" title="Emberville Builds: Combat &amp; Class Systems Guide">combat and class systems guide</Link>. Release and Early Access statements are tracked separately on the <Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">official Steam news summary</Link>.
+        The store description does not assign a particular diary, quest, unlock, or reward to an individual resident.
+        It also does not say that reading a diary changes a quest outcome. Once Early Access begins, this page will
+        add character names and quest details when they can be checked against the game, rather than treating broad
+        feature descriptions as individual biographies.
       </p>
+
+      <h2>Player character creation and relationships</h2>
+      <p>
+        The player character is customizable: the Steam listing describes dozens of creation options, including
+        hairstyles, beards, facial features, and colors. This is separate from the villagers’ stories and roles in
+        rebuilding. For the combat choices the protagonist can develop alongside those relationships, see the
+        <Link href="/builds" title="Emberville Builds: Combat &amp; Class Systems Guide">Emberville builds and class guide</Link>.
+      </p>
+      <p>
+        Romance and affinity are not confirmed in the cited description. It mentions engaging with townsfolk, quests,
+        stories, and diaries, but does not describe romance routes, affinity values, gift preferences, or relationship
+        thresholds. Those mechanics should not be inferred from the presence of character interactions alone.
+      </p>
+
+      <h2>Related Emberville coverage</h2>
+      <ul>
+        <li><Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">Emberville map and confirmed world spaces</Link></li>
+        <li><Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Emberville news and Early Access announcements</Link></li>
+        <li><Link href="/wiki" title="Emberville Wiki: Setting, Combat &amp; Gameplay Systems">Emberville wiki: setting and gameplay systems</Link></li>
+        <li><Link href="/about/methodology" title="Sources &amp; Methodology | Emberville Guide">Sources and methodology</Link></li>
+      </ul>
 
       <h2>Emberville characters FAQ</h2>
       <FaqList faqs={FAQS} />
-    </article>
+    </AdArticle>
   );
 }

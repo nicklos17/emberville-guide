@@ -5,6 +5,7 @@ import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
+import { AdArticle } from "@/components/ads/AdArticle";
 
 const SEO_TITLE = "Emberville News: Early Access Scope & Roadmap"
 const route = getRoute("/news");
@@ -24,15 +25,43 @@ export function generateMetadata(): Metadata {
 
 export default function NewsPage() {
   return (
-    <article className="article mx-auto w-full max-w-3xl px-4 py-10">
+    <AdArticle className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "News", href: route.path }]} />
       <h1>Emberville Official News and Early Access Summary</h1>
       <p className="answer">
-        This page summarizes information that can be checked on Emberville's official Steam store page, not a speculative patch timeline. The page identifies Cygnus Cross as developer and publisher, lists 27 October 2026 as the planned Early Access date, and describes a fully playable single-player release with substantial content and meaningful updates. The developer says its plans can evolve; this summary distinguishes confirmed store statements from dates and details not supplied.
+        This page summarizes Emberville's dated announcement history from the Steam and GOG store pages, IGN reporting and the developer's own press release, not a speculative patch timeline. The page identifies Cygnus Cross as developer and publisher, lists 27 October 2026 as the planned Early Access date, and describes a fully playable single-player release with substantial content and meaningful updates. The developer says its plans can evolve; this summary distinguishes confirmed statements from dates and details not supplied.
       </p>
 
+      <h2>Emberville announcement timeline</h2>
+      <p>
+        The target date and public demo information have changed from an early seasonal window into specific
+        October dates. This timeline separates IGN’s dated reporting and official-trailer pages from the July
+        developer press release; the release announcement, the release date, and the demo schedule are distinct
+        events rather than one repeated Steam-store statement.
+      </p>
+      <div className="my-4 overflow-x-auto">
+        <table>
+          <thead><tr><th scope="col">Date</th><th scope="col">Announcement or coverage</th><th scope="col">What it records</th></tr></thead>
+          <tbody>
+            <tr><td>January 27, 2026</td><td>IGN announcement report</td><td>PC action-adventure RPG announcement; Early Access then targeted for Summer 2026</td></tr>
+            <tr><td>July 15, 2026</td><td>IGN release-date trailer coverage</td><td>October 27 Early Access date and additional named voice actors</td></tr>
+            <tr><td>July 16, 2026</td><td>Cygnus Cross press release</td><td>Gameplay feature reveal, cast additions, and studio statements on systems and roadmap</td></tr>
+            <tr><td>October 8, 2026</td><td>IGN demo-announcement trailer listing</td><td>Steam Next Fest demo scheduled for October 19–26; PC Early Access on October 27</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <DataBlock source="IGN announcement report" url="https://nordic.ign.com/news/103247/emberville-announced-for-pc-aims-to-be-like-diablo-lite-meets-stardew-valley" verified="2026-10-10">
+        <p>IGN’s January 27 announcement report records the original Summer 2026 Early Access target for PC.</p>
+      </DataBlock>
+      <DataBlock source="IGN demo-announcement trailer listing" url="https://www.ign.com/videos/emberville-official-demo-announcement-trailer-convergence-games-showcase-october-2026" verified="2026-10-10">
+        <p>IGN’s October 8 listing states that the Steam Next Fest demo is scheduled for October 19–26 and Early Access for October 27 on PC.</p>
+      </DataBlock>
+      <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
+        <p>The July 16 developer release announces the October 27 Steam Early Access date and describes its gameplay feature reveal.</p>
+      </DataBlock>
+
       <h2>Official store information at a glance</h2>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-09">
+      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
         <div className="overflow-x-auto my-4">
           <table>
             <thead><tr><th scope="col">Topic</th><th scope="col">What the official page says</th><th scope="col">Important limit</th></tr></thead>
@@ -90,7 +119,7 @@ export default function NewsPage() {
 
       <h2>News policy and related system guides</h2>
       <p>
-        This news page is an official-source summary, not a dated timeline assembled from press articles, community posts, or guessed patch schedules. The planned release date is listed as a store-page fact, not as the date on which a separate announcement was made. Until the official page supplies a dated patch or roadmap entry, no fabricated milestone appears here. The <Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">map and world overview</Link> explains the setting details the store confirms without assigning unnamed areas.
+        This timeline uses dated IGN reporting and trailer listings alongside a developer-authored press release and the Steam store page. IGN is identified as media coverage; the GamesPress-hosted item is identified as Cygnus Cross’s release, not independent GamesPress reporting. No community-post rumor or guessed patch schedule is used. The <Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">map and world overview</Link> explains the world spaces described by the studio without assigning unnamed areas.
       </p>
       <p>
         For mechanics rather than announcements, the <Link href="/builds" title="Emberville Builds: Combat &amp; Class Systems Guide">combat and class systems guide</Link> explains why no tested builds or rankings are claimed from a store description. The <Link href="/item-database" title="Emberville Items: Crafting &amp; Database Reference">item and crafting guide</Link> outlines the announced categories without making up item names or statistics, and the <Link href="/characters" title="Emberville Characters: Survivors &amp; Village Stories">characters and village stories guide</Link> covers the rescue and rebuilding information available from the same first-party source.
@@ -98,6 +127,6 @@ export default function NewsPage() {
 
       <h2>Emberville news FAQ</h2>
       <FaqList faqs={FAQS} />
-    </article>
+    </AdArticle>
   );
 }

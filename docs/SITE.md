@@ -11,6 +11,9 @@ https://emberville-guide.wiki
 # 核心关键词
 Emberville Wiki & Guides
 
+# 游戏研发团队
+Cygnus Cross
+
 # 核心骨架
 一、首页
 Title：Emberville Wiki & Guides – Maps, Builds, Release Date
@@ -71,6 +74,7 @@ H1：Emberville News
 | L1 | Release 附属：Countdown | `/countdown` | `/release-date` 的倒计时组件页；主词仍是 release date 的变体，**不与 `/release-date` 抢词**（`KEYWORDS.md` 已划界） |
 | L1 | Wiki 附属：Item Database | `/item-database` | `/wiki` 四大分组的明细落地页；**管单条目数值，`/wiki` 管结构**（`KEYWORDS.md` 已划界） |
 | — | 法务/功能页 | `/about` `/contact` `/privacy` `/terms` | 不参与关键词竞争，不加广告与 GA4 |
+| — | 来源与方法说明 | `/about/methodology` | 信任与编辑流程页面，不参与关键词竞争，不加广告与 GA4 |
 
 **URL 约定**：实际路径以 `routes.json` 为准，`/release-date` 为准（SITEMAP.md §换页禁改：
 `栏目.md` §3「已上线 URL 一个都不改」——`/release` 从未上线，故保留脚本生成的 `/release-date`）。

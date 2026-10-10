@@ -5,27 +5,24 @@ import { getRoute } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
+import { AdArticle } from "@/components/ads/AdArticle";
 
-const SEO_TITLE = "Emberville Builds: Combat & Class Systems Guide"
+const SEO_TITLE = "Emberville Builds: Combat & Class Systems Guide";
 const route = getRoute("/builds");
 
 const FAQS: Faq[] = [
   {
-    q: "How many combat classes or weapons are available?",
-    a: "The Steam store page gives no class count, weapon roster, or complete skills list. It describes a range of combat classes and weapons, but exact totals should wait for a source that lists them."
+    q: "Can players change class in Emberville?",
+    a: "Yes. The Steam description says players can change class at any time and inherit active or passive skills from other classes they have learned.",
   },
   {
-    q: "Does changing class erase skills learned in another class?",
-    a: "The store page says classes can inherit active and passive skills from other learned classes and that class choice can be changed at any time. It does not explain retention rules, limits, or what happens to an equipped skill during a change."
+    q: "Do weapons have the same combos?",
+    a: "No. The store page describes unique combos for each weapon and says different kinds of attacks can be chained together.",
   },
   {
-    q: "Can I use a controller for combat?",
-    a: "The Early Access description lists keyboard and mouse as well as controller support. It does not publish a button map or platform-specific control layout."
+    q: "Does the store page identify the strongest build?",
+    a: "No tested loadouts, weapon names, damage values, or class rankings are published in the cited description.",
   },
-  {
-    q: "Does the Early Access description list a multiplayer mode?",
-    a: "The store page lists single-player support. It does not describe co-op or competitive modes, so this guide does not assume a multiplayer combat format."
-  }
 ];
 
 export const revalidate = false;
@@ -36,74 +33,121 @@ export function generateMetadata(): Metadata {
 
 export default function BuildsPage() {
   return (
-    <article className="article mx-auto w-full max-w-3xl px-4 py-10">
+    <AdArticle className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Builds", href: route.path }]} />
-      <h1>Emberville Combat Builds: A Responsible Setup Guide</h1>
+      <h1>Emberville Builds: Weapons, Combos, and Classes</h1>
       <p className="answer">
-        Emberville's official description confirms action combat built around positioning, timing, and knowledge; weapon-specific combos; melee, magic, and ranged attacks; and classes whose learned active and passive skills can be inherited across classes. It does not publish tested builds, weapon names, damage values, or skill combinations. This guide explains how to think about a setup using only those confirmed systems, without presenting untested recommendations as results.
+        Emberville builds combine a weapon’s own combo set with a flexible class system: players can change class at
+        any time and inherit active or passive skills from other classes they have learned. Combat offers melee,
+        magic, and ranged approaches, with positioning, timing, and attack chains shaping how each setup plays. The
+        Steam description confirms these systems, but does not publish named loadouts or tested rankings yet.
       </p>
 
-      <h2>What is confirmed about combat</h2>
+      <h2>Emberville combat styles and weapon combos</h2>
       <p>
-        Combat is described as action-focused. The store page says success rewards positioning, timing, and knowledge. Those words establish the broad demands of the system, but they are not numerical advice: no dodge window, stamina rule, enemy resistance chart, damage formula, or precise rotation is specified. A responsible build guide can help readers structure their choices around the disclosed mechanics, while leaving performance claims open until they can be supported.
+        The game describes combat as a mix of positioning, timing, and knowledge. That points to three connected
+        decisions: where to fight from, when to commit to an attack, and which weapon moves to use. Weapons have
+        unique combos, so a weapon is more than a cosmetic choice or a single damage number; its own sequence of
+        attacks shapes the actions available to the player.
       </p>
       <p>
-        Emberville offers melee, magic, and ranged combat, and weapons have unique, weapon-bound combos. It also describes chaining different kinds of attacks. That confirms that a weapon category can affect the moves available and that attack sequencing matters. It does not identify a particular weapon, say which category deals the most damage, or prove that one sequence works in every encounter. Avoid treating a category label as a ranking.
-      </p>
-      <p>
-        The class system is flexible. Players can learn from a wide selection of combat classes, change classes at any time, and use active and passive skills inherited from other learned classes. The store page presents this as a way to develop different styles, but it does not give a skill tree, class names, unlock conditions, slot limits, or compatibility table. Any setup that claims exact requirements or a superior combination would need evidence beyond the currently disclosed store details.
+        The confirmed combat approaches are melee, magic, and ranged. The store page also mentions chaining different
+        types of attacks together. This means a build can be understood through both its preferred range and the
+        weapon-specific moves it brings into a sequence. It does not establish which approach deals more damage,
+        which weapon has the fastest combo, or which chain is best for a particular enemy. Those are questions for
+        in-game testing, not conclusions that can be drawn from the category names alone.
       </p>
 
-      <h2>A framework for planning a setup</h2>
-      <p>
-        A useful setup begins with the kind of decisions the official description actually supports. Start with a preferred attack range, choose a weapon category whose handling you want to learn, and decide which learned class skills suit that approach. Then assess whether your choices let you respond to the encounter through positioning and timing. This is a planning framework, not a claim that one setup has been tested or that the game enforces these as formal roles.
-      </p>
-      <ol>
-        <li><b>Choose a range to practice.</b> Melee, magic, and ranged options are explicitly listed. Decide which distance feels natural to you, but do not infer class restrictions or assume that the categories have fixed damage tiers.</li>
-        <li><b>Learn the weapon's own combo language.</b> The store page confirms weapon-specific combos. Treat each weapon as having its own moves to understand; do not import an assumed combo list or attack speed from another game.</li>
-        <li><b>Think about sequence and spacing together.</b> Because the description calls out chained attack types and positioning, a setup should be evaluated for how its attacks fit into movement and spacing. The actual combo inputs and safe openings are not published here.</li>
-        <li><b>Separate active choices from passive support.</b> The class system names both active and passive skills as inheritable. Record which source class a skill comes from and how the game describes it before claiming that it synergizes with another skill.</li>
-        <li><b>Revisit the setup as you learn.</b> Classes can be changed at any time, so experimentation is part of the stated flexibility. That does not reveal respec costs or the consequences of a switch; those details should not be assumed.</li>
-        <li><b>Judge beyond combat alone.</b> The store page says growth comes through combat, exploration, rebuilding, and choices. A character plan should not be reduced to a damage score when the game explicitly presents several progression activities.</li>
-      </ol>
-
-      <h2>What a future build entry should show</h2>
-      <p>
-        A build listing becomes useful only when another player can understand its context and separate facts from opinion. The fields below are an editorial checklist, not a claim that the game has a particular build screen or data panel. Until an official source documents concrete choices and outcomes, the page should remain a mechanics guide rather than displaying fictional sample loadouts.
-      </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-09">
-        <div className="overflow-x-auto my-4">
+      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
+        <div className="my-4 overflow-x-auto">
           <table>
-            <thead><tr><th scope="col">Build record field</th><th scope="col">Why it matters</th><th scope="col">Current official detail</th></tr></thead>
+            <thead><tr><th scope="col">Confirmed build system</th><th scope="col">What the description establishes</th></tr></thead>
             <tbody>
-              <tr><td><b>Combat approach</b></td><td>Explains intended range and action style</td><td>Melee, magic, and ranged combat are confirmed; role labels are not</td></tr>
-              <tr><td><b>Weapon and combo</b></td><td>Shows the weapon-specific move context</td><td>Unique weapon-bound combos are confirmed; names and inputs are not listed</td></tr>
-              <tr><td><b>Class and inherited skills</b></td><td>Explains active and passive choices</td><td>Inheritance and class switching are confirmed; individual skills are not listed</td></tr>
-              <tr><td><b>Evaluation conditions</b></td><td>Prevents an opinion from appearing universal</td><td>No test mode, encounter, patch result, or performance metric is published</td></tr>
-              <tr><td><b>Evidence and date</b></td><td>Makes the source and scope inspectable</td><td>This page verifies only the official store description on the date shown</td></tr>
+              <tr><td>Combat styles</td><td>Melee, magic, and ranged attacks</td></tr>
+              <tr><td>Weapon identity</td><td>Each weapon has its own combos</td></tr>
+              <tr><td>Attack flow</td><td>Different types of attacks can be chained</td></tr>
+              <tr><td>Class choice</td><td>Players can change class at any time</td></tr>
+              <tr><td>Skill inheritance</td><td>Active and passive skills can be inherited from other learned classes</td></tr>
+              <tr><td>Progression</td><td>Combat, exploration, rebuilding, quests, choices, items, and villager help all contribute</td></tr>
             </tbody>
           </table>
         </div>
       </DataBlock>
 
-      <h2>Progression is broader than a combat setup</h2>
+      <h2>IGN preview: mastery trees, loot, and stat points</h2>
       <p>
-        Emberville describes character growth as a mix of battle experience, quests, exploration, rebuilding, and choices. Weapons and skills can be improved through leveling, items, and help from rescued villagers, according to the store page. It also connects professions and crafting to restoration of the town. These statements mean a combat-only guide cannot explain every route to character development; it should make its scope explicit instead of calling one loadout a complete progression solution.
+        IGN’s September 11 hands-on preview reports mastery and class skill trees, loot, and stat points the player
+        could distribute. That makes the build conversation more concrete than weapon categories alone: progression
+        appeared to include tree-based mastery and player-selected stats in the preview. The report does not provide
+        a full tree, stat formula, named best setup, or a comparative damage test, so these observations should not
+        be stretched into build rankings.
+      </p>
+      <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
+        <p>Scott White’s September 11 preview reports mastery and class skill trees, loot, and points to distribute among stats.</p>
+      </DataBlock>
+
+      <h2>Combat inputs and the adaptive HUD</h2>
+      <p>
+        The July developer feature release describes combat as a two-button base expanded by weapon-bound combos
+        and class-related combat skills. It also describes a dynamic interface that changes the HUD around the
+        player’s needs. Those details frame a setup as a combination of weapon moves, inherited class abilities,
+        and information the interface presents—not simply a class name. The release does not name button inputs or
+        explain the final HUD rules, and the IGN preview is an early look rather than a launch-build test.
+      </p>
+      <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
+        <p>The developer describes a two-button combat foundation, weapon-bound combos, class skills, and a dynamic HUD.</p>
+      </DataBlock>
+
+      <h2>Emberville classes and inherited skills</h2>
+      <p>
+        Class choice is presented as flexible rather than permanent. Players can learn from a range of combat
+        classes, switch classes at any time, and inherit active and passive skills from classes they have learned.
+        The important distinction is between the class currently selected and skills retained from other learned
+        classes: the description explicitly connects class learning with inheritance, allowing a character’s combat
+        style to draw on more than one class over time.
       </p>
       <p>
-        The description says the deeper the player ventures, the stronger foes become, and encourages experimenting with fighting techniques to find a build and weapon category that suits an individual playstyle. That is a broad design statement, not a disclosed difficulty curve or a promise that a specific category counters a named enemy. For the setting behind exploration, use the <Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">confirmed world and map guide</Link>. For people who contribute skills and teachings after rescue, see the <Link href="/characters" title="Emberville Characters: Survivors &amp; Village Stories">survivors and village stories page</Link>.
-      </p>
-      <p>
-        Equipment is part of the announced Early Access feature set, while gathering, crafting, farming, and cooking are also described. The official page does not provide actual item stats, recipe data, or a list of equipment slots, so this guide does not turn those broad categories into a supposed best-in-slot table. See the <Link href="/item-database" title="Emberville Items: Crafting &amp; Database Reference">items and crafting database guide</Link> for the confirmed category boundaries. Official game announcements and scope notes are summarized on the <Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Emberville news page</Link>.
+        That flexibility gives class and weapon choices separate jobs in a setup. The weapon determines its own
+        combos; class skills add active or passive abilities that can be inherited. The Steam page does not list
+        class names, individual skills, inheritance limits, slots, prerequisites, or how a class change affects an
+        equipped ability. It is therefore possible to explain the structure of the system, but not to prescribe a
+        specific class-and-skill combination yet.
       </p>
 
-      <h2>What this page deliberately does not rank</h2>
+      <h2>How progression shapes a build</h2>
       <p>
-        No tier list appears here because the Steam store page does not report play-tested results. There are no named weapons, classes, enemies, skill values, damage measurements, or encounter conditions in the source used for this guide. A speculative combination dressed up with confident wording would be less informative than a clear account of the systems and their limits. When first-party material identifies additional mechanics, the guide can add those facts without retroactively claiming that a build was tested.
+        Builds sit inside a broader progression loop. The store description says character growth comes through
+        combat, exploration, rebuilding, and choices. Weapons and skills can be improved through leveling, items,
+        and help from rescued villagers; quests and exploration also contribute to development. A build is therefore
+        more than a combat menu: it grows alongside the player’s activity in the prison and the work of restoring
+        Emberville.
       </p>
+      <p>
+        The description also says foes become stronger the deeper the player ventures and encourages experimentation
+        with fighting techniques. Combined with the ability to change class at any time, that supports trying
+        different approaches as new challenges appear. It does not reveal an exact difficulty curve or guarantee
+        that a class switch is free of costs. For the spaces behind that exploration loop, see the
+        <Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">Emberville map and areas guide</Link>; the <Link href="/characters" title="Emberville Characters: Survivors &amp; Village Stories">survivors and village stories page</Link> covers how rescued residents contribute to progression.
+      </p>
+
+      <h2>Emberville build data after launch</h2>
+      <p>
+        The current Steam description does not provide actual weapon or skill names, item statistics, or tested
+        loadouts, so there is no evidence-based “best build” to rank before hands-on play. After Early Access begins,
+        this guide will add setups only when their weapon, class skills, use case, and test context can be checked
+        against the game. The <Link href="/item-database" title="Emberville Items: Crafting &amp; Database Reference">item database</Link> will cover individual equipment and item details rather than build recommendations.
+      </p>
+
+      <h2>Related Emberville coverage</h2>
+      <ul>
+        <li><Link href="/wiki" title="Emberville Wiki: Setting, Combat &amp; Gameplay Systems">Emberville wiki and gameplay systems</Link></li>
+        <li><Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Early Access scope and official announcements</Link></li>
+        <li><Link href="/release-date" title="Emberville Early Access Date 2026: Price &amp; Scope">Early Access date and release details</Link></li>
+        <li><Link href="/about/methodology" title="Sources &amp; Methodology | Emberville Guide">How sources and test findings are handled</Link></li>
+      </ul>
 
       <h2>Emberville builds FAQ</h2>
       <FaqList faqs={FAQS} />
-    </article>
+    </AdArticle>
   );
 }

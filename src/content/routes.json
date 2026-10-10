@@ -2,8 +2,8 @@
   {
     "path": "/",
     "title": "Emberville Wiki & Guides – Maps, Builds, Release Date",
-    "description": "The Emberville wiki and guides hub: official game premise, gameplay systems, Early Access details, map context and sourced updates. Unknowns are marked.",
-    "lastModified": "2026-10-09",
+    "description": "Explore Emberville's prison setting, the Memento, combat and crafting, the official 22-name voice cast, and how the game compares to Stardew Valley and Diablo.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -11,8 +11,8 @@
   {
     "path": "/wiki",
     "title": "Emberville Wiki: Setting, Combat & Gameplay Systems",
-    "description": "Emberville wiki covers the setting, combat and crafting described by Cygnus Cross, marking undisclosed locations, item values and names.",
-    "lastModified": "2026-10-09",
+    "description": "Explore Emberville's Vitromotus, the Memento, class and mastery trees, combat, crafting, the Cygnus Cross studio and voice cast, and the Stardew Valley and Diablo comparison.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -20,8 +20,8 @@
   {
     "path": "/guides",
     "title": "Emberville Guides: Systems, Prep & Verified Tips",
-    "description": "This Emberville guide explains confirmed systems and combat from Steam, separating pre-launch orientation from tactics that require hands-on testing.",
-    "lastModified": "2026-10-09",
+    "description": "Compare Emberville's announced combat and crafting systems with IGN's preview of mastery trees, loot, and stat points; separate early observations from launch tactics.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -29,8 +29,8 @@
   {
     "path": "/release-date",
     "title": "Emberville Early Access Date 2026: Price & Scope",
-    "description": "Emberville enters Early Access on 27 October 2026. Check Steam-listed scope, minimum PC requirements, purchase model and the developer's roadmap estimate.",
-    "lastModified": "2026-10-09",
+    "description": "Check Emberville's October 27 Early Access date against Steam, GOG, and IGN coverage, plus the developer's price, scope, and PC requirements.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -38,8 +38,8 @@
   {
     "path": "/countdown",
     "title": "Emberville Early Access Countdown 2026: Calendar",
-    "description": "Track Emberville's 27 October 2026 Early Access date without guessing its unlock time; understand the date-only reference and separate 1.0 estimate.",
-    "lastModified": "2026-10-09",
+    "description": "Track the October 27, 2026 date shown by Steam and GOG, follow IGN's date announcement timeline, and distinguish the calendar day from an unlock time.",
+    "lastModified": "2026-10-10",
     "priority": 0.8,
     "changeFrequency": "daily",
     "pageLive": true
@@ -47,8 +47,8 @@
   {
     "path": "/map",
     "title": "Emberville Map: Confirmed Areas & World Guide",
-    "description": "Explore Emberville's confirmed world: the Vitromotus, tunnels, ruins, settlements and biomes. See which map names and routes remain undisclosed.",
-    "lastModified": "2026-10-09",
+    "description": "Explore the Vitromotus, its tunnels and ruins, survivor settlements, strange biomes, and Emberville town in the confirmed game world.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -56,8 +56,8 @@
   {
     "path": "/builds",
     "title": "Emberville Builds: Combat & Class Systems Guide",
-    "description": "Learn Emberville's confirmed combat styles, weapon combos and flexible classes; no untested build rankings or invented equipment statistics.",
-    "lastModified": "2026-10-09",
+    "description": "Understand Emberville's melee, magic and ranged combat, weapon-specific combos, class switching, and inherited skills for flexible builds.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -65,8 +65,8 @@
   {
     "path": "/item-database",
     "title": "Emberville Items: Crafting & Database Reference",
-    "description": "Explore Emberville's confirmed crafting categories and database approach, without invented item names, recipes, sources or statistics.",
-    "lastModified": "2026-10-09",
+    "description": "See Emberville's confirmed equipment, potions, food, tools, trinkets, crafting, cooking, and personal-estate systems for the journey.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -74,8 +74,8 @@
   {
     "path": "/characters",
     "title": "Emberville Characters: Survivors & Village Stories",
-    "description": "Read what Emberville's Steam page confirms about survivors, villagers, quests and rebuilding—and what it does not say about names or relationships.",
-    "lastModified": "2026-10-09",
+    "description": "Learn how Emberville survivors support quests, rebuilding, and progression, plus the official 22-name voice cast led by voice-acting director Alex Jordan.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -83,8 +83,8 @@
   {
     "path": "/news",
     "title": "Emberville News: Early Access Scope & Roadmap",
-    "description": "A source-checked Emberville Steam summary of Early Access scope, developer plans and dates, prices and updates that remain unannounced.",
-    "lastModified": "2026-10-09",
+    "description": "Follow Emberville's PC announcement, October Early Access date, Steam Next Fest demo, developer feature release, and evolving 1.0 roadmap.",
+    "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -93,7 +93,16 @@
     "path": "/about",
     "title": "About the Unofficial Emberville Fan Hub | Emberville Guide",
     "description": "What Emberville Guide covers, how it sources Emberville information, and why every date, code and build on the site carries a source and verification date.",
-    "lastModified": "2026-10-09",
+    "lastModified": "2026-10-10",
+    "priority": 0.3,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
+    "path": "/about/methodology",
+    "title": "Sources & Methodology",
+    "description": "Learn how Emberville Guide verifies claims, uses official and community sources, records hands-on findings, and handles unknowns.",
+    "lastModified": "2026-10-10",
     "priority": 0.3,
     "changeFrequency": "monthly",
     "pageLive": true

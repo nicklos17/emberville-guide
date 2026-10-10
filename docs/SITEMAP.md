@@ -67,7 +67,7 @@
 | 核心栏目页（SITE.md 7 栏目 `/wiki` `/guides` `/release-date` `/map` `/builds` `/characters` `/news`） | 0.9 | daily |
 | 从属页（`/countdown` `/item-database`） | 0.9 | daily |
 | 深度详情页（L2，当前不存在） | 0.7 | daily |
-| 政策页 `/about` `/contact` | 0.3 | monthly |
+| 政策/来源说明页 `/about` `/about/methodology` `/contact` | 0.3 | monthly |
 | `/privacy` `/terms` | 0.2 | yearly |
 
 - 新页默认向同层级现页看齐。

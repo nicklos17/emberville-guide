@@ -5,6 +5,7 @@ import { getRoute, routeTitle } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
+import { AdArticle } from "@/components/ads/AdArticle";
 
 const SEO_TITLE = "Emberville Guides: Systems, Prep & Verified Tips"
 const route = getRoute("/guides");
@@ -36,7 +37,7 @@ export function generateMetadata(): Metadata {
 
 export default function GuidesPage() {
   return (
-    <article className="article mx-auto w-full max-w-3xl px-4 py-10">
+    <AdArticle className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Guides", href: route.path }]} />
       <h1>Emberville Guides: A Pre-Launch Systems Tour</h1>
       <p className="answer">
@@ -56,7 +57,7 @@ export default function GuidesPage() {
         broad setting and stakes; it is not enough to name the protagonist, list every location or reconstruct
         the story chapter by chapter.
       </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-09">
+      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
         <div className="overflow-x-auto my-4">
           <table>
             <thead><tr><th scope="col">System area</th><th scope="col">Confirmed information</th><th scope="col">Still to test or learn</th></tr></thead>
@@ -75,8 +76,8 @@ export default function GuidesPage() {
         The store listing presents several kinds of progress: fight, explore, rebuild and make choices. It also
         describes survivor rescue, crafting and an estate. A helpful mental model is that these activities can
         reinforce one another. Exploring may bring the player into contact with survivors and materials; combat
-        challenges the player's timing and equipment choices; making things can produce gear, potions, food,
-        tools and accessories; and rebuilding links underground activity to the town's recovery.
+        challenges the player's timing and equipment choices; making things can produce equipment, potions, food,
+        tools and trinkets; and rebuilding links underground activity to the town's recovery.
       </p>
       <p>
         That model is a connection between disclosed systems, not a prescribed quest order. There is no confirmed
@@ -103,6 +104,17 @@ export default function GuidesPage() {
         and weapon-specific combos.
       </p>
 
+      <h2>What the IGN preview saw in progression</h2>
+      <p>
+        A September hands-on preview by IGN’s Scott White reports mastery and class skill trees, loot, and points
+        the player could distribute among stats. That observation gives this pre-launch guide a concrete picture of
+        what progression may look like in play, beyond the high-level feature list. It is still a preview snapshot:
+        the article does not establish a finished skill tree, optimal allocation, or the full release balance.
+      </p>
+      <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
+        <p>IGN’s September 11 preview reports mastery and class skill trees, loot, and stat points to distribute in the build it played.</p>
+      </DataBlock>
+
       <h2>Class flexibility and loadout planning</h2>
       <p>
         The store page says players can switch classes at any time and inherit class skills as active or passive
@@ -120,10 +132,23 @@ export default function GuidesPage() {
         for actual in-game evidence before treating any combination as optimal.
       </p>
 
+      <h2>Combat interface and layered controls</h2>
+      <p>
+        Cygnus Cross’s July feature release describes a simple two-button base with additional depth from weapon-bound
+        combos and class-related skills. It also describes a dynamic UI that changes the HUD in response to what the
+        player needs to manage. Those statements offer a useful way to read combat footage: look for how the weapon
+        sequence, inherited class ability and interface work together, rather than assuming that a compact control
+        scheme means combat has only two actions. The press release does not provide exact inputs or a complete HUD
+        rule set.
+      </p>
+      <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
+        <p>The developer release describes two-button combat expanded by weapon-bound combos and class skills, alongside a HUD that adapts to player needs.</p>
+      </DataBlock>
+
       <h2>Making resources useful</h2>
       <p>
         Gathering, crafting, farming and cooking are all part of the announced game. The player can collect
-        materials to make equipment, potions, food, tools and accessories. As a player-facing orientation, keep
+        materials to make equipment, potions, food, tools and trinkets. As a player-facing orientation, keep
         those outputs in mind when considering why a resource activity might matter: some crafted categories are
         directly named, while their recipes and exact use cases remain to be confirmed. The listing does not tell
         us which resources are common, how much storage exists, whether any recipe is missable or how long a crop
@@ -193,10 +218,10 @@ export default function GuidesPage() {
       <h2>Emberville guides FAQ</h2>
       <FaqList faqs={FAQS} />
       <p>
-        The Steam listing was checked on <b>2026-10-09</b>. This page uses it as its sole game-information source.
-        It is a useful starting guide precisely because it labels the line between announced systems and advice
-        that will need to wait for real play.
+        This guide combines the developer’s store and feature descriptions with IGN’s dated hands-on preview.
+        Developer statements describe planned mechanics; the preview reports observations from an earlier playable
+        look. Neither substitutes for testing a launch build, so tactics and optimal setups still require direct play.
       </p>
-    </article>
+    </AdArticle>
   );
 }
