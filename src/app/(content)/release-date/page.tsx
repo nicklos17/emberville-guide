@@ -140,17 +140,10 @@ export default function ReleaseDatePage() {
 
       <h2>Price and purchase model</h2>
       <p>
-        The store information checked for this page publishes no exact price. The developer says the game will be
-        a one-time purchase with no microtransactions, and that the price will remain stable, while discounts may
-        be offered during Early Access. “Price will remain stable” is the developer's stated plan; it stops short
-        of a currency amount, regional price, discount date or discount percentage. For that reason, the table
-        reports the price as <b>Not announced</b> instead of a guessed retail figure.
-      </p>
-      <p>
-        A discount differs from a permanent price change, and the base amount stays unstated in both. Readers
-        deciding whether to buy should check the current store listing when purchase becomes available. This guide
-        records only the stated policy and date of verification, leaving launch offers and cross-storefront price
-        comparisons aside.
+        The store information checked for this page publishes no exact price: the developer describes a one-time
+        purchase with no microtransactions and a price that stays stable, with discounts possible during Early
+        Access, but gives no currency amount, regional price or discount date. The summary table above therefore
+        reports price as <b>Not announced</b> rather than a guessed retail figure.
       </p>
 
       <h2>Minimum PC requirements</h2>
@@ -182,22 +175,40 @@ export default function ReleaseDatePage() {
         checking a system, and revisit the listing if the developer changes requirements during development.
       </p>
 
-      <h2>Why the release date has no clock time</h2>
+      <h2>Emberville release time: the listing gives a day, not an hour</h2>
       <p>
-        The official listing states 27 October 2026 and stops at a calendar day, leaving the precise unlock time
-        unpublished. An exact hour would therefore be an unsupported claim. Time-zone conversions need a known
-        instant to work from, and a bare date supplies none. The companion{" "}
-        <Link href="/countdown" title={routeTitle("/countdown")}>Emberville countdown: date vs unlock time</Link> explains how its
-        date-boundary timer is presented as a calendar reference rather than a store unlock schedule.
+        The official listings state 27 October 2026 and stop at a calendar day. Steam and GOG publish no unlock hour
+        and no timezone for that day, so an exact “release time” would be an unsupported claim. A clock time only
+        exists once a source names one; a bare date supplies none, which is why time-zone conversions of the date
+        produce derived hours rather than announced ones. The homepage timer follows the same limit: it counts to the
+        start of 27 October 2026 in UTC as a display boundary for the calendar day, not as a store unlock instant.
+      </p>
+
+      <h2>Emberville unlock time and regional availability</h2>
+      <p>
+        When the day arrives is a separate question from when the store button becomes active. Because no unlock hour
+        is published, we cannot say whether Emberville goes live at a single moment worldwide or rolls out region by
+        region. Anyone who needs to know whether access is live should check the Steam or GOG listing directly rather
+        than a calendar panel, since the storefront shows the real availability for your account and region. A
+        countdown timer can only mark the calendar day; the announcement history on this page explains how that day
+        was set in the first place.
       </p>
       <p>
-        Dated announcements, including the demo window and the Early Access reveal, are collected on the{" "}
-        <Link href="/news" title={routeTitle("/news")}>Emberville news page</Link>.
+        Dated announcements, including the demo window that runs ahead of launch, are collected on the{" "}
+        <Link href="/news" title={routeTitle("/news")}>Emberville news page</Link>, with the free Next Fest demo
+        covered in detail on the{" "}
+        <Link href="/news/emberville-demo" title={routeTitle("/news/emberville-demo")}>Emberville demo dates and content page</Link>.
       </p>
       <p>
-        For a plain-language introduction to the features and their limits, see the{" "}
-        <Link href="/guides" title={routeTitle("/guides")}>pre-launch systems guide</Link>. The{" "}
-        <Link href="/wiki" title={routeTitle("/wiki")}>wiki overview</Link> groups the setting, combat and
+        For the confirmed platform set behind the date, see the{" "}
+        <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platforms and console status</Link>; for
+        the pricing policy while the amount stays unannounced, see the{" "}
+        <Link href="/price" title={routeTitle("/price")}>Emberville price and purchase model</Link>. For a
+        plain-language introduction to the features and their limits, see the{" "}
+        <Link href="/guides" title={routeTitle("/guides")}>pre-launch systems guide</Link>.
+      </p>
+      <p>
+        The <Link href="/wiki" title={routeTitle("/wiki")}>wiki overview</Link> groups the setting, combat and
         progression categories. These references draw on the same dated first-party and media sources and avoid
         assigning roadmap items or launch details that the store pages leave unconfirmed.
       </p>

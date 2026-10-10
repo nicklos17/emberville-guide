@@ -36,11 +36,29 @@
     "pageLive": true
   },
   {
-    "path": "/countdown",
-    "title": "Emberville Countdown 2026: Date vs Unlock Time",
-    "description": "See what Emberville’s October 27 calendar date means, why it is not an announced unlock time, and how to read the countdown boundary.",
+    "path": "/platforms",
+    "title": "Emberville Platforms: PS5, Switch & Console Status",
+    "description": "Emberville platforms: PC on Steam and GOG is confirmed, while PS5, Xbox, Switch, Switch 2 and mobile are unannounced. What each source lists.",
     "lastModified": "2026-10-10",
-    "priority": 0.5,
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/platforms/multiplayer",
+    "title": "Emberville Multiplayer: Co-op Status Explained",
+    "description": "Emberville multiplayer status: Steam lists the game as single-player, and the roadmap’s Workshop modding is a modding feature, not a co-op mode.",
+    "lastModified": "2026-10-10",
+    "priority": 0.7,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/price",
+    "title": "Emberville Price 2026: Purchase Model & What's Announced",
+    "description": "Emberville price: no amount is announced. Confirmed is a one-time purchase, no microtransactions, a stable price and possible Early Access discounts.",
+    "lastModified": "2026-10-10",
+    "priority": 0.8,
     "changeFrequency": "daily",
     "pageLive": true
   },
@@ -108,6 +126,15 @@
     "pageLive": true
   },
   {
+    "path": "/games-like-emberville",
+    "title": "Games Like Emberville: Similar Action RPGs Compared",
+    "description": "Games like Emberville compared by mechanic: Core Keeper, Moonlighter, DREDGE and Dimraeth, matched to Emberville’s combat, crafting and town building.",
+    "lastModified": "2026-10-10",
+    "priority": 0.8,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
     "path": "/news",
     "title": "Emberville News & Updates: Announcements & Launches",
     "description": "Follow dated Emberville news and updates from Cygnus Cross, including launch announcements, gameplay reveals, and the Steam Next Fest demo.",
@@ -121,7 +148,7 @@
     "title": "Emberville Demo Dates, Content & Early Access Explained",
     "description": "Trying the Emberville demo? See its Oct 19–26, 2026 Steam Next Fest dates, Oct 27 Early Access launch, confirmed facts, and what to check before buying.",
     "lastModified": "2026-10-10",
-    "priority": 0.7,
+    "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
   },

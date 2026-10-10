@@ -20,10 +20,10 @@ Title：Emberville Wiki & Guides – Maps, Builds, Release Date
 H1：Emberville Wiki & Guides for the whole dungeon
 
 段落大意：1.一句话说清这站是什么、给谁用——"Emberville 的完整资料库与攻略站，覆盖抢先体验版的地图、装备数据库、角色与 Boss"。
-2.release date设计，配上countdown
-3.紧接着一排入口卡片指向 7 个栏目（让首页把权重分下去）。第三段放"最新更新"列表（3~5 条时效内容）。全站之力围绕 emberville wiki（KD 11.9，极易）+ emberville guide（KD 24.9，容易） 这两个词面。
+2.release date 与解锁时间设计（原 `/countdown` 倒计时页已撤，内容并入 `/release-date`）
+3.紧接着一排入口卡片指向核心栏目（卡片网格 + 正文内链共同覆盖 8 个栏目，让首页把权重分下去）。第三段放"最新更新"列表（3~5 条时效内容）。全站之力围绕 emberville wiki（KD 11.9，极易）+ emberville guide（KD 24.9，容易） 这两个词面。
 
-二、7 个栏目的 TDH 与段落大意
+二、8 个栏目的 TDH 与段落大意
 1. Wiki（/wiki/） — 主承接 emberville wiki
 
 Title：Emberville Wiki: Weapons, Items, Characters & Bosses
@@ -38,7 +38,7 @@ H1：Emberville Guides
 
 Title：Emberville Early Access Date 2026 | Emberville Guide
 H1：Emberville Early Access Date and Launch Status
-段落：这是上线前唯一有官方搜索量撑着的栏目（release date 880/月，另叠加 switch 110、steam 110、ps5 90、multiplayer 70、price 10）。第一段直接给日期和平台，用表格列 平台/日期/价格/抢先体验状态；后面接"会不会上 Switch""能不能联机"这类问答段落。
+段落：这是上线前唯一有官方搜索量撑着的栏目（release date 880/月，另叠加 steam 110）。第一段直接给日期和平台，用表格列 平台/日期/价格/抢先体验状态；用文字补 `Emberville release time` / `Emberville unlock time` 两个词面。平台词（ps5 / switch / switch 2 / console / xbox / mobile）交给 `/platforms`，联机词（multiplayer）交给 `/platforms/multiplayer`，价格词（price）交给 `/price`，本页只留摘要与内链。
 4. Map & Areas（/map/） — 主承接 emberville map
 
 Title：Emberville Map & Areas: Regions, Dungeons & Loot
@@ -59,33 +59,42 @@ H1：Emberville Characters
 Title：Emberville News & Updates: Announcements & Launches
 H1：Emberville News and Updates
 段落：用 1–2 句说明本页汇总有日期、可追溯来源的 Emberville 新闻与更新；之后按日期倒序列出公告和详情页入口。栏目页只作简要摘要与分发，不重复新闻详情页的完整内容或争抢其专题词。
+8. Platforms（/platforms/） — 主承接 `emberville platforms`
+
+Title：Emberville Platforms: PS5, Switch & Console Status
+H1：Where You Can Play Emberville: PS5, Switch and Console Status
+段落：一页回答六个同义问句（ps5 / xbox / switch / switch 2 / console / mobile）——官方目前只有 PC（Steam 与 GOG），主机与移动端均未公布。首段一句给结论，随后按 PS5/Xbox、Switch 与 Switch 2、mobile 分节，一律写「未公布」而非「不会出」，末节一句话说明本页如何更新。联机状态由子页 `/platforms/multiplayer` 承接。
 
 ---
 
 # 栏目层级与 URL 映射（实现口径）
 
-上面 7 个是**核心栏目**。实际站点另有 2 个从属页，均为内容页（带广告、进 sitemap、
-出现在顶部导航与页脚），它们**不是第 8、第 9 个栏目**：
+上面 8 个是**核心栏目**。实际站点另有 2 个从属页、1 个栏目子页与 4 个专题页，均为内容页
+（带广告、进 sitemap 或页脚），它们**不算核心栏目**：
 
 | 层级 | 页面 | URL | 定位 |
 | --- | --- | --- | --- |
 | L0 | 首页 | `/` | 栏目入口分发 |
-| L1 | 7 个核心栏目 | 见上表 | 承接栏目词 |
-| L1 | Release 附属：Countdown | `/countdown` | `/release-date` 的倒计时组件页；主词仍是 release date 的变体，**不与 `/release-date` 抢词**（`KEYWORDS.md` 已划界） |
+| L1 | 8 个核心栏目 | 见上表 | 承接栏目词 |
+| L1 | Release 附属：Price | `/price` | `/release-date` 的价格落地页；**只写官方口径**（未公布具体售价、一次性买断、无微交易），不与 `/release-date` 抢日期词（`KEYWORDS.md` 已划界） |
 | L1 | Wiki 附属：Item Database | `/item-database` | `/wiki` 四大分组的明细落地页；**管单条目数值，`/wiki` 管结构**（`KEYWORDS.md` 已划界） |
+| L2 | Platforms 子页：Multiplayer | `/platforms/multiplayer` | 独立承接 `Emberville multiplayer` / `is Emberville multiplayer` / `will Emberville be multiplayer`；单机结论、Steam 商店口径、Workshop 模组≠联机（`KEYWORDS.md` 已划界） |
 | L1 | 专题页：Voice Cast | `/voice-cast` | 独立承接 `Emberville voice cast`；`/characters` 只留摘要与内链，不再复写 22 人全表 |
 | L1 | 专题页：Studio | `/studio` | 独立承接 `Emberville developer` / `Cygnus Cross`；工作室与 CohhCarnage 背景的落地页 |
 | L1 | 专题页：Comparison | `/stardew-valley-diablo` | 独立承接 `Emberville vs Stardew Valley and Diablo`；媒体对比口径的落地页 |
+| L1 | 专题页：Games Like | `/games-like-emberville` | 独立承接 `games like Emberville`；按机制而非品类匹配的横向扩展页，是 `stardew-valley-diablo` 的补充 |
 | — | 法务/功能页 | `/about` `/contact` `/privacy` `/terms` | 不参与关键词竞争，不加广告与 GA4 |
 | — | 来源与方法说明 | `/about/methodology` | 信任与编辑流程页面，不参与关键词竞争，不加广告与 GA4 |
 
 **URL 约定**：实际路径以 `routes.json` 为准，`/release-date` 为准（SITEMAP.md §换页禁改：
 `栏目.md` §3「已上线 URL 一个都不改」——`/release` 从未上线，故保留脚本生成的 `/release-date`）。
 
-**栏目总数口径**：对外说「7 个核心栏目」；`/countdown`、`/item-database` 表述为
-「Release 的倒计时页」「Wiki 的条目明细页」，`/voice-cast`、`/studio`、`/stardew-valley-diablo`
-表述为「专题页」，均不得称其为独立栏目。专题页**不进顶部导航**（导航仍只放 7 个栏目 + 首页），
-由首页正文与相关栏目页正文内链进入。
+**栏目总数口径**：对外说「8 个核心栏目」（2026-10-10 起由 7 个增为 8 个，新增 Platforms）；
+`/price`、`/item-database` 表述为「Release 的价格落地页」「Wiki 的条目明细页」，
+`/platforms/multiplayer` 表述为「Platforms 的子页」，`/voice-cast`、`/studio`、
+`/stardew-valley-diablo`、`/games-like-emberville` 表述为「专题页」，均不得称其为独立栏目。
+专题页**不进顶部导航**（导航只放 8 个栏目 + 首页），由首页正文与相关栏目页正文内链进入；
+Platforms 栏目在导航中占一项，其子页 `/platforms/multiplayer` 不进导航，由栏目页正文内链进入。
 
 > **专题页的设立判据**（2026-10-10 立规）：当某个栏目页的某一节本身对应**独立搜索需求**、
 > 且该节把栏目页篇幅推到 1800 词以上时，拆为专题页——栏目页只留摘要 + 内链，专题页承接该节词形。

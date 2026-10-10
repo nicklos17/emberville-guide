@@ -265,7 +265,9 @@ export default function HomePage() {
           roadmap sets no dated schedule and no order of delivery. For the
           individual
           date, platform and price status, use the{" "}
-          <Link href="/release-date" title={routeTitle("/release-date")}>release-date reference</Link>.
+          <Link href="/release-date" title={routeTitle("/release-date")}>release-date reference</Link>. Ahead of
+          launch, the free Steam Next Fest demo is covered on the{" "}
+          <Link href="/news/emberville-demo" title={routeTitle("/news/emberville-demo")}>Emberville demo page</Link>.
         </p>
 
         <h2>Emberville confirmed facts and open details</h2>
@@ -310,9 +312,11 @@ export default function HomePage() {
           a calendar launch date stops short of the hour at which a store will unlock a product. Our practical
           references follow that distinction. The{" "}
           <Link href="/wiki" title={routeTitle("/wiki")}>Emberville wiki</Link> organizes the setting and systems,
-          while the{" "}
-          <Link href="/countdown" title={routeTitle("/countdown")}>Emberville countdown: date vs unlock time</Link> explains exactly
-          what the date timer represents and where that reference ends.
+          the{" "}
+          <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platforms status page</Link> separates
+          the confirmed PC release from the unannounced console versions, and the{" "}
+          <Link href="/price" title={routeTitle("/price")}>Emberville price page</Link> records the purchase model
+          while the amount is still unannounced.
         </p>
 
         <h2>Emberville comparison: Stardew Valley vs Diablo</h2>

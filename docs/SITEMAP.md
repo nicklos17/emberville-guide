@@ -24,7 +24,7 @@
    - `changeFrequency` / `priority` 按下文分档表。
 4. 需要入口时更新 `navigation.json`（顶部 `navLinks` 或页脚 `footerLinks`）。
    **入口归属按 `SITE.md` 的栏目表判断**——不是每个新页都要进顶部导航，
-   导航只放 7 栏目 + 2 从属页，其余入口走页脚全集或父栏目正文。
+   导航只放 8 栏目 + 从属页，其余入口走页脚全集或父栏目正文。
 5. `docs/CHANGELOG.md` 当日记一行——**该文件是所有日期戳的源头**。
 6. 数据文件驱动的详情页走例外流程：不进 routes.json，翻对应数据文件的 `pageLive`，
    并核对核验日常量是否需要前移。
@@ -64,9 +64,11 @@
 | 页型 | priority | changeFrequency |
 | --- | --- | --- |
 | `/` | 1.0 | daily |
-| 核心栏目页（SITE.md 7 栏目 `/wiki` `/guides` `/release-date` `/map` `/builds` `/characters` `/news`） | 0.9 | daily |
-| 从属页（`/countdown` `/item-database`） | 0.9 | daily |
-| 深度详情页（L2，当前不存在） | 0.7 | daily |
+| 核心栏目页（SITE.md 8 栏目 `/wiki` `/guides` `/release-date` `/platforms` `/map` `/builds` `/characters` `/news`） | 0.9 | daily |
+| 从属页（`/item-database` `/price`） | 0.9 | daily |
+| 专题页（`/voice-cast` `/studio` `/stardew-valley-diablo` `/games-like-emberville`） | 0.8 | monthly |
+| 栏目子页（`/platforms/multiplayer`） | 0.7 | daily |
+| L2 详情页（`/news/emberville-demo`；时效页，Next Fest 期间提级 0.9） | 0.7–0.9 | daily |
 | 政策/来源说明页 `/about` `/about/methodology` `/contact` | 0.3 | monthly |
 | `/privacy` `/terms` | 0.2 | yearly |
 

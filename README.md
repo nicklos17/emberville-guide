@@ -14,7 +14,8 @@ npm run deploy       # Cloudflare Workers（需 wrangler 登录）
 
 ## 已生成内容
 
-- 内容页：`/release-date`, `/countdown`, `/item-database`, `/guides`, `/builds`
+- 内容页（栏目）：`/wiki` `/guides` `/release-date` `/platforms` `/map` `/builds` `/characters` `/news`
+- 内容页（从属/专题/子页）：`/item-database` `/price` `/platforms/multiplayer` `/voice-cast` `/studio` `/stardew-valley-diablo` `/games-like-emberville` `/news/emberville-demo`
 - 政策页：`/about` `/contact` `/privacy` `/terms`（联系邮箱 support@emberville-guide.wiki）
 - 基础设施：`/sitemap.xml`、`/robots.txt`、`/rss.xml`、`/llms.txt`、og 占位图、favicon
 - 数据登记：`src/content/routes.json`（sitemap/日期戳单一来源）、`src/content/navigation.json`
@@ -35,5 +36,5 @@ npm run deploy       # Cloudflare Workers（需 wrangler 登录）
 ## 内容红线（AGENT.md §1，最高优先级）
 
 不编造名称/数值/日期/兑换码；未确认就写 Not yet available；数据必须带来源与核验日。
-生成的页面已按此执行：无日期显示 TBA、codes/item-database 为诚实空态、倒计时只在有真实
-发布日时存在。
+生成的页面已按此执行：无日期显示 TBA、`/item-database` 为诚实空态、倒计时只在有真实
+发布日时存在（原 `/countdown` 独立页已撤，倒计时组件留在首页，解锁时刻口径并入 `/release-date`）。

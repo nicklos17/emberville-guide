@@ -109,7 +109,7 @@ export default function EmbervilleDemoPage() {
         <p>The Steam listing gives October 27, 2026 as Emberville’s planned PC Early Access date.</p>
       </DataBlock>
 
-      <h2>What the Emberville demo is confirmed to include</h2>
+      <h2>What the Emberville demo includes</h2>
       <p>
         A detailed demo-content list has not been announced. The sources confirm the festival dates, but do not
         identify which locations, quests, story beats, enemies, bosses, classes, weapons, or progression systems
@@ -148,7 +148,7 @@ export default function EmbervilleDemoPage() {
         <p>IGN labels the piece an opening-prologue hands-on preview and describes the scope of that earlier playable build.</p>
       </DataBlock>
 
-      <h2>Emberville demo length, save transfer, and post-festival access</h2>
+      <h2>Does demo progress carry over? Length and save transfer</h2>
       <p>
         No playtime estimate, save-transfer policy, or post-festival access notice has been published in the sources
         checked for this article. Treat all three as unknown rather than assuming the demo lasts a certain number
@@ -174,8 +174,12 @@ export default function EmbervilleDemoPage() {
       </p>
       <p>
         The demo can help you judge the slice you play. It cannot establish the full game’s breadth, future
-        development, or value at a price that has not been announced. Before buying, compare the playable content
-        with your own priorities and check the Steam store page for current Early Access details.
+        development, or value at a price that has not been announced. The{" "}
+        <Link href="/price" title={routeTitle("/price")}>Emberville price and purchase model</Link> sets out what is
+        confirmed while the amount stays open, and the{" "}
+        <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platform status page</Link> covers which
+        systems the game is planned for. Before buying, compare the playable content with your own priorities and
+        check the Steam store page for current Early Access details.
       </p>
       <DataBlock source="Steam Next Fest public event page" url="https://store.steampowered.com/sale/nextfest" verified="2026-10-10">
         <p>Steam describes Next Fest as an event where players can try free demos of upcoming games.</p>

@@ -88,6 +88,12 @@ export default function ComparisonPage() {
         <p>Steam lists Emberville as a single-player game.</p>
       </DataBlock>
 
+      <p>
+        If you came here looking for what to play next rather than a direct comparison, the{" "}
+        <Link href="/games-like-emberville" title={routeTitle("/games-like-emberville")}>games like Emberville list</Link>{" "}
+        matches the same mechanics to similar games.
+      </p>
+
       <h2>Related Emberville guides</h2>
       <ul>
         <li><Link href="/builds" title={routeTitle("/builds")}>Emberville combat, classes and builds</Link></li>

@@ -8,8 +8,10 @@
 是真空期，标注复核时间（上月数据次月上旬放出）。
 
 > **本站（Emberville Guide）登记状态**：站点尚未上线，各页主词**尚未取得规划师数据**。
-> 下表已按 `docs/SITE.md` 的 7 栏目结构完成**词形占位与冲突检查**（确保一词一页），
+> 下表已按 `docs/SITE.md` 的 8 栏目结构完成**词形占位与冲突检查**（确保一词一页），
 > 月搜/KD 待 2026-11 上旬（首月数据放出后）回填。回填时只改数字列，不动词形。
+> `/countdown` 已于 2026-10-10 直接撤页（不设 301，旧 URL 返回 404）：其词形与独有内容并入
+> `/release-date`，不再单独登记，也不再新建同义页。
 
 ## L1 首页
 | 页面 | 主词 | 月搜 | KD | 备注 |
@@ -24,7 +26,9 @@
 | --- | --- | ---: | ---: | --- |
 | /wiki | Emberville wiki database | 待测 | 待测 | **主承接 wiki 词**；与首页主词同族，靠 "database" 变体区分，不与首页抢同一词形 |
 | /guides | Emberville guide | 待测 | 待测 | 承接 "Emberville guide / walkthrough"；与首页主词区分：首页打 wiki，本页打 guide |
-| /release-date | Emberville release date | 待测 | 待测 | **上线前唯一有官方量支撑的词**，优先级最高；时效页，Title 必带年份 |
+| /release-date | Emberville release date | 待测 | 待测 | **上线前唯一有官方量支撑的词**，优先级最高；时效页，Title 必带年份。另以正文补 `Emberville release time` / `Emberville unlock time` 两个词面（规划师未收录，口径统一为「Steam 只给日历日、无解锁时刻」） |
+| /platforms | Emberville platforms | 20 | 待测 | **一页承接六个同义词面**：`Emberville ps5`(90) `Emberville switch`(110) `Emberville switch 2`(30，+333%) `Emberville console`(30) `Emberville xbox`(30) `Emberville mobile`(10)，美国口径合计约 320/月（2026-10 实测）；实测 KD：ps5 33.1（容易）/ switch 41.9（中等）。六词同答案（官方仅 PC，主机未公布），故合页 |
+| /price | Emberville price | 40 | 待测 | 全球口径 +186%（2026-01 起新词）；**只写官方口径**（未公布具体售价、一次性买断、无微交易），严禁引用任何第三方估算金额 |
 | /map | Emberville map | 待测 | 待测 | 上线后需求最猛；与 /wiki 不重叠（wiki 管条目、map 管区域） |
 | /builds | Emberville builds | 待测 | 待测 | 承接 builds / best build / weapons 族词；与 /item-database 划界：builds 管配装、database 管条目数值 |
 | /item-database | Emberville items | 待测 | 待测 | 承接 items / weapons 词；是 /wiki 四大分组的明细落地页 |
@@ -37,6 +41,12 @@
 | /voice-cast | Emberville voice cast | 待测 | 待测 | 从 `/characters` 拆出；`/characters` 只留摘要 + 内链，不再复写 22 人全表 |
 | /studio | Emberville developer | 待测 | 待测 | 承接 developer / studio / Cygnus Cross 族词；`/wiki` 与 `/characters` 只留摘要 |
 | /stardew-valley-diablo | Emberville vs Stardew Valley and Diablo | 待测 | 待测 | 承接媒体对比口径（Diablo Lite meets Stardew Valley）；`/wiki` 与首页只留摘要 |
+| /games-like-emberville | games like Emberville | 30 | 45.9 | 全球口径 +183%；本轮 8 页中难度最高（KD 45.9，中等）。按机制匹配而非泛列表；`/stardew-valley-diablo` 的横向扩展。候选条目 Core Keeper / Moonlighter / DREDGE / Graveyard Keeper 2（各配自家 Steam 页作来源）；`Dimraeth`（2900/月但 -52%）只作条目，不单独开页 |
+
+## L2 栏目子页（从栏目页拆出，不进导航）
+| 页面 | 主词 | 月搜 | KD | 优先级 |
+| --- | --- | ---: | ---: | --- |
+| /platforms/multiplayer | Emberville multiplayer | 70 | 33.4 | 叠加 `is Emberville multiplayer`(40) `will Emberville be multiplayer`(30)，合计 140/月（2026-10 实测）。难度最低、意图最明确——首段一句结论即可答完。**口径**：Steam 明确标 Single-player，EA 阶段无联机；Workshop 模组（1.0 路线图）**≠联机**，不得混写 |
 
 ### 登记备注的固定写法（每页登记时补充）
 - **词形分工**：Title/H1/主词承接哪个词形；首段补哪些变体词形（单数/复数/省略形），
@@ -58,8 +68,21 @@
   **不管**条目详情。
 - **/characters**：承接 `Emberville characters`、`Emberville romance`。
   口径：affinity 数值官方未公开，页面只写「哪些交互提升」不写具体数字。
-- **/release-date**：承接 `Emberville release date`、`Emberville early access date`。
-  时效页，Title 带 2026。**管**日期与平台；**不管**内容更新。
+- **/release-date**：承接 `Emberville release date`、`Emberville early access date`、
+  `Emberville release time`、`Emberville unlock time`。
+  时效页，Title 带 2026。**管**日期与解锁时刻口径（Steam 只给日历日、无解锁时刻）；**不管**内容更新，
+  平台词交 `/platforms`、价格词交 `/price`。
+- **/platforms**：承接 `Emberville platforms` 及六个平台词面（ps5 / xbox / switch / switch 2 / console / mobile）。
+  **管**「哪些平台已确认」与「每个平台的最新官方口径」；口径一律写「未公布」而非「不会出」。
+  **不管**联机状态（在 `/platforms/multiplayer`）、价格（在 `/price`）。商品页来源为 Steam 商店页。
+- **/platforms/multiplayer**：承接 `Emberville multiplayer`、`is Emberville multiplayer`、
+  `will Emberville be multiplayer`。**管**单机/联机结论与理由；**不管**平台发售（在 `/platforms`）。
+  口径：Steam 商店页标 Single-player，EA 阶段无联机；Workshop 模组是 1.0 路线图内容，不等于联机。
+- **/price**：承接 `Emberville price`、`Emberville cost`。**管**购买模式（一次性买断、无微交易、EA 期可能折扣）；
+  **不管**具体金额——官方未公布，任何第三方估算（含标为 estimate 的）一律不引。
+- **/games-like-emberville**：承接 `games like Emberville`、`similar games to Emberville`。
+  **管**按机制逐条对应到相似游戏（近战/魔法/远程、武器绑定连招、随时换职业继承技能、农耕建造救村民）；
+  **不管**泛品类列表。与 `/stardew-valley-diablo` 区分：那页管「与两款具体游戏比」，本页管「玩什么下一款」。
 - **/news**：承接 `Emberville news`、`Emberville updates`；作为日期新闻列表门户，只作简短摘要并链接到来源或详情页，不复写详情页专题内容。只转述官方渠道或明确标注的署名媒体报道，禁收传闻。
 - **/voice-cast**：承接 `Emberville voice cast`、`Emberville cast`。**管**22 人全表、导演与旁白署名、已点名的角色配对；
   **不管**村民/幸存者玩法（在 `/characters`）。与 `/characters` 的区分句已写入两页正文。
@@ -96,5 +119,6 @@
 | 任何 `/{lang}/` 多语言目录 | 本项目只做 en |
 | **游戏未上线前的任何具体条目页**（单个 boss / 单件装备） | 名称与数值不可核验，属编造（AGENT.md §1.1）。上线后随实测开放 |
 | **SITE.md 未定义的栏目页**（工具页 / 排行页 / 玩法专题页等） | 站点结构由 SITE.md 定；未登记即不得建（docs/README.md 维护约定） |
+| **单平台页**（如 `/platforms/ps5`、`/platforms/switch` 一类） | 六个平台词答案是同一个（官方仅 PC），拆页即同义内容互打；统一由 `/platforms` 一页承接 |
 
 > 不建页但页面要提的真实相关搜索：在对应父页写一小段说明即可——写了吃词、不写漏词。
