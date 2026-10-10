@@ -7,14 +7,12 @@
     { "label": "Builds", "href": "/builds" },
     { "label": "Characters", "href": "/characters" },
     { "label": "Release", "href": "/release-date" },
-    { "label": "Countdown", "href": "/countdown" },
     { "label": "News", "href": "/news" }
   ],
   "footerLinks": [
     { "label": "Wiki", "href": "/wiki" },
     { "label": "Guides", "href": "/guides" },
     { "label": "Release & Platforms", "href": "/release-date" },
-    { "label": "Countdown", "href": "/countdown" },
     { "label": "Map & Areas", "href": "/map" },
     { "label": "Builds & Items", "href": "/builds" },
     { "label": "Item Database", "href": "/item-database" },

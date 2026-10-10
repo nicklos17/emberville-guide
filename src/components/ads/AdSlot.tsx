@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { AD_SLOTS, type AdSlotPosition } from "@/lib/ads";
 
 const ADS_ENABLED = process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_ADS_ENABLED === "true";
@@ -16,6 +17,11 @@ const SIZE_CLASS: Record<AdSlotPosition, string> = {
 const SIDEBAR_POSITIONS = new Set<AdSlotPosition>(["left-skyscraper", "right-skyscraper"]);
 
 export function AdSlot({ position, className = "" }: { position: AdSlotPosition; className?: string }) {
+  const pathname = usePathname();
+  return <AdSlotInstance key={`${position}:${pathname}`} position={position} className={className} />;
+}
+
+function AdSlotInstance({ position, className }: { position: AdSlotPosition; className: string }) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -130,6 +136,8 @@ export function AdSlot({ position, className = "" }: { position: AdSlotPosition;
       if (loaderTimer) window.clearTimeout(loaderTimer);
       observer?.disconnect();
       activeScript?.remove();
+      el.replaceChildren();
+      el.style.removeProperty("display");
       finishLoader?.();
     };
   }, [position]);

@@ -57,6 +57,7 @@ type AdSlotProps = {
 - `<1280px`：左右位容器整体 `display: none`，正文末尾出现 `bottom-banner`
 - Banner 通过 aspect-ratio 容器 + iframe 强制 100%×100% 等比缩放，小屏不裁切
 - Banner 不得出现在 H1 与首段之间，不得遮挡正文
+- 每次全页刷新或站内路由切换，广告位都必须重新请求广告单元
 
 ## 性能红线
 - LCP < 2.5s · CLS < 0.1 · INP < 200ms

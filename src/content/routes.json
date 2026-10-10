@@ -2,7 +2,7 @@
   {
     "path": "/",
     "title": "Emberville Wiki & Guides – Maps, Builds, Release Date",
-    "description": "Explore Emberville's prison setting, the Memento, combat and crafting, the official 22-name voice cast, and how the game compares to Stardew Valley and Diablo.",
+    "description": "Emberville wiki and guides: explore the prison setting, combat, crafting, release details, and verified links to the game’s systems and story.",
     "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
@@ -10,8 +10,8 @@
   },
   {
     "path": "/wiki",
-    "title": "Emberville Wiki: Setting, Combat & Gameplay Systems",
-    "description": "Explore Emberville's Vitromotus, the Memento, class and mastery trees, combat, crafting, the Cygnus Cross studio and voice cast, and the Stardew Valley and Diablo comparison.",
+    "title": "Emberville Wiki Database: Setting, Combat & Systems",
+    "description": "Emberville wiki database: the Vitromotus, kymia, combat, crafting and progression, plus the studio and voice cast behind the game.",
     "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
@@ -20,7 +20,7 @@
   {
     "path": "/guides",
     "title": "Emberville Guides: Systems, Prep & Verified Tips",
-    "description": "Compare Emberville's announced combat and crafting systems with IGN's preview of mastery trees, loot, and stat points; separate early observations from launch tactics.",
+    "description": "Emberville guides to the announced combat, crafting and class systems, separating IGN's preview observations from unverified launch tactics.",
     "lastModified": "2026-10-10",
     "priority": 0.9,
     "changeFrequency": "daily",
@@ -37,10 +37,10 @@
   },
   {
     "path": "/countdown",
-    "title": "Emberville Early Access Countdown 2026: Calendar",
-    "description": "Track the October 27, 2026 date shown by Steam and GOG, follow IGN's date announcement timeline, and distinguish the calendar day from an unlock time.",
+    "title": "Emberville Countdown 2026: Date vs Unlock Time",
+    "description": "See what Emberville’s October 27 calendar date means, why it is not an announced unlock time, and how to read the countdown boundary.",
     "lastModified": "2026-10-10",
-    "priority": 0.8,
+    "priority": 0.5,
     "changeFrequency": "daily",
     "pageLive": true
   },
@@ -81,11 +81,47 @@
     "pageLive": true
   },
   {
+    "path": "/voice-cast",
+    "title": "Emberville Voice Cast: All 22 Actors & Known Roles",
+    "description": "Meet the 22-person Emberville voice cast, Alex Jordan’s directing credit, Jane Perry’s narration, and the two character roles named in coverage.",
+    "lastModified": "2026-10-10",
+    "priority": 0.8,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
+    "path": "/studio",
+    "title": "Emberville Developer: Cygnus Cross & CohhCarnage",
+    "description": "Meet the Emberville developer: Cygnus Cross, a Cork indie studio led by Brynjar Gigja with co-founder Ben “CohhCarnage” Cassell.",
+    "lastModified": "2026-10-10",
+    "priority": 0.8,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
+    "path": "/stardew-valley-diablo",
+    "title": "Emberville vs Stardew Valley and Diablo Compared",
+    "description": "Compare Emberville’s two-button combat and gathering loop with the Diablo and Stardew Valley shorthand used by IGN and GameSpot.",
+    "lastModified": "2026-10-10",
+    "priority": 0.8,
+    "changeFrequency": "monthly",
+    "pageLive": true
+  },
+  {
     "path": "/news",
-    "title": "Emberville News: Early Access Scope & Roadmap",
-    "description": "Follow Emberville's PC announcement, October Early Access date, Steam Next Fest demo, developer feature release, and evolving 1.0 roadmap.",
+    "title": "Emberville News & Updates: Announcements & Launches",
+    "description": "Follow dated Emberville news and updates from Cygnus Cross, including launch announcements, gameplay reveals, and the Steam Next Fest demo.",
     "lastModified": "2026-10-10",
     "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/news/emberville-demo",
+    "title": "Emberville Demo Dates, Content & Early Access Explained",
+    "description": "Trying the Emberville demo? See its Oct 19–26, 2026 Steam Next Fest dates, Oct 27 Early Access launch, confirmed facts, and what to check before buying.",
+    "lastModified": "2026-10-10",
+    "priority": 0.7,
     "changeFrequency": "daily",
     "pageLive": true
   },

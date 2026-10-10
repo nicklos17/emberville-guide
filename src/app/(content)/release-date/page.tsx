@@ -187,8 +187,12 @@ export default function ReleaseDatePage() {
         The official listing states 27 October 2026 and stops at a calendar day, leaving the precise unlock time
         unpublished. An exact hour would therefore be an unsupported claim. Time-zone conversions need a known
         instant to work from, and a bare date supplies none. The companion{" "}
-        <Link href="/countdown" title={routeTitle("/countdown")}>countdown page</Link> explains how its
+        <Link href="/countdown" title={routeTitle("/countdown")}>Emberville countdown: date vs unlock time</Link> explains how its
         date-boundary timer is presented as a calendar reference rather than a store unlock schedule.
+      </p>
+      <p>
+        Dated announcements, including the demo window and the Early Access reveal, are collected on the{" "}
+        <Link href="/news" title={routeTitle("/news")}>Emberville news page</Link>.
       </p>
       <p>
         For a plain-language introduction to the features and their limits, see the{" "}

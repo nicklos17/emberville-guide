@@ -25,3 +25,12 @@
 
 ## 内链规范
 - 层级模型 + 面包屑 + Related 区；锚文本用目标页主词；同页同目标不重复链接。
+- 层级：L0 首页 / L1 七栏目 + L1 从属页（/countdown /item-database）+ **L1 专题页（/voice-cast /studio /stardew-valley-diablo，不进导航）** / L2 详情页（/news/emberville-demo）。
+- 外链口径：`<a href=… rel="noopener noreferrer">`，**不加 `target`**（与 DataBlock 一致）。
+
+## SEO 约定（2026-10-10 起）
+- **H1 与 Title 措辞必须明显不同**（不能只差一两个修饰词，如 `/wiki` 旧值两者仅差 "Combat &"）；H1 用陈述式名词短语，**禁问句 H1**（ONPAGE §3.1）。
+- 校验方法：比对 H1 与 routes.json title 的词集相似度，≥0.7 即视为过近，须改写。
+- 一词一页靠变体区分：`/` 占 `Emberville wiki`，`/wiki` 占 `Emberville wiki database`；H2 一律挂 "Emberville" 词面。
+- 首页 hero 主 CTA 为外链 Steam 商店页 `View on Steam ↗`（`store.steampowered.com/app/2295170/Emberville/`）。
+- 拆页判据：栏目页某一节对应**独立搜索需求**且把页面推到 1800 词以上 → 拆为 L1 专题页，栏目页只留摘要 + 内链（SITE.md 已立规，同步面 5 处）。

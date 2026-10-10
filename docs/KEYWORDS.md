@@ -31,6 +31,13 @@
 | /characters | Emberville characters | 待测 | 待测 | 承接 characters / romance 族词；affinity 数值不预写，避免与实测冲突 |
 | /news | Emberville news | 待测 | 待测 | 蹭宣发节点；承接 update / patch notes |
 
+## L1 专题页（从栏目页拆出，不进导航）
+| 页面 | 主词 | 月搜 | KD | 优先级 |
+| --- | --- | ---: | ---: | --- |
+| /voice-cast | Emberville voice cast | 待测 | 待测 | 从 `/characters` 拆出；`/characters` 只留摘要 + 内链，不再复写 22 人全表 |
+| /studio | Emberville developer | 待测 | 待测 | 承接 developer / studio / Cygnus Cross 族词；`/wiki` 与 `/characters` 只留摘要 |
+| /stardew-valley-diablo | Emberville vs Stardew Valley and Diablo | 待测 | 待测 | 承接媒体对比口径（Diablo Lite meets Stardew Valley）；`/wiki` 与首页只留摘要 |
+
 ### 登记备注的固定写法（每页登记时补充）
 - **词形分工**：Title/H1/主词承接哪个词形；首段补哪些变体词形（单数/复数/省略形），
   变体只落正文一句话内，不进 Title 重复
@@ -53,19 +60,25 @@
   口径：affinity 数值官方未公开，页面只写「哪些交互提升」不写具体数字。
 - **/release-date**：承接 `Emberville release date`、`Emberville early access date`。
   时效页，Title 带 2026。**管**日期与平台；**不管**内容更新。
-- **/news**：承接 `Emberville news`、`Emberville patch notes`。只转述官方渠道，禁收传闻。
+- **/news**：承接 `Emberville news`、`Emberville updates`；作为日期新闻列表门户，只作简短摘要并链接到来源或详情页，不复写详情页专题内容。只转述官方渠道或明确标注的署名媒体报道，禁收传闻。
+- **/voice-cast**：承接 `Emberville voice cast`、`Emberville cast`。**管**22 人全表、导演与旁白署名、已点名的角色配对；
+  **不管**村民/幸存者玩法（在 `/characters`）。与 `/characters` 的区分句已写入两页正文。
+- **/studio**：承接 `Emberville developer`、`Cygnus Cross`。**管**工作室背景、Cork、成立时间、Gigja 与 CohhCarnage 的职务口径；
+  **不管**游戏系统与角色。口径：社区流传的「creative lead」不是官方头衔，一律写 co-founder / co-game director。
+- **/stardew-valley-diablo**：承接 `Emberville vs Stardew Valley and Diablo`、`Emberville Diablo`。**管**媒体对比口径与其边界（双键连招、采集循环、single-player）；
+  **不管**具体配装（在 `/builds`）。口径：该对比是 IGN/GameSpot 的媒体 shorthand，非官方分类。
 
 ## L3 详情页
 | slug | 主词 | 备注 |
 | --- | --- | --- |
+| /news/emberville-demo | `Emberville demo` | News L2 详情页；覆盖 Next Fest demo 内容/试玩范围/购前判断，不与 /news 泛新闻词或 /release-date 抢词；来源：IGN Oct 8 + Steamworks + Steam + IGN Sep 11 preview（限先期构建） |
 | /{hub}/{slug} | `Emberville {slug}` | 来源、上线日、Title 模板、互证关系 |
 
 > 详情页登记备注固定项：①内容出自什么来源，转写歧义名是否内联标注；
 > ②与父页/姊妹页的主词边界与互链关系；③Title 模板（一词一页让位见 SEO.md）；
 > ④赞助段（推广码内容）按惯例排除。
 
-> **本站当前无 L3 详情页**：游戏未上线，无可核验条目。
-> 上线后新增详情页须先在此登记，并检查父页 Title 是否需要按 SEO.md「一词一页让位」退出该词形。
+> **已登记 L3 详情页**：`/news/emberville-demo`。后续新增详情页须先在此登记，并检查父页 Title 是否需要按 SEO.md「一词一页让位」退出该词形；游戏内具体条目仍须等到有可核验数据后再建。
 
 ## 政策页（合规页，不参与关键词竞争）
 | 页面 | 主词 | 备注 |

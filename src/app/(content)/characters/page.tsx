@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
-import { getRoute } from "@/lib/routes";
+import { getRoute, routeTitle } from "@/lib/routes";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
@@ -95,67 +95,28 @@ export default function CharactersPage() {
         </div>
       </DataBlock>
 
-      <h2>The Memento and Emberville’s voice cast</h2>
+      <h2>Emberville’s voice cast and the Memento</h2>
       <p>
-        The Cygnus Cross studio introduction names the protagonist’s luminous companion as the Memento, adding a
-        specific story figure to the otherwise unnamed rescue-and-rebuilding cast. The studio also publishes a
-        22-name voice cast — unusually large for a debut indie — led by voice-acting director Alex Jordan, who
-        performs in the game as well. The roster spans established game actors and creators: Doug Cockle (Geralt in
-        The Witcher), Matthew Mercer (Critical Role, Baldur’s Gate 3), Jennifer English and Ben Starr (Baldur’s
-        Gate 3, Clair Obscur: Expedition 33), Abubakar Salim (Bayek in Assassin’s Creed Origins), Amelia Tyler
-        (Baldur’s Gate 3) and Elias Toufexis (Deus Ex).
-      </p>
-      <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
-        <div className="my-4 overflow-x-auto">
-          <table>
-            <thead><tr><th scope="col">Role</th><th scope="col">Name</th></tr></thead>
-            <tbody>
-              <tr><td>Voice Acting Director</td><td>Alex Jordan</td></tr>
-              <tr><td>Voice actor</td><td>Doug Cockle</td></tr>
-              <tr><td>Voice actor</td><td>Abubakar Salim</td></tr>
-              <tr><td>Voice actor</td><td>Lucy Elliott</td></tr>
-              <tr><td>Voice actor</td><td>Amelia Tyler</td></tr>
-              <tr><td>Voice actor</td><td>Jennifer English</td></tr>
-              <tr><td>Voice actor</td><td>Ben Starr</td></tr>
-              <tr><td>Voice actor</td><td>Matthew Mercer</td></tr>
-              <tr><td>Voice actor</td><td>Alex Ponton</td></tr>
-              <tr><td>Voice actor</td><td>Jane Perry</td></tr>
-              <tr><td>Voice actor</td><td>Elias Toufexis</td></tr>
-              <tr><td>Voice actor</td><td>Kirsty Rider</td></tr>
-              <tr><td>Voice actor</td><td>Nick Apostolides</td></tr>
-              <tr><td>Voice actor</td><td>Anjali Bhimani</td></tr>
-              <tr><td>Voice actor</td><td>Cahla Thorman</td></tr>
-              <tr><td>Voice actor</td><td>Briana White</td></tr>
-              <tr><td>Voice actor</td><td>Rich Keeble</td></tr>
-              <tr><td>Voice actor</td><td>Michael Bryan</td></tr>
-              <tr><td>Voice actor</td><td>David Menkin</td></tr>
-              <tr><td>Voice actor</td><td>Harry McEntire</td></tr>
-              <tr><td>Voice actor</td><td>LilyPichu</td></tr>
-              <tr><td>Voice actor</td><td>Dillon Francis</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </DataBlock>
-      <p>
-        Only two character roles have been named in published coverage so far: Alex Jordan voices Adeos, an elderly
-        and not-quite-all-there figure, and Matthew Mercer voices Gumu, a gremlin-like shopkeeper. The official
-        roster does not map the remaining performers to survivor names, and this page does not infer those pairings
-        from the cast list alone.
+        The Cygnus Cross studio introduction names the protagonist’s luminous companion as the Memento. The studio
+        also publishes a 22-name voice cast — unusually large for a debut indie — led by voice-acting director Alex
+        Jordan, who performs in the game as well. Two roles have been named in published coverage: Alex Jordan
+        voices Adeos, an elderly and not-quite-all-there figure, and Matthew Mercer voices Gumu, a gremlin-like
+        shopkeeper. The official roster does not map the remaining performers to characters, and this page does not
+        infer those pairings from the cast list alone. The full roster and its sourcing are on the{" "}
+        <Link href="/voice-cast" title={routeTitle("/voice-cast")}>Emberville voice cast reference</Link>.
       </p>
       <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
         <p>IGN’s September 11 preview heard Alex Jordan’s performance as the elderly Adeos and Matt Mercer’s shopkeeper Gumu in the prologue.</p>
       </DataBlock>
-      <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
-        <p>The July 16 press release lists the cast with sample credits and identifies Jane Perry as cinematic narrator; it does not assign performers to specific villagers.</p>
+      <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
+        <p>The studio site publishes the 22-name Emberville voice cast with Alex Jordan credited as Voice Acting Director; it does not map performers to specific villagers.</p>
       </DataBlock>
       <p>
         The cast is assembled by Cygnus Cross, the independent studio behind the game — Emberville is its debut
         title, based in Cork, Ireland and led by founder and lead game director Brynjar Gigja, with Twitch streamer
-        Ben “CohhCarnage” Cassell as co-founder and co-game director.
+        Ben “CohhCarnage” Cassell as co-founder and co-game director. For the studio’s background, see the{" "}
+        <Link href="/studio" title={routeTitle("/studio")}>Emberville developer profile</Link>.
       </p>
-      <DataBlock source="GamingTrend" url="https://gamingtrend.com/news/get-a-look-at-emberville-before-it-launches-into-early-access-this-october" verified="2026-10-10">
-        <p>GamingTrend names Cygnus Cross’s “Co-founder and Co-Game Director CohhCarnage” and “Lead Game Director Bynja Gigja.”</p>
-      </DataBlock>
 
       <h2>Character stories, diaries, and quests</h2>
       <p>
@@ -187,9 +148,8 @@ export default function CharactersPage() {
       <h2>Related Emberville coverage</h2>
       <ul>
         <li><Link href="/map" title="Emberville Map: Confirmed Areas &amp; World Guide">Emberville map and confirmed world spaces</Link></li>
-        <li><Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Emberville news and Early Access announcements</Link></li>
-        <li><Link href="/wiki" title="Emberville Wiki: Setting, Combat &amp; Gameplay Systems">Emberville wiki: setting and gameplay systems</Link></li>
-        <li><Link href="/about/methodology" title="Sources &amp; Methodology | Emberville Guide">Sources and methodology</Link></li>
+        <li><Link href="/news" title="Emberville News &amp; Updates: Announcements &amp; Launches">Emberville news and Early Access announcements</Link></li>
+        <li><Link href="/wiki" title="Emberville Wiki Database: Setting, Combat &amp; Systems">Emberville wiki: setting and gameplay systems</Link></li>
       </ul>
 
       <h2>Emberville characters FAQ</h2>

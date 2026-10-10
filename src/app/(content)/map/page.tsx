@@ -129,8 +129,8 @@ export default function MapPage() {
 
       <h2>Related Emberville coverage</h2>
       <ul>
-        <li><Link href="/wiki" title="Emberville Wiki: Setting, Combat &amp; Gameplay Systems">Setting, combat, and gameplay systems</Link></li>
-        <li><Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Early Access announcements and roadmap</Link></li>
+        <li><Link href="/wiki" title="Emberville Wiki Database: Setting, Combat &amp; Systems">Setting, combat, and gameplay systems</Link></li>
+        <li><Link href="/news" title="Emberville News &amp; Updates: Announcements &amp; Launches">Early Access announcements and roadmap</Link></li>
         <li><Link href="/release-date" title="Emberville Early Access Date 2026: Price &amp; Scope">Early Access date and release details</Link></li>
         <li><Link href="/about/methodology" title="Sources &amp; Methodology | Emberville Guide">Sources and verification methodology</Link></li>
       </ul>

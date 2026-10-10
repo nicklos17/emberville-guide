@@ -45,3 +45,36 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
     })),
   };
 }
+
+export function articleSchema({
+  headline,
+  description,
+  path,
+  datePublished,
+  dateModified,
+  image,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  dateModified: string;
+  image?: string;
+}) {
+  const pageUrl = SITE.url + path;
+  const imageUrl = SITE.url + (image ?? "/images/og/og-default.png");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline,
+    description,
+    datePublished,
+    dateModified,
+    inLanguage: SITE.locale,
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    author: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    image: [imageUrl],
+  };
+}

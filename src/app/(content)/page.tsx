@@ -28,18 +28,6 @@ const FAQS: Faq[] = [
     q: "How much will Emberville cost?",
     a: "A specific price has not been announced on the Steam store page as of 2026-10-10.",
   },
-  {
-    q: "Who is making Emberville?",
-    a: "Cygnus Cross, an independent studio based in Cork, Ireland, for which Emberville is the debut title. It is led by founder and lead game director Brynjar Gigja, with Twitch streamer Ben \u201CCohhCarnage\u201D Cassell as co-founder and co-game director.",
-  },
-  {
-    q: "Who is in Emberville's voice cast?",
-    a: "The official site lists 22 people, led by voice-acting director Alex Jordan. The roster includes Doug Cockle, Matthew Mercer, Jennifer English, Ben Starr, Abubakar Salim, Jane Perry, Amelia Tyler, Elias Toufexis, Briana White, LilyPichu and DJ Dillon Francis, among others.",
-  },
-  {
-    q: "Is Emberville like Stardew Valley or Diablo?",
-    a: "Press coverage introduced the game as \u201CDiablo Lite meets Stardew Valley,\u201D a shorthand for its blend of action-RPG combat and farming-style gathering with town rebuilding. It is not an official genre label, and the game is single-player only.",
-  },
 ];
 
 const SECTIONS = [
@@ -114,10 +102,11 @@ export default function HomePage() {
         <Image
           src="/images/program/hero-forest-camp.webp"
           alt="Overhead pixel-art view of the Emberville forest camp: a lantern-lit tent, work benches, a crafting station, a wooden bridge and a winding river."
-          fill
+          width={1600}
+          height={900}
           priority
           sizes="100vw"
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div aria-hidden="true" className="absolute inset-0 bg-linear-to-r from-canvas via-canvas/85 to-canvas/35" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20">
@@ -129,14 +118,19 @@ export default function HomePage() {
           </h1>
           <p className="mb-7 max-w-2xl text-lg leading-relaxed text-ink">
             Emberville is a single-player action RPG about waking inside a magical prison, exploring its depths,
-            rescuing survivors and rebuilding a town. This guide brings together the store-confirmed premise,
-            connected gameplay systems, Early Access scope and what remains unannounced. Treat it as a
-            reference, with any preview report or tested-system claim left to the sources that can support it.
+            rescuing survivors and rebuilding a town. This Emberville wiki and guides hub brings together what the
+            cited sources actually confirm — the premise, the systems, the Early Access scope — and flags what they
+            still withhold. Where a claim needs a source, we point to it; anything unverified stays out.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/wiki" title={routeTitle("/wiki")} className="rounded-md border border-line bg-canvas/80 px-6 py-3 text-sm font-semibold text-ink no-underline transition-colors hover:border-primary hover:text-primary">
-              Browse the Wiki ↓
-            </Link>
+            <a
+              href="https://store.steampowered.com/app/2295170/Emberville/"
+              rel="noopener noreferrer"
+              title="Emberville on Steam"
+              className="rounded-md border border-line bg-canvas/80 px-6 py-3 text-sm font-semibold text-ink no-underline transition-colors hover:border-primary hover:text-primary"
+            >
+              View on Steam ↗
+            </a>
             <Link href="/guides" title={routeTitle("/guides")} className="rounded-md border border-line bg-canvas/80 px-6 py-3 text-sm font-semibold text-ink no-underline transition-colors hover:border-primary hover:text-primary">
               Read the systems guide
             </Link>
@@ -162,14 +156,13 @@ export default function HomePage() {
 
       <AdArticle className="article mx-auto w-full max-w-6xl px-4 py-12">
         <p className="answer">
-          Emberville is a single-player action RPG from Cygnus Cross, planned to enter Steam Early Access on
-          27 October 2026. You wake with no memories in the Vitromotus, a magical underground prison, and
-          become involved in rescuing survivors and rebuilding Emberville. Its announced design joins
-          exploration and action combat with crafting, farming, cooking and a personal estate. This overview
-          separates those confirmed pillars from details the store page leaves unspecified.
+          Emberville is a single-player action RPG from Cygnus Cross, planned for Steam Early Access on 27 October
+          2026. You wake without memories in the Vitromotus, a magical prison, and set out to rescue survivors and
+          rebuild the town. The announced design joins exploration and action combat with crafting, farming,
+          cooking and a personal estate.
         </p>
 
-        <h2>A setting built around imprisonment and renewal</h2>
+        <h2>Emberville setting: imprisonment and renewal</h2>
         <p>
           The opening premise starts below ground. The player character awakens inside the Vitromotus, described
           as a magical prison, without memories. The world extends beyond a route from one fight to the next:
@@ -186,7 +179,7 @@ export default function HomePage() {
           twists.
         </p>
 
-        <h2>One loop connects exploration, combat and rebuilding</h2>
+        <h2>Emberville gameplay loop: exploration, combat and rebuilding</h2>
         <p>
           Emberville's disclosed activities fit together rather than sitting in isolated modes. Exploration takes
           the player through tunnels, ruins, survivor settlements, unusual biomes and encounters with monsters.
@@ -204,7 +197,7 @@ export default function HomePage() {
           efficiency ranking out.
         </p>
 
-        <h2>Combat emphasizes decisions, not just attack speed</h2>
+        <h2>Emberville combat: decisions over attack speed</h2>
         <p>
           The announced combat is action-oriented and asks players to pay attention to position, timing and
           knowledge. Each weapon has its own combos, and combination attacks are part of the system. The store
@@ -221,7 +214,7 @@ export default function HomePage() {
           page, so this page reports only what is stated.
         </p>
 
-        <h2>Crafting and a home plot give progression another purpose</h2>
+        <h2>Emberville crafting and the estate</h2>
         <p>
           Gathering, crafting, farming and cooking are explicitly part of the announced experience. The
           description says players can collect resources and make equipment, potions, food, tools and trinkets.
@@ -233,13 +226,13 @@ export default function HomePage() {
         <p>
           The player also has a personal estate. It can be developed with buildings and customized with furniture,
           plants and other decorations. The store page describes this as a place where collected materials can
-          become useful creations as well as a place to arrange a home. This is distinct from the stated goal of
-          rebuilding Emberville itself: one is the player's customizable property, while the other is the town at
-          the center of the rescue premise. The cited material leaves plot dimensions, the building catalogue and
-          placement rules unconfirmed.
+          become useful creations as well as a place to arrange a home. Rebuilding Emberville itself is the
+          separate story goal: one is the player's own property, the other is the town at the center of the rescue
+          premise. The cited material leaves plot dimensions, the building catalogue and placement rules
+          unconfirmed.
         </p>
 
-        <h2>Villager stories are part of the progression picture</h2>
+        <h2>Emberville villagers and progression</h2>
         <p>
           Emberville describes its villagers through stories, diaries, quests, classes, skills and rewards. This
           indicates that the human side of rebuilding is intended to connect narrative material with play systems.
@@ -256,7 +249,7 @@ export default function HomePage() {
           customization statement as just that.
         </p>
 
-        <h2>What the Early Access label means here</h2>
+        <h2>Emberville Early Access scope and release details</h2>
         <p>
           Cygnus Cross describes the Early Access release as a fully playable experience with substantial
           content and meaningful updates planned during development. Its roadmap estimate is approximately
@@ -268,14 +261,14 @@ export default function HomePage() {
           The developer says the game will be a one-time purchase without microtransactions, and that its price
           will remain stable while discounts may occur during Early Access. The actual price remains unannounced.
           Planned 1.0 work includes Workshop modding, optimization, additional difficulty options, balancing,
-          creative-area implementation, bosses, biomes and monsters. These are intentions that may change,
-          distinct from a dated schedule or a guarantee that every item will arrive in a particular order. For the
+          creative-area implementation, bosses, biomes and monsters. These are intentions that may change; the
+          roadmap sets no dated schedule and no order of delivery. For the
           individual
           date, platform and price status, use the{" "}
           <Link href="/release-date" title={routeTitle("/release-date")}>release-date reference</Link>.
         </p>
 
-        <h2>Verified facts, and details still to come</h2>
+        <h2>Emberville confirmed facts and open details</h2>
         <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
           <div className="overflow-x-auto my-4">
             <table>
@@ -292,12 +285,12 @@ export default function HomePage() {
           </div>
         </DataBlock>
 
-        <h2>What Cygnus Cross adds beyond the store summary</h2>
+        <h2>Emberville details beyond the store summary</h2>
         <p>
           The studio’s own site gives one story detail the short Steam capsule leaves out: the amnesiac protagonist
           is accompanied by a strange, luminous entity that calls itself the Memento. Cygnus Cross also maintains
-          a dedicated Emberville voice-cast listing. Those are studio-published details, distinct from IGN’s
-          editorial shorthand comparing the game’s genre mix to action RPG and farming games.
+          a dedicated Emberville voice-cast listing. Those are studio-published details; IGN’s editorial shorthand
+          about genre mix is a separate kind of claim.
         </p>
         <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
           <p>The official introduction identifies the Memento as the protagonist’s luminous companion; the studio site also publishes a separate Emberville voice-cast list.</p>
@@ -305,8 +298,8 @@ export default function HomePage() {
         <p>
           The July 16 developer press release adds production context: it describes an expedition-and-return loop
           connecting the Vitromotus to town restoration, and identifies Jane Perry as the narrator of that trailer
-          and Greg Dombrowski of Secession Studios as composer. Those are statements in a dated developer release,
-          distinct from an independent review or a guarantee about the final soundtrack.
+          and Greg Dombrowski of Secession Studios as composer. They come from a dated developer release, not an
+          independent review, and they do not guarantee the final soundtrack.
         </p>
         <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
           <p>The July 16 release describes the expedition / return / town-restoration loop and names Jane Perry for cinematic narration and Greg Dombrowski for the original score.</p>
@@ -316,104 +309,35 @@ export default function HomePage() {
           differs from a delivered one; a general promise of unusual biomes stays separate from an exact count; and
           a calendar launch date stops short of the hour at which a store will unlock a product. Our practical
           references follow that distinction. The{" "}
-          <Link href="/wiki" title={routeTitle("/wiki")}>wiki overview</Link> organizes the setting and systems,
+          <Link href="/wiki" title={routeTitle("/wiki")}>Emberville wiki</Link> organizes the setting and systems,
           while the{" "}
-          <Link href="/countdown" title={routeTitle("/countdown")}>calendar countdown</Link> explains exactly
+          <Link href="/countdown" title={routeTitle("/countdown")}>Emberville countdown: date vs unlock time</Link> explains exactly
           what the date timer represents and where that reference ends.
         </p>
 
-        <h2>How Emberville compares to Stardew Valley and Diablo</h2>
+        <h2>Emberville comparison: Stardew Valley vs Diablo</h2>
         <p>
-          The shorthand most people meet first is “Diablo meets Stardew Valley,” and it comes from press coverage
-          rather than an official genre label. IGN’s January announcement trailer introduced Emberville as “Diablo
-          Lite meets Stardew Valley”; GameSpot’s January 28 report framed it as Diablo-style action fused with
-          Stardew Valley vibes. The comparison is a useful starting point and a misleading finish: it points at the
-          game’s two halves — action-RPG combat below ground, a cosy gathering-and-rebuilding layer above it —
-          without describing how either actually plays.
+          Press coverage coined “Diablo Lite meets Stardew Valley” as shorthand for Emberville’s action combat and
+          gathering-and-rebuilding loop. The comparison is not an official genre label; for the reported combat
+          differences and what the shorthand leaves out, read the{" "}
+          <Link href="/stardew-valley-diablo" title={routeTitle("/stardew-valley-diablo")}>Emberville vs Stardew Valley and Diablo comparison</Link>.
         </p>
-        <DataBlock source="IGN announcement report" url="https://nordic.ign.com/news/103247/emberville-announced-for-pc-aims-to-be-like-diablo-lite-meets-stardew-valley" verified="2026-10-10">
-          <p>IGN’s January 27 report introduced the “Diablo Lite meets Stardew Valley” framing for the PC pixel-art action-adventure RPG.</p>
-        </DataBlock>
-        <DataBlock source="GameSpot" url="https://www.gamespot.com/articles/emberville-announced-for-pc-blends-diablo-style-action-with-stardew-valley-vibes/1100-6537712/" verified="2026-10-10">
-          <p>GameSpot’s January 28 report described Emberville as blending Diablo-style action with Stardew Valley vibes.</p>
-        </DataBlock>
-        <p>
-          IGN’s September hands-on preview draws the split more precisely. Where Diablo leans on a single main attack
-          backed by spells and abilities, Emberville uses a two-button combo system that mixes a main and an
-          alternate attack into a stronger finishing hit. Where Stardew Valley centres on farming and gathering, the
-          preview found ore veins to mine, trees to cut and plants to pull as it explored the Vitromotus. What the
-          shorthand leaves out is the third pillar: rescued survivors return to Emberville and rebuild the town,
-          reopening shops and improving your gear. The Steam listing also describes Emberville as single-player with
-          no co-op — a deliberate departure from the Diablo side of the comparison.
-        </p>
-        <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
-          <p>IGN’s September 11 preview contrasts Emberville’s two-button combo system with Diablo’s single main attack, likens its gathering to Stardew Valley-style sims, and notes the single-player scope.</p>
-        </DataBlock>
 
-        <h2>Emberville’s voice cast: the official roster</h2>
+        <h2>Emberville voice cast: the official roster</h2>
         <p>
-          Cygnus Cross publishes a 22-name voice cast for Emberville — unusually large for a debut indie — led by
-          voice-acting director Alex Jordan, who also performs in the game. The roster mixes established game actors
-          with streamers and creators: Doug Cockle (Geralt in The Witcher), Matthew Mercer (Critical Role, Baldur’s
-          Gate 3), Jennifer English and Ben Starr (both Baldur’s Gate 3 and Clair Obscur: Expedition 33), Abubakar
-          Salim (Bayek in Assassin’s Creed Origins), Amelia Tyler (Baldur’s Gate 3), Elias Toufexis (Deus Ex) and
-          Briana White (Final Fantasy VII Remake). Jane Perry narrates the cinematic trailer. Two roles have been
-          named in hands-on coverage: Alex Jordan voices Adeos, and Matthew Mercer voices the shopkeeper Gumu.
+          Cygnus Cross lists 22 people, with Alex Jordan as Voice Acting Director. Published coverage names Jordan
+          as Adeos and Matthew Mercer as Gumu; other performer-to-character pairings are not established in the
+          sources cited here. See the{" "}
+          <Link href="/voice-cast" title={routeTitle("/voice-cast")}>complete Emberville voice cast and known roles</Link> for the sourced roster.
         </p>
-        <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
-          <div className="my-4 overflow-x-auto">
-            <table>
-              <thead><tr><th scope="col">Role</th><th scope="col">Name</th></tr></thead>
-              <tbody>
-                <tr><td>Voice Acting Director</td><td>Alex Jordan</td></tr>
-                <tr><td>Voice actor</td><td>Doug Cockle</td></tr>
-                <tr><td>Voice actor</td><td>Abubakar Salim</td></tr>
-                <tr><td>Voice actor</td><td>Lucy Elliott</td></tr>
-                <tr><td>Voice actor</td><td>Amelia Tyler</td></tr>
-                <tr><td>Voice actor</td><td>Jennifer English</td></tr>
-                <tr><td>Voice actor</td><td>Ben Starr</td></tr>
-                <tr><td>Voice actor</td><td>Matthew Mercer</td></tr>
-                <tr><td>Voice actor</td><td>Alex Ponton</td></tr>
-                <tr><td>Voice actor</td><td>Jane Perry</td></tr>
-                <tr><td>Voice actor</td><td>Elias Toufexis</td></tr>
-                <tr><td>Voice actor</td><td>Kirsty Rider</td></tr>
-                <tr><td>Voice actor</td><td>Nick Apostolides</td></tr>
-                <tr><td>Voice actor</td><td>Anjali Bhimani</td></tr>
-                <tr><td>Voice actor</td><td>Cahla Thorman</td></tr>
-                <tr><td>Voice actor</td><td>Briana White</td></tr>
-                <tr><td>Voice actor</td><td>Rich Keeble</td></tr>
-                <tr><td>Voice actor</td><td>Michael Bryan</td></tr>
-                <tr><td>Voice actor</td><td>David Menkin</td></tr>
-                <tr><td>Voice actor</td><td>Harry McEntire</td></tr>
-                <tr><td>Voice actor</td><td>LilyPichu</td></tr>
-                <tr><td>Voice actor</td><td>Dillon Francis</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </DataBlock>
-        <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
-          <p>The July 16 release lists the cast with sample credits, including Matthew Mercer (Critical Role, Baldur’s Gate 3), Jennifer English and Ben Starr (Clair Obscur: Expedition 33), Abubakar Salim (Assassin’s Creed: Origins) and Amelia Tyler (Baldur’s Gate 3).</p>
-        </DataBlock>
 
-        <h2>The studio behind Emberville: Cygnus Cross and CohhCarnage</h2>
+        <h2>Emberville studio: Cygnus Cross and CohhCarnage</h2>
         <p>
-          Cygnus Cross is an independent studio based in Cork, Ireland, and Emberville is its debut title — the team
-          had been building it quietly for roughly three years before the January 2026 reveal. The studio
-          self-publishes, with Cygnus Cross listed as both developer and publisher. It is led by founder and lead
-          game director Brynjar Gigja, with Twitch streamer Ben “CohhCarnage” Cassell as co-founder and co-game
-          director. Because a well-known streamer is attached, some community posts describe his role loosely —
-          including a “creative lead” label that circulates on Reddit — but the title used in press coverage is
-          co-founder and co-game director.
+          Emberville is the debut title from Cork-based independent studio Cygnus Cross. Coverage identifies
+          Brynjar Gigja as founder and lead game director and Ben “CohhCarnage” Cassell as co-founder and co-game
+          director. Read the{" "}
+          <Link href="/studio" title={routeTitle("/studio")}>Emberville developer and studio profile</Link> for the sourced background.
         </p>
-        <DataBlock source="GamingTrend" url="https://gamingtrend.com/news/get-a-look-at-emberville-before-it-launches-into-early-access-this-october" verified="2026-10-10">
-          <p>GamingTrend names Cygnus Cross’s “Co-founder and Co-Game Director CohhCarnage” alongside “Lead Game Director Bynja Gigja.”</p>
-        </DataBlock>
-        <DataBlock source="Gamer Social Club" url="https://gamersocialclub.ca/2026/09/11/emberville-preview/" verified="2026-10-10">
-          <p>Gamer Social Club’s September 11 preview describes Emberville as “the debut title from studio Cygnus Cross, a small imprint based out of Cork, Ireland,” building since 2023, led by founder and lead game director Brynjar Gigja with co-founder and co-director Ben “CohhCarnage” Cassell.</p>
-        </DataBlock>
-        <DataBlock source="Cygnus Cross press release (hosted by GamesPress)" url="https://www.gamespress.com/Emberville-Sets-October-27-Early-Access-Launch-Reveals-Its-Biggest-Loo" verified="2026-10-10">
-          <p>The July 16 release is datelined “Cork, Ireland” and describes Cygnus Cross as an independent developer.</p>
-        </DataBlock>
 
         <h2>Emberville FAQ</h2>
         <FaqList faqs={FAQS} />
@@ -429,7 +353,7 @@ export default function HomePage() {
           {SECTIONS.map((s) => (
             <Link key={s.href} href={s.href} title={routeTitle(s.href)} className="group flex flex-col overflow-hidden rounded-lg border border-line bg-surface no-underline transition-all hover:-translate-y-1 hover:border-primary hover:shadow-xl">
               <div className="relative aspect-video overflow-hidden bg-canvas-deep">
-                <Image src={s.image} alt={s.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                <Image src={s.image} alt={s.alt} width={1200} height={675} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 <div aria-hidden="true" className="absolute inset-0 bg-linear-to-t from-canvas-deep via-canvas-deep/25 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-4">

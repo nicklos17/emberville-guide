@@ -209,11 +209,19 @@ export default function GuidesPage() {
         The announced Early Access date is 27 October 2026, with no exact unlock time specified by Steam. For the
         date and scope table, see the{" "}
         <Link href="/release-date" title={routeTitle("/release-date")}>release-date page</Link>. The
-        <Link href="/countdown" title={routeTitle("/countdown")}>countdown explanation</Link> makes clear why a
+        <Link href="/countdown" title={routeTitle("/countdown")}>Emberville countdown: date vs unlock time</Link> makes clear why a
         calendar timer should not be mistaken for a store unlock notice. Minimum PC requirements are listed as
         64-bit Windows 10 or newer, Intel Core i5 3.2 GHz or equivalent, 4 GB RAM, a DirectX 10-compatible
         graphics card, DirectX 11 and 4 GB storage.
       </p>
+
+      <h2>Related Emberville guides</h2>
+      <ul>
+        <li><Link href="/stardew-valley-diablo" title={routeTitle("/stardew-valley-diablo")}>Emberville compared with Stardew Valley and Diablo</Link></li>
+        <li><Link href="/builds" title={routeTitle("/builds")}>Emberville combat, classes and builds</Link></li>
+        <li><Link href="/characters" title={routeTitle("/characters")}>Emberville characters, survivors and villagers</Link></li>
+        <li><Link href="/item-database" title={routeTitle("/item-database")}>Emberville crafting and item categories</Link></li>
+      </ul>
 
       <h2>Emberville guides FAQ</h2>
       <FaqList faqs={FAQS} />

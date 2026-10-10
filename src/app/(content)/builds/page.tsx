@@ -140,8 +140,9 @@ export default function BuildsPage() {
 
       <h2>Related Emberville coverage</h2>
       <ul>
-        <li><Link href="/wiki" title="Emberville Wiki: Setting, Combat &amp; Gameplay Systems">Emberville wiki and gameplay systems</Link></li>
-        <li><Link href="/news" title="Emberville News: Early Access Scope &amp; Roadmap">Early Access scope and official announcements</Link></li>
+        <li><Link href="/wiki" title="Emberville Wiki Database: Setting, Combat &amp; Systems">Emberville wiki and gameplay systems</Link></li>
+        <li><Link href="/stardew-valley-diablo" title="Emberville vs Stardew Valley and Diablo: What’s Different">Emberville compared with Stardew Valley and Diablo</Link></li>
+        <li><Link href="/news" title="Emberville News &amp; Updates: Announcements &amp; Launches">Early Access scope and official announcements</Link></li>
         <li><Link href="/release-date" title="Emberville Early Access Date 2026: Price &amp; Scope">Early Access date and release details</Link></li>
         <li><Link href="/about/methodology" title="Sources &amp; Methodology | Emberville Guide">How sources and test findings are handled</Link></li>
       </ul>

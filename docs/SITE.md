@@ -54,11 +54,11 @@ H1：Emberville Build Hub — Tested Setups
 Title：Emberville Characters: Survivors & Companions
 H1：Emberville Characters
 段落：人物列表 + 每个人物一小段（身份、在哪遇到、好感度怎么加）。romance 这类问题谷歌常出 PAA，段落写成能直接命中问答的短句。
-7. News（/news/） — 主承接 update、cohhcarnage、review
+7. News（/news/） — 主承接 `Emberville news`、`Emberville updates`
 
-Title：Emberville News & Updates: Patch Notes & Roadmap
-H1：Emberville News
-段落：倒序时间线，每条一句话摘要 + 日期。蹭宣发节点和主播话题（cohhcarnage 70/月）做时效页。
+Title：Emberville News & Updates: Announcements & Launches
+H1：Emberville News and Updates
+段落：用 1–2 句说明本页汇总有日期、可追溯来源的 Emberville 新闻与更新；之后按日期倒序列出公告和详情页入口。栏目页只作简要摘要与分发，不重复新闻详情页的完整内容或争抢其专题词。
 
 ---
 
@@ -73,6 +73,9 @@ H1：Emberville News
 | L1 | 7 个核心栏目 | 见上表 | 承接栏目词 |
 | L1 | Release 附属：Countdown | `/countdown` | `/release-date` 的倒计时组件页；主词仍是 release date 的变体，**不与 `/release-date` 抢词**（`KEYWORDS.md` 已划界） |
 | L1 | Wiki 附属：Item Database | `/item-database` | `/wiki` 四大分组的明细落地页；**管单条目数值，`/wiki` 管结构**（`KEYWORDS.md` 已划界） |
+| L1 | 专题页：Voice Cast | `/voice-cast` | 独立承接 `Emberville voice cast`；`/characters` 只留摘要与内链，不再复写 22 人全表 |
+| L1 | 专题页：Studio | `/studio` | 独立承接 `Emberville developer` / `Cygnus Cross`；工作室与 CohhCarnage 背景的落地页 |
+| L1 | 专题页：Comparison | `/stardew-valley-diablo` | 独立承接 `Emberville vs Stardew Valley and Diablo`；媒体对比口径的落地页 |
 | — | 法务/功能页 | `/about` `/contact` `/privacy` `/terms` | 不参与关键词竞争，不加广告与 GA4 |
 | — | 来源与方法说明 | `/about/methodology` | 信任与编辑流程页面，不参与关键词竞争，不加广告与 GA4 |
 
@@ -80,7 +83,13 @@ H1：Emberville News
 `栏目.md` §3「已上线 URL 一个都不改」——`/release` 从未上线，故保留脚本生成的 `/release-date`）。
 
 **栏目总数口径**：对外说「7 个核心栏目」；`/countdown`、`/item-database` 表述为
-「Release 的倒计时页」「Wiki 的条目明细页」，不得称其为独立栏目。
+「Release 的倒计时页」「Wiki 的条目明细页」，`/voice-cast`、`/studio`、`/stardew-valley-diablo`
+表述为「专题页」，均不得称其为独立栏目。专题页**不进顶部导航**（导航仍只放 7 个栏目 + 首页），
+由首页正文与相关栏目页正文内链进入。
+
+> **专题页的设立判据**（2026-10-10 立规）：当某个栏目页的某一节本身对应**独立搜索需求**、
+> 且该节把栏目页篇幅推到 1800 词以上时，拆为专题页——栏目页只留摘要 + 内链，专题页承接该节词形。
+> 拆页后须同步本文件、`KEYWORDS.md`、`INTERNAL-LINKS.md`、`routes.json` 与 `docs/CHANGELOG.md`。
 
 # 不在本结构内的东西（明确不做）
 
