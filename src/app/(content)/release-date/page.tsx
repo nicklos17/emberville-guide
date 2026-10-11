@@ -7,13 +7,25 @@ import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
 import { AdArticle } from "@/components/ads/AdArticle";
 
-const SEO_TITLE = "Emberville Early Access Date 2026: Price & Scope"
+const SEO_TITLE = "Emberville Release Date & Early Access: Oct 27, 2026"
 const route = getRoute("/release-date");
 
 const FAQS: Faq[] = [
   {
     q: "When is Emberville's Early Access release date?",
     a: "The Steam store page lists 27 October 2026. It does not give a precise unlock time.",
+  },
+  {
+    q: "What time does Emberville unlock?",
+    a: "No unlock hour has been announced. The convention table above projects the usual Steam release hour, 10:00 AM Pacific (about 17:00 UTC, early on 28 October in Beijing), onto the announced date. That figure is a projection from platform convention, not an official time; on launch day the Steam page counter is the authority.",
+  },
+  {
+    q: "Is Emberville co-op or multiplayer?",
+    a: "No. Steam lists Emberville as Single-player, and neither the Steam store page nor the GOG listing names any co-op or online mode. Rescuing villagers and rebuilding the town are things you do alone in Early Access; a rescue theme is not a multiplayer feature.",
+  },
+  {
+    q: "Is Emberville on PS5 or Switch?",
+    a: "Console versions are not announced. Steam and GOG list Windows PC only, and the developer has named no PS5, Xbox, Switch or mobile edition. The platforms page on this site tracks each console's status in detail.",
   },
   {
     q: "When will the full release arrive?",
@@ -194,6 +206,44 @@ export default function ReleaseDatePage() {
         was set in the first place.
       </p>
       <p>
+        Neither Cygnus Cross nor the Steam or GOG store pages has announced an unlock hour. The table below projects
+        the Steam convention for major releases, 10:00 AM Pacific Time, onto the announced date; it is not an official
+        announcement.
+      </p>
+      <div className="overflow-x-auto my-4">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">PT</th>
+              <th scope="col">ET</th>
+              <th scope="col">UTC</th>
+              <th scope="col">CET</th>
+              <th scope="col">Beijing (UTC+8)</th>
+              <th scope="col">JST (UTC+9)</th>
+              <th scope="col">AEDT (UTC+11)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00 AM · Oct 27</td>
+              <td>1:00 PM · Oct 27</td>
+              <td>17:00 · Oct 27</td>
+              <td>18:00 · Oct 27</td>
+              <td>01:00 · Oct 28</td>
+              <td>02:00 · Oct 28</td>
+              <td>04:00 · Oct 28</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Times assume the usual late-October clock state: Pacific and Eastern are on daylight saving, Europe is back on
+        standard time, and Australian east-coast clocks run on AEDT in Sydney and Melbourne, hence 04:00; Brisbane,
+        which stays on AEST (UTC+10) year-round, would see 03:00. On launch day the Steam page itself begins showing an
+        “unlocks in approximately X hours” counter; treat that storefront display as authoritative. Once Cygnus Cross
+        or Steam names an exact hour, that official figure replaces this table.
+      </p>
+      <p>
         Dated announcements, including the demo window that runs ahead of launch, are collected on the{" "}
         <Link href="/news" title={routeTitle("/news")}>Emberville news page</Link>, with the free Next Fest demo
         covered in detail on the{" "}
@@ -216,9 +266,10 @@ export default function ReleaseDatePage() {
       <h2>Emberville release-date FAQ</h2>
       <FaqList faqs={FAQS} />
       <p>
-        Status on this page was verified on <b>2026-10-10</b> against the Steam store page, the GOG product page
+        Status on this page was verified on <b>2026-10-11</b> against the Steam store page, the GOG product page
         and dated IGN reporting. Early Access date: 27 October 2026. Exact unlock time, specific price and
-        full-release date: unannounced in those sources.
+        full-release date: unannounced in those sources. The unlock-time table above is a platform-convention
+        projection and is labeled as such.
       </p>
     </AdArticle>
   );

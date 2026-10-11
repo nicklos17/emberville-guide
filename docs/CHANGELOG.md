@@ -22,6 +22,12 @@ YYYY-MM-DD
 ## 站点日志
 
 ```
+2026-10-11
+[/release-date·TDK] 标题改为 "Emberville Release Date & Early Access: Oct 27, 2026"（SEO_TITLE 与 routes.json 同步，页面输出追加品牌后缀），description 重写为直接给出 release date：「Emberville's release date is October 27, 2026 in Early Access, confirmed on Steam and GOG...」；首页倒计时链接复核：全站 src 与线上首页均无 /countdown 引用，倒计时区已直链 /release-date，无需改动。
+2026-10-11
+[/release-date] 解锁惯例表与 FAQ 按用户指令修订（同日补记）：① 表前句压缩为「官方未公布解锁时刻 + 下表按 Steam 大型发售惯例（10:00 PT）推算，非官方公布」两句式；② 澳洲栏改标 AEDT (UTC+11)、值 04:00 · Oct 28（10 月末悉尼/墨尔本已入夏令时，按东岸实际钟面取 04:00；严格 AEST 的布里斯班 03:00，注脚说明）；③ 表后补「当天 Steam 页会出现 unlocks in approximately X hours 倒计时，以它为准；官方一旦公布时刻即替换本表」；④ FAQ 补三条：What time does Emberville unlock?（指向惯例表，替换原 What time will Emberville unlock on Steam? 措辞避免近重复）、Is Emberville co-op or multiplayer?（No，Steam 仅列 Single-player，救村民≠多人）、Is Emberville on PS5 or Switch?（未公布，正文已链 /platforms）。FAQPage JSON-LD 随之更新；事实口径未变，lastModified 维持 2026-10-11。
+2026-10-11
+[/release-date] 新增 Steam 解锁时刻惯例表（承接 emberville release time / unlock hour 词面与 PAA "What time do new games unlock on Steam?" 答案位）：写法两段——先一句官方口径（Cygnus Cross 与 Steam/GOG 列表均未公布解锁时刻），再给平台惯例推算：大型 Steam 发售传统上 10:00 AM PT（≈17:00 UTC，北京为次日凌晨），落成 PT/ET/UTC/CET/Beijing/JST/AEST 七栏表，表头明确标注 community estimate, not an official announcement，表后注明十月令时换算前提（PDT/EDT、欧洲已回冬令时、AEST 固定 UTC+10）与「官方一旦公布时刻即替换本表」。FAQ 增补 "What time will Emberville unlock on Steam?"（FAQPage JSON-LD 随之更新）。事实与来源未变（各 DataBlock 核验日期保持 2026-10-10），页面收尾核验日期更新为 2026-10-11，routes.json lastModified 同步（sitemap lastmod 随之更新）。
 2026-10-10
 [/countdown] 撤页决策反转（补记）：由「直接 404」改为 **301 → /release-date**。动机：保留旧 URL 可能已有的收录与外链权重。实现为 next.config.ts redirects()（statusCode 301；撤页路径无对应资产、请求必达 Next 路由），已部署并线上验证 301 与落点 200；`/countdown/` 尾斜杠 308 归一后 301，query 透传；www 两跳与既有 www 规则一致。同步回填 docs/REDIRECT.md §6（撤页 301 的层位选择与验证命令）、docs/CONFLICTS.md C-13 补记、docs/KEYWORDS.md、docs/INTERNAL-LINKS.md §9/§10。页面内容不变（独有内容此前已并入 /release-date）。
 2026-10-10
