@@ -22,6 +22,10 @@ YYYY-MM-DD
 ## 站点日志
 
 ```
+2026-10-12
+[/games-like-emberville] 扩容两节 + 一次提及，承接 emberville vs necesse / vs witchbrook 长尾（不为新游戏开独立页）：新增 Necesse 节（列首位，机制对位最紧：定居点+招募专家+地牢 Boss 战+采矿制作，Fair Games ApS，2025-10-16 已发行，像素+在线合作）与 Witchbrook 节（像素女巫生活模拟，Chucklefish + Robotality，最多 4 人，商店页 2026 窗口未定档——全列表唯一未发售条目，收尾句相应调整）；导购段一两句提及 Enshrouded（Keen Games，至多 16 人合作，3D voxel 大体量同类）；FAQ 两条同步更新（closest game 首推 Necesse；co-op 答案补 Necesse/Witchbrook）。事实均取自当日 Steam 商店页抓取（新增两节 DataBlock verified=2026-10-12，原五节保持 2026-10-10）。routes.json lastModified → 2026-10-12，description 补全七款游戏名。
+2026-10-12
+[/characters] 与 /voice-cast 去重（纯减法）：配音节正文压缩为两句（Memento 一句保留 + 「工作室公布 22 人名单与两个已确认角色映射，完整名单与来源见配音名单页」），原句中的名单详情、Alex Jordan/Matthew Mercer→Adeos/Gumu 映射细节不再重复（/voice-cast 为唯一落点）；删除该节下 IGN 预览与 Cygnus Cross 官网两个重复来源脚注块（两来源在 /voice-cast 各有一块）；FAQ "Who voices the characters in Emberville?" 改为一句指路。其余节不动（幸存者救援循环、村民职业与重建、角色创建、「官方未公布具名角色表」说明、工作室段落与 /studio 内链均保留）。routes.json lastModified → 2026-10-12，description 尾部同步收敛（不再提 voice-acting director）。
 2026-10-11
 [/release-date·TDK] 标题改为 "Emberville Release Date & Early Access: Oct 27, 2026"（SEO_TITLE 与 routes.json 同步，页面输出追加品牌后缀），description 重写为直接给出 release date：「Emberville's release date is October 27, 2026 in Early Access, confirmed on Steam and GOG...」；首页倒计时链接复核：全站 src 与线上首页均无 /countdown 引用，倒计时区已直链 /release-date，无需改动。
 2026-10-11

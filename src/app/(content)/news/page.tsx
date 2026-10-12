@@ -71,7 +71,9 @@ export default function NewsPage() {
       </p>
 
       <p>
-        For system explainers rather than announcements, start with the <Link href="/guides" title={routeTitle("/guides")}>Emberville guides hub</Link>.
+        For system explainers rather than announcements, start with the <Link href="/guides" title={routeTitle("/guides")}>Emberville guides hub</Link>. For the
+        people behind the game, read <Link href="/studio" title={routeTitle("/studio")}>CohhCarnage’s game</Link> and
+        the Cygnus Cross studio profile.
       </p>
 
       <h2>Latest Emberville news</h2>

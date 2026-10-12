@@ -25,7 +25,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Who voices the characters in Emberville?",
-    a: "The official site lists a 22-name cast led by voice-acting director Alex Jordan, including Doug Cockle, Matthew Mercer, Jennifer English, Ben Starr, Abubakar Salim and Jane Perry. Alex Jordan voices Adeos and Matthew Mercer voices the shopkeeper Gumu; the rest are not yet mapped to roles.",
+    a: "Cygnus Cross has published a 22-name voice cast with two confirmed role mappings; the voice cast page on this site carries the full roster and its sourcing.",
   },
   {
     q: "Who is developing Emberville?",
@@ -97,20 +97,11 @@ export default function CharactersPage() {
 
       <h2>Emberville’s voice cast and the Memento</h2>
       <p>
-        The Cygnus Cross studio introduction names the protagonist’s luminous companion as the Memento. The studio
-        also publishes a 22-name voice cast — unusually large for a debut indie — led by voice-acting director Alex
-        Jordan, who performs in the game as well. Two roles have been named in published coverage: Alex Jordan
-        voices Adeos, an elderly and not-quite-all-there figure, and Matthew Mercer voices Gumu, a gremlin-like
-        shopkeeper. The official roster does not map the remaining performers to characters, and this page does not
-        infer those pairings from the cast list alone. The full roster and its sourcing are on the{" "}
+        The Cygnus Cross studio introduction names the protagonist’s luminous companion as the Memento. On the voice
+        work, the studio publishes a 22-name cast with two confirmed role mappings, and the full roster with its
+        sourcing sits on the{" "}
         <Link href="/voice-cast" title={routeTitle("/voice-cast")}>Emberville voice cast reference</Link>.
       </p>
-      <DataBlock source="IGN hands-on preview" url="https://nordic.ign.com/emberville/112727/emberville-is-a-charming-blend-of-stardew-valley-and-diablo-ign-preview" verified="2026-10-10">
-        <p>IGN’s September 11 preview heard Alex Jordan’s performance as the elderly Adeos and Matt Mercer’s shopkeeper Gumu in the prologue.</p>
-      </DataBlock>
-      <DataBlock source="Cygnus Cross official website" url="https://www.cygnuscross.com/" verified="2026-10-10">
-        <p>The studio site publishes the 22-name Emberville voice cast with Alex Jordan credited as Voice Acting Director; it does not map performers to specific villagers.</p>
-      </DataBlock>
       <p>
         The cast is assembled by Cygnus Cross, the independent studio behind the game — Emberville is its debut
         title, based in Cork, Ireland and led by founder and lead game director Brynjar Gigja, with Twitch streamer

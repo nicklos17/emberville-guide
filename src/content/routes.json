@@ -92,8 +92,8 @@
   {
     "path": "/characters",
     "title": "Emberville Characters: Survivors & Village Stories",
-    "description": "Learn how Emberville survivors support quests, rebuilding, and progression, plus the official 22-name voice cast led by voice-acting director Alex Jordan.",
-    "lastModified": "2026-10-10",
+    "description": "Learn how Emberville survivors support quests, rebuilding, and progression, plus the Memento companion and the confirmed 22-name voice cast.",
+    "lastModified": "2026-10-12",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -109,9 +109,9 @@
   },
   {
     "path": "/studio",
-    "title": "Emberville Developer: Cygnus Cross & CohhCarnage",
-    "description": "Meet the Emberville developer: Cygnus Cross, a Cork indie studio led by Brynjar Gigja with co-founder Ben “CohhCarnage” Cassell.",
-    "lastModified": "2026-10-10",
+    "title": "CohhCarnage’s Game Is Emberville – Cygnus Cross Developer Guide",
+    "description": "CohhCarnage’s game is Emberville. Meet Cygnus Cross, the Cork studio where Ben “CohhCarnage” Cassell is co-founder and co-game director alongside lead game director Brynjar Gigja.",
+    "lastModified": "2026-10-12",
     "priority": 0.8,
     "changeFrequency": "monthly",
     "pageLive": true
@@ -128,8 +128,8 @@
   {
     "path": "/games-like-emberville",
     "title": "Games Like Emberville: Similar Action RPGs Compared",
-    "description": "Games like Emberville compared by mechanic: Core Keeper, Moonlighter, DREDGE and Dimraeth, matched to Emberville’s combat, crafting and town building.",
-    "lastModified": "2026-10-10",
+    "description": "Games like Emberville compared by mechanic: Necesse, Core Keeper, Moonlighter, DREDGE, Graveyard Keeper 2, Witchbrook and Dimraeth, matched to Emberville’s combat, crafting and town building.",
+    "lastModified": "2026-10-12",
     "priority": 0.8,
     "changeFrequency": "monthly",
     "pageLive": true

@@ -159,7 +159,9 @@ export default function HomePage() {
           Emberville is a single-player action RPG from Cygnus Cross, planned for Steam Early Access on 27 October
           2026. You wake without memories in the Vitromotus, a magical prison, and set out to rescue survivors and
           rebuild the town. The announced design joins exploration and action combat with crafting, farming,
-          cooking and a personal estate.
+          cooking and a personal estate. Curious about the streamer connection? The people behind it are covered
+          in <Link href="/studio" title={routeTitle("/studio")}>CohhCarnage’s game</Link>, our profile of the
+          studio making it.
         </p>
 
         <h2>Emberville setting: imprisonment and renewal</h2>

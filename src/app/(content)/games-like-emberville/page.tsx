@@ -13,11 +13,11 @@ const route = getRoute("/games-like-emberville");
 const FAQS: Faq[] = [
   {
     q: "What is the closest game to Emberville?",
-    a: "On the two layers Emberville emphasises most — pixel action combat plus gathering, crafting and building a base — Core Keeper and Dimraeth sit closest. For the town-and-economy layer, Moonlighter and Graveyard Keeper 2 are nearer.",
+    a: "On raw mechanics, Necesse is the tightest match: settlement building, recruited specialists, dungeon and boss combat, and mining and crafting all appear in both. Core Keeper and Dimraeth sit closest on the pixel action-and-gathering side, while Moonlighter and Graveyard Keeper 2 are nearer on the town-and-economy layer.",
   },
   {
     q: "Do the games on this list have co-op?",
-    a: "Some do and some do not. Core Keeper and Dimraeth support online play, while DREDGE is single-player. Emberville is listed as single-player, so a co-op game is similar in mechanics but not in mode.",
+    a: "Some do and some do not. Necesse, Core Keeper and Dimraeth support online play, Witchbrook is built for up to four players, and DREDGE is single-player. Emberville is listed as single-player, so a co-op game is similar in mechanics but not in mode.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function GamesLikePage() {
       <p className="answer">
         Games “like” Emberville are best matched by mechanic, not by genre label. Emberville’s announced design mixes
         melee, magic and ranged combat, weapon-bound combos, classes you can switch at any time with skills you keep,
-        and a loop of gathering, crafting, farming and rebuilding a town of rescued survivors. The five games below
+        and a loop of gathering, crafting, farming and rebuilding a town of rescued survivors. The seven games below
         each overlap on one of those layers, and each differs somewhere else.
       </p>
       <p>
@@ -62,6 +62,21 @@ export default function GamesLikePage() {
             </tbody>
           </table>
         </div>
+      </DataBlock>
+
+      <h2>Necesse: the closest mechanical counterpart</h2>
+      <p>
+        Necesse is the tightest one-to-one match on mechanics. Its store page describes building, exploring and
+        conquering in an infinite procedurally generated world, alone or with friends, where you establish a
+        settlement, delve into dungeons, fight monsters and bosses, mine rare ores, craft magical equipment and
+        recruit experts for your settlement. Nearly every one of Emberville’s five layers keys on something in that
+        sentence: boss combat, gathering and crafting, and a town you grow by bringing people into it. The
+        differences are just as concrete. Necesse is a procedurally generated sandbox with online co-op and has been
+        released since 16 October 2025, while Emberville is single-player with a handcrafted town where survivors
+        arrive with stories, diaries and quests rather than job assignments.
+      </p>
+      <DataBlock source="Necesse store page" url="https://store.steampowered.com/app/1169040/Necesse/" verified="2026-10-12">
+        <p>Necesse, from Fair Games ApS, is described as a build-explore-conquer sandbox in an infinite procedurally generated world, with settlements, dungeons, bosses, mining, magical crafting and recruited experts; its store page lists 16 October 2025 as the release date.</p>
       </DataBlock>
 
       <h2>Core Keeper: the underground gathering loop</h2>
@@ -116,6 +131,20 @@ export default function GamesLikePage() {
         <p>Graveyard Keeper 2, from Lazy Bear Games and tinyBuild, is described as a medieval graveyard simulator about rebuilding a town and automating production.</p>
       </DataBlock>
 
+      <h2>Witchbrook: the pixel life-sim corner of the same shelf</h2>
+      <p>
+        Witchbrook covers the life-sim side of Emberville’s mix. Its store page describes a magical witch life
+        simulation for up to four players, set in a seaside town where you make friends, find romance and study
+        while exploring magic and mystery, with crafting, farming and character customisation among its tags. The
+        overlap with Emberville is the social-and-crafting layer: a pixel town full of characters worth knowing,
+        plus farming and crafting rhythms. The split is on the action core — Witchbrook is a life sim first, while
+        Emberville puts combat, classes and weapon combos at the centre. Its store page carries a 2026 release
+        window with no exact date, so this is the entry to watch rather than to play today.
+      </p>
+      <DataBlock source="Witchbrook store page" url="https://store.steampowered.com/app/1846700/Witchbrook/" verified="2026-10-12">
+        <p>Witchbrook, from Chucklefish and Robotality, is described as a magical witch life simulation for up to four players in a seaside town; its store page carries a 2026 release window.</p>
+      </DataBlock>
+
       <h2>Dimraeth: the closest pixel action RPG with a stronghold</h2>
       <p>
         Dimraeth overlaps on the exact combination of pixel action RPG and base-building that Emberville advertises. Its
@@ -131,10 +160,14 @@ export default function GamesLikePage() {
 
       <h2>Which one fits your Emberville interest?</h2>
       <p>
-        If what pulls you in is the underground gather-build-fight loop, Core Keeper and Dimraeth are the nearest.
-        If it is the town that grows as you play, Moonlighter and Graveyard Keeper 2 speak to that side. If it is the
-        single-player exploration mood, DREDGE is the closest in atmosphere. And if you want the Diablo-and-Stardew
-        shorthand worked through properly, our{" "}
+        If you want the most mechanics in common, Necesse is the tightest fit: settlement, recruits, bosses and
+        crafting all carry over as ideas. If what pulls you in is the underground gather-build-fight loop, Core
+        Keeper and Dimraeth are the nearest on the pixel action side. If it is the town that grows as you play,
+        Moonlighter and Graveyard Keeper 2 speak to that side, and Witchbrook takes it furthest into life-sim
+        territory. If it is the single-player exploration mood, DREDGE is the closest in atmosphere. And if the loop
+        appeals but the scale feels small, Keen Games’ Enshrouded runs the same gather-build-fight shape in a large
+        3D voxel open world with co-op for up to 16 players — a different production class from every pixel game on
+        this list. If you want the Diablo-and-Stardew shorthand worked through properly, our{" "}
         <Link href="/stardew-valley-diablo" title={routeTitle("/stardew-valley-diablo")}>Emberville vs Stardew Valley and Diablo comparison</Link>{" "}
         takes that pair apart; the{" "}
         <Link href="/wiki" title={routeTitle("/wiki")}>Emberville wiki</Link> lists the confirmed systems these
@@ -152,8 +185,10 @@ export default function GamesLikePage() {
       <FaqList faqs={FAQS} />
       <p>
         This comparison was built from Emberville’s Steam store page and IGN’s hands-on preview, checked on
-        <b> 2026-10-10</b>, alongside each listed game’s own store page on the same date. Emberville’s design is
-        announced rather than released; the games above are all available now.
+        <b> 2026-10-10</b>, alongside each listed game’s own store page — the five original entries on that date,
+        and Necesse plus Witchbrook on <b> 2026-10-12</b>. Emberville’s design is announced rather than released;
+        the games above are available now except Witchbrook, whose store page carries a 2026 window with no exact
+        date.
       </p>
     </AdArticle>
   );

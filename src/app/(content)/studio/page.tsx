@@ -7,7 +7,7 @@ import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
 import { AdArticle } from "@/components/ads/AdArticle";
 
-const SEO_TITLE = "Emberville Developer: Cygnus Cross & CohhCarnage";
+const SEO_TITLE = "CohhCarnage’s Game Is Emberville – Cygnus Cross Developer Guide";
 const route = getRoute("/studio");
 
 const FAQS: Faq[] = [
@@ -23,6 +23,14 @@ const FAQS: Faq[] = [
     q: "Is Emberville Cygnus Cross’s first game?",
     a: "The September preview describes Emberville as the studio’s debut title.",
   },
+  {
+    q: "What game is CohhCarnage working on?",
+    a: "Emberville, a pixel-art action RPG developed by Cygnus Cross in Cork, Ireland. Cassell co-founded the studio and serves as co-game director.",
+  },
+  {
+    q: "Did CohhCarnage make Emberville?",
+    a: "He co-founded the studio and is co-game director; the game is developed by the Cygnus Cross team led by Brynjar Gigja.",
+  },
 ];
 
 export const revalidate = false;
@@ -35,11 +43,27 @@ export default function StudioPage() {
   return (
     <AdArticle className="article mx-auto w-full max-w-3xl px-4 py-10">
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Studio", href: route.path }]} />
-      <h1>Emberville Developer: The Cygnus Cross Studio</h1>
+      <h1>Emberville Developer: Cygnus Cross, the Studio Behind CohhCarnage’s Game</h1>
       <p className="answer">
         Emberville is the debut game from Cygnus Cross, an independent studio based in Cork, Ireland. The team is
         led by founder and lead game director Brynjar Gigja, with Twitch streamer Ben “CohhCarnage” Cassell as
         co-founder and co-game director. These are the roles used in developer and named-media sources.
+      </p>
+
+      <h2>What game is CohhCarnage making?</h2>
+      <p>
+        CohhCarnage’s game is Emberville, a pixel-art dungeon-crawling action RPG from Cygnus Cross, an independent
+        studio in Cork, Ireland. It launches into Early Access on 27 October 2026 on Steam and GOG.
+      </p>
+      <p>
+        Ben “CohhCarnage” Cassell is a co-founder of Cygnus Cross and co-game director on Emberville, working
+        alongside founder and lead game director Brynjar Gigja. He has documented the project on his own channel in
+        videos including “I Am Making A Game – Emberville” and “Answering Questions About My Game”.
+      </p>
+      <p>
+        “CohhCarnage’s game” can mean two different things. The games he streams are the daily variety lineup on his
+        channel, which recently has included Valheim and Windrose. The game he is making is Emberville. This page
+        covers the second.
       </p>
 
       <h2>Cygnus Cross: the independent Emberville studio</h2>
@@ -47,8 +71,7 @@ export default function StudioPage() {
         Cygnus Cross is identified as both developer and publisher on the Steam listing. A July developer release
         is datelined Cork, Ireland and describes the company as an independent developer. Emberville is the
         studio’s debut title; Gamer Social Club’s September preview reports that the team had been building it
-        since 2023. Those details provide a sourced outline of the studio without extending it into unverified
-        claims about its size or internal structure.
+        since 2023.
       </p>
       <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
         <p>Steam identifies Cygnus Cross as both the developer and publisher of Emberville.</p>
@@ -59,10 +82,8 @@ export default function StudioPage() {
 
       <h2>Emberville leadership: Brynjar Gigja and CohhCarnage</h2>
       <p>
-        Named coverage describes Brynjar Gigja as founder and lead game director. Ben “CohhCarnage” Cassell is
-        identified as a co-founder and co-game director. Cassell is also known as a Twitch streamer, but the
-        position relevant to Emberville in the cited reports is the studio role—not an informal label sometimes
-        repeated in community posts.
+        Named coverage describes Brynjar Gigja as founder and lead game director. Cassell is identified in named
+        coverage as co-founder and co-game director.
       </p>
       <DataBlock source="GamingTrend" url="https://gamingtrend.com/news/get-a-look-at-emberville-before-it-launches-into-early-access-this-october" verified="2026-10-10">
         <p>GamingTrend names CohhCarnage as “Co-founder and Co-Game Director” and Brynjar Gigja as “Lead Game Director.”</p>
