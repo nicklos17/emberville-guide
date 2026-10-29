@@ -3,7 +3,7 @@
     "path": "/",
     "title": "Emberville Wiki & Guides – Maps, Builds, Release Date",
     "description": "Emberville wiki and guides: explore the prison setting, combat, crafting, release details, and verified links to the game’s systems and story.",
-    "lastModified": "2026-10-10",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -12,7 +12,7 @@
     "path": "/wiki",
     "title": "Emberville Wiki Database: Setting, Combat & Systems",
     "description": "Emberville wiki database: the Vitromotus, kymia, combat, crafting and progression, plus the studio and voice cast behind the game.",
-    "lastModified": "2026-10-10",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -21,43 +21,43 @@
     "path": "/guides",
     "title": "Emberville Guides: Systems, Prep & Verified Tips",
     "description": "Emberville guides to the announced combat, crafting and class systems, separating IGN's preview observations from unverified launch tactics.",
-    "lastModified": "2026-10-10",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
   },
   {
     "path": "/release-date",
-    "title": "Emberville Release Date & Early Access: Oct 27, 2026",
-    "description": "Emberville's release date is October 27, 2026 in Early Access, confirmed on Steam and GOG. Compare official sources, price status, scope, and PC requirements.",
-    "lastModified": "2026-10-11",
+    "title": "Emberville Release Date & Early Access: Jan 7, 2027",
+    "description": "Emberville enters Early Access on January 7, 2027, moved from October 27, 2026. Compare the official date, price, platforms and PC requirements.",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
   },
   {
     "path": "/platforms",
-    "title": "Emberville Platforms: PS5, Switch & Console Status",
-    "description": "Emberville platforms: PC on Steam and GOG is confirmed, while PS5, Xbox, Switch, Switch 2 and mobile are unannounced. What each source lists.",
-    "lastModified": "2026-10-10",
+    "title": "Emberville Platforms: PC Now, Consoles Planned for 1.0",
+    "description": "Emberville launches on PC via Steam and GOG on January 7, 2027. Console versions are planned for the 1.0 release, with no platform named and no date set.",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
   },
   {
     "path": "/platforms/multiplayer",
-    "title": "Emberville Multiplayer: Co-op Status Explained",
-    "description": "Emberville multiplayer status: Steam lists the game as single-player, and the roadmap’s Workshop modding is a modding feature, not a co-op mode.",
-    "lastModified": "2026-10-10",
+    "title": "Emberville Co-op: Planned for 1.0, Not at Launch",
+    "description": "Emberville's Early Access build is single-player, and the studio says co-op multiplayer is planned for the 1.0 release. What is confirmed and what is not.",
+    "lastModified": "2026-10-28",
     "priority": 0.7,
     "changeFrequency": "daily",
     "pageLive": true
   },
   {
     "path": "/price",
-    "title": "Emberville Price 2026: Purchase Model & What's Announced",
-    "description": "Emberville price: no amount is announced. Confirmed is a one-time purchase, no microtransactions, a stable price and possible Early Access discounts.",
-    "lastModified": "2026-10-10",
+    "title": "Emberville Price: $29.99, 10% Off, No Microtransactions",
+    "description": "Emberville launches at $29.99, or $26.99 with the 10% launch discount. What changed from the old $25 cap, and what the one-time purchase includes.",
+    "lastModified": "2026-10-28",
     "priority": 0.8,
     "changeFrequency": "daily",
     "pageLive": true
@@ -111,7 +111,7 @@
     "path": "/studio",
     "title": "CohhCarnage’s Game Is Emberville – Cygnus Cross Developer Guide",
     "description": "CohhCarnage’s game is Emberville. Meet Cygnus Cross, the Cork studio where Ben “CohhCarnage” Cassell is co-founder and co-game director alongside lead game director Brynjar Gigja.",
-    "lastModified": "2026-10-12",
+    "lastModified": "2026-10-28",
     "priority": 0.8,
     "changeFrequency": "monthly",
     "pageLive": true
@@ -120,7 +120,7 @@
     "path": "/stardew-valley-diablo",
     "title": "Emberville vs Stardew Valley and Diablo Compared",
     "description": "Compare Emberville’s two-button combat and gathering loop with the Diablo and Stardew Valley shorthand used by IGN and GameSpot.",
-    "lastModified": "2026-10-10",
+    "lastModified": "2026-10-28",
     "priority": 0.8,
     "changeFrequency": "monthly",
     "pageLive": true
@@ -129,7 +129,7 @@
     "path": "/games-like-emberville",
     "title": "Games Like Emberville: Similar Action RPGs Compared",
     "description": "Games like Emberville compared by mechanic: Necesse, Core Keeper, Moonlighter, DREDGE, Graveyard Keeper 2, Witchbrook and Dimraeth, matched to Emberville’s combat, crafting and town building.",
-    "lastModified": "2026-10-12",
+    "lastModified": "2026-10-28",
     "priority": 0.8,
     "changeFrequency": "monthly",
     "pageLive": true
@@ -138,7 +138,16 @@
     "path": "/news",
     "title": "Emberville News & Updates: Announcements & Launches",
     "description": "Follow dated Emberville news and updates from Cygnus Cross, including launch announcements, gameplay reveals, and the Steam Next Fest demo.",
-    "lastModified": "2026-10-10",
+    "lastModified": "2026-10-28",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/news/emberville-delay",
+    "title": "Emberville Delay: Early Access Now Launches January 7, 2027",
+    "description": "Emberville's Early Access launch is now January 7, 2027, delayed a day before the October 27 date over bow combat and demo feedback. Timeline and impact.",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
     "pageLive": true
@@ -146,10 +155,28 @@
   {
     "path": "/news/emberville-demo",
     "title": "Emberville Demo Dates, Content & Early Access Explained",
-    "description": "Trying the Emberville demo? See its Oct 19–26, 2026 Steam Next Fest dates, Oct 27 Early Access launch, confirmed facts, and what to check before buying.",
-    "lastModified": "2026-10-10",
+    "description": "Trying the Emberville demo? See its Oct 19–26, 2026 Steam Next Fest dates, the January 7, 2027 Early Access launch, and what to check before buying.",
+    "lastModified": "2026-10-28",
     "priority": 0.9,
     "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/news/emberville-demo-launch",
+    "title": "Emberville Next Fest Demo Live: Prologue & Save Transfer",
+    "description": "The Emberville Next Fest demo went live on October 20 with a 90-minute prologue, carry-over saves and a day-one patch. Here is what the build contains.",
+    "lastModified": "2026-10-28",
+    "priority": 0.9,
+    "changeFrequency": "daily",
+    "pageLive": true
+  },
+  {
+    "path": "/news/emberville-announcement-video",
+    "title": "Emberville Announcement Video: What CohhCarnage Revealed",
+    "description": "What CohhCarnage announced in his Emberville reveal video: how he joined Cygnus Cross, the $25 price cap, zero microtransactions and the open Early Access plan.",
+    "lastModified": "2026-10-28",
+    "priority": 0.8,
+    "changeFrequency": "weekly",
     "pageLive": true
   },
   {

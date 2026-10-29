@@ -7,37 +7,37 @@ import { FaqList, type Faq } from "@/components/FaqList";
 import { DataBlock } from "@/components/DataBlock";
 import { AdArticle } from "@/components/ads/AdArticle";
 
-const SEO_TITLE = "Emberville Release Date & Early Access: Oct 27, 2026"
+const SEO_TITLE = "Emberville Release Date & Early Access: Jan 7, 2027"
 const route = getRoute("/release-date");
 
 const FAQS: Faq[] = [
   {
     q: "When is Emberville's Early Access release date?",
-    a: "The Steam store page lists 27 October 2026. It does not give a precise unlock time.",
+    a: "7 January 2027. Cygnus Cross moved the date from 27 October 2026 on 26 October, one day before the original launch. The listings give the calendar day only, with no unlock hour.",
   },
   {
     q: "What time does Emberville unlock?",
-    a: "No unlock hour has been announced. The convention table above projects the usual Steam release hour, 10:00 AM Pacific (about 17:00 UTC, early on 28 October in Beijing), onto the announced date. That figure is a projection from platform convention, not an official time; on launch day the Steam page counter is the authority.",
+    a: "No unlock hour has been announced for 7 January 2027 either. The convention table below projects the usual Steam release hour, 10:00 AM Pacific (18:00 UTC, early on 8 January in Beijing), onto the announced date. That figure is a projection from platform convention, not an official time; on launch day the Steam page counter is the authority.",
   },
   {
     q: "Is Emberville co-op or multiplayer?",
-    a: "No. Steam lists Emberville as Single-player, and neither the Steam store page nor the GOG listing names any co-op or online mode. Rescuing villagers and rebuilding the town are things you do alone in Early Access; a rescue theme is not a multiplayer feature.",
+    a: "Not at launch. The Early Access build is single-player, and the studio says co-op multiplayer is planned for the 1.0 release, with no date, no player count and no word on whether it is online or local.",
   },
   {
     q: "Is Emberville on PS5 or Switch?",
-    a: "Console versions are not announced. Steam and GOG list Windows PC only, and the developer has named no PS5, Xbox, Switch or mobile edition. The platforms page on this site tracks each console's status in detail.",
+    a: "Console versions are planned for the 1.0 release, but no console is named. Steam and GOG list Windows only, and no PS5, Xbox, Switch or mobile edition has a version, a date or a storefront listing. The platforms page tracks each console's status in detail.",
   },
   {
     q: "When will the full release arrive?",
     a: "A specific 1.0 date is not announced. The developer estimates approximately eighteen months to reach its intended complete experience, and says community feedback may extend that period.",
   },
   {
-    q: "How much does Emberville cost?",
-    a: "A specific price is not announced on the Steam store page as of 2026-10-10.",
+    q: "Will the Emberville price rise after Early Access?",
+    a: "Unstated. The January 2026 video described a base price that stays stable, but the October 19 briefing prices launch at $29.99 without repeating that commitment, and no future increase has been announced.",
   },
   {
     q: "Does Emberville have a GOG listing as well as Steam?",
-    a: "Yes. Steam and the official GOG product page both list Emberville for October 27, 2026; GOG identifies its supported system as Windows.",
+    a: "Yes. The official GOG product page carries Emberville for the same Early Access release as Steam and identifies its supported system as Windows. The studio's 26 October announcement, rather than either store page, is what moved the date.",
   },
 ];
 
@@ -53,61 +53,78 @@ export default function ReleaseDatePage() {
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Release Date", href: route.path }]} />
       <h1>Emberville Release Date and Early Access Details</h1>
       <p className="answer">
-        Emberville is planned to enter Early Access on 27 October 2026. The Steam and GOG product pages give a
-        calendar date; the exact unlock time, full-release date and specific price all remain unannounced. The table
-        below separates confirmed information from those open items, then summarizes the Early Access scope,
-        developer roadmap notes and minimum PC requirements, with developer estimates clearly marked.
+        Emberville is scheduled to enter Early Access on 7 January 2027, after Cygnus Cross moved the date from
+        27 October 2026 on 26 October — one day before the original launch. The studio prices Early Access at
+        $29.99 with a 10% launch discount; the unlock hour and full-release date remain unannounced. The table below
+        separates confirmed information from those open items, then summarizes the Early Access scope, developer
+        roadmap notes and minimum PC requirements.
       </p>
 
       <h2>Release information at a glance</h2>
       <p>
-        The date shown by Steam and GOG is the only specific launch date recorded here. “Early Access” and “full release”
-        are different milestones: the former is the planned public release stage, while a 1.0 date remains
-        unannounced. Likewise, the Steam and GOG product listings confirm the Windows store context, distinct from
-        availability on an unlisted storefront or a console. Where the source omits a value, this page uses “Not
-        announced” rather than calculating or inferring one.
+        The studio&rsquo;s announcement is what set the current date; the store listings supply the storefront and
+        system facts. “Early Access” and “full release” are different milestones: the former is the planned public
+        release stage, while a 1.0 date remains unannounced. Where the source omits a value, this page uses
+        “Not announced” rather than calculating or inferring one.
       </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
+      <DataBlock source="Steam — Emberville store page, Cygnus Cross Early Access briefing (October 19, 2026) and delay announcement (October 26, 2026)" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-28">
         <div className="overflow-x-auto my-4">
           <table>
             <thead><tr><th scope="col">Item</th><th scope="col">Confirmed status</th><th scope="col">What that means</th></tr></thead>
             <tbody>
-              <tr><td>Early Access date</td><td>27 October 2026</td><td>Calendar date published by Steam; the exact unlock time stays unannounced</td></tr>
+              <tr><td>Early Access date</td><td>7 January 2027</td><td>Set by the studio&rsquo;s October 26 announcement; the exact unlock time stays unannounced</td></tr>
+              <tr><td>Previously announced date</td><td>27 October 2026</td><td>Withdrawn one day before it would have taken effect</td></tr>
               <tr><td>Full release / 1.0 date</td><td>Unannounced</td><td>The complete version's date stays unpublished</td></tr>
-              <tr><td>Platform</td><td>Windows (Steam and GOG)</td><td>Steam and the official GOG product page both list Windows; a console platform stays unconfirmed</td></tr>
-              <tr><td>Price</td><td>Unannounced</td><td>The developer describes its pricing approach while leaving the specific amount unlisted</td></tr>
-              <tr><td>Mode</td><td>Single-player</td><td>Listed game mode; this source lists single-player only</td></tr>
+              <tr><td>Platform</td><td>Windows (Steam and GOG) at launch</td><td>Both product pages list Windows; console releases are planned for 1.0 without a named platform</td></tr>
+              <tr><td>Price</td><td>$29.99, or $26.99 with the 10% launch discount</td><td>Stated in the studio&rsquo;s October 19 briefing; regional pricing may vary, and the discount window has not been restated for January</td></tr>
+              <tr><td>Mode</td><td>Single-player at launch</td><td>Listed game mode for Early Access; co-op multiplayer is planned for 1.0</td></tr>
               <tr><td>Early Access experience</td><td>Fully playable experience with substantial content; meaningful updates planned</td><td>Developer's description of the intended starting scope and update approach</td></tr>
-              <tr><td>Purchase and monetization</td><td>Developer says one-time purchase and no microtransactions</td><td>Price may be discounted during Early Access; a specific amount remains unannounced</td></tr>
+              <tr><td>Purchase and monetization</td><td>One-time purchase; no microtransactions, battle passes or paid DLC</td><td>Stated in the October 19 briefing; the January video&rsquo;s price-stability remark is not repeated there</td></tr>
               <tr><td>Estimated development period</td><td>Approximately 18 months</td><td>Estimate toward the developer's complete experience; feedback may extend it</td></tr>
             </tbody>
           </table>
         </div>
       </DataBlock>
 
-      <h2>Steam and GOG listings cross-check the release date</h2>
+      <h2>Emberville release date history: from summer to January</h2>
       <p>
-        The Steam product page and GOG’s official Emberville product page both list 27 October 2026. GOG’s page
-        separately identifies Windows as its supported system and provides a GOG offline-installer option; those
-        are storefront details, distinct from proof that the game is currently playable before its listed date.
-        IGN’s July 15 trailer coverage independently reported the same Early Access date after the initial January
-        announcement had described a Summer 2026 window. The dated announcement history is more informative than
-        repeating one store capsule: the target became a specific October day in the July release-date announcement.
+        The date has moved twice on the record, and the sequence matters more than any single store capsule. In
+        January 2026 the announcement aimed at a summer window; the July release-date trailer narrowed that to a
+        specific October day; and on 26 October 2026 the studio withdrew the October date one day before it was due
+        to take effect. The store pages carried the October date until then, which is why older coverage still
+        reports it.
       </p>
-      <DataBlock source="GOG product page" url="https://www.gog.com/en/game/emberville" verified="2026-10-10">
+      <div className="my-4 overflow-x-auto">
+        <table>
+          <thead><tr><th scope="col">Date</th><th scope="col">What the record shows</th></tr></thead>
+          <tbody>
+            <tr><td>January 2026</td><td>Early Access described as arriving in a summer window, with no day fixed</td></tr>
+            <tr><td>July 15, 2026</td><td>Release-date trailer coverage names October 27, 2026</td></tr>
+            <tr><td>October 19, 2026</td><td>The Early Access briefing reaffirms October 27 and sets the $29.99 price</td></tr>
+            <tr><td>October 26, 2026</td><td>Studio postpones the launch; January 7, 2027 becomes the date</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The reasoning behind the October 26 move — demo feedback, and the bow-combat rework the letter names as an
+        example — is set out in full on the{" "}
+        <Link href="/news/emberville-delay" title={routeTitle("/news/emberville-delay")}>Emberville delay record</Link>.
+        This page tracks the standing date and what it does and does not settle.
+      </p>
+      <DataBlock source="GOG product page (storefront and system details; the date itself comes from the studio&rsquo;s October 26 announcement)" url="https://www.gog.com/en/game/emberville" verified="2026-10-28">
         <div className="my-4 overflow-x-auto">
           <table>
             <thead><tr><th scope="col">GOG listing detail</th><th scope="col">Displayed information</th></tr></thead>
             <tbody>
-              <tr><td>Release date</td><td>October 27, 2026</td></tr>
               <tr><td>Platform</td><td>Windows</td></tr>
+              <tr><td>Release date</td><td>Carried October 27, 2026 before the postponement; the studio now gives January 7, 2027</td></tr>
               <tr><td>GOG distribution</td><td>GOG describes DRM-free play and an optional offline installer</td></tr>
             </tbody>
           </table>
         </div>
       </DataBlock>
       <DataBlock source="IGN release-date trailer coverage" url="https://www.ign.com/videos/emberville-official-early-access-release-date-trailer" verified="2026-10-10">
-        <p>IGN’s July 15 item reports the October 27 Early Access date and names Doug Cockle, Alex Jordan, and Jane Perry among the featured voice actors.</p>
+        <p>IGN’s July 15 item reports the October 27 Early Access date and names Doug Cockle, Alex Jordan, and Jane Perry among the featured voice actors. That date was superseded on October 26, 2026.</p>
       </DataBlock>
 
       <h2>What to expect from Early Access</h2>
@@ -127,10 +144,10 @@ export default function ReleaseDatePage() {
         catalogue and the numbered list of available quests and items unpublished.
       </p>
       <p>
-        Controls for keyboard, mouse and controller are listed. Single-player is the confirmed play mode in the
-        cited store information, so this page treats co-op availability as unsupported by the rescue or rebuilding
-        themes. A story about survivors stands apart from a multiplayer feature; the stated mode is the relevant
-        fact.
+        Controls for keyboard, mouse and controller are listed. Single-player is the confirmed play mode for the
+        Early Access build, and co-op multiplayer is a 1.0 plan rather than a launch feature, so the two statements
+        do not conflict: the store listing describes what ships at launch, and the announcement describes what
+        comes after it.
       </p>
 
       <h2>Roadmap estimate and planned 1.0 work</h2>
@@ -142,8 +159,9 @@ export default function ReleaseDatePage() {
         for individual milestones.
       </p>
       <p>
-        The planned 1.0 scope names Workshop modding, optimization, additional difficulty options, balancing,
-        implementation of creative areas, bosses, biomes and monsters. These are roadmap intentions rather than a
+        The planned 1.0 scope names co-op multiplayer, console releases and modding support, alongside optimization,
+        additional difficulty options, balancing, implementation of creative areas, bosses, biomes and monsters.
+        These are roadmap intentions rather than a
         set of dates or a guarantee that a particular feature arrives in a specific update. The store listing
         leaves open how many bosses or biomes are planned, what each difficulty changes, and how the creative
         areas will work. We preserve those limits because turning a broad roadmap bullet into a detailed feature
@@ -152,10 +170,10 @@ export default function ReleaseDatePage() {
 
       <h2>Price and purchase model</h2>
       <p>
-        The store information checked for this page publishes no exact price: the developer describes a one-time
-        purchase with no microtransactions and a price that stays stable, with discounts possible during Early
-        Access, but gives no currency amount, regional price or discount date. The summary table above therefore
-        reports price as <b>Not announced</b> rather than a guessed retail figure.
+        The studio prices Early Access at $29.99 USD with a 10% launch discount, taking the introductory price to
+        $26.99, and flags that regional pricing may vary. The model around it is a one-time purchase with no
+        microtransactions, battle passes or subscription fees, and no paid DLC is planned. That supersedes the $25
+        ceiling quoted in the January 2026 announcement video, which the studio has not addressed since.
       </p>
 
       <h2>Minimum PC requirements</h2>
@@ -189,11 +207,12 @@ export default function ReleaseDatePage() {
 
       <h2>Emberville release time: the listing gives a day, not an hour</h2>
       <p>
-        The official listings state 27 October 2026 and stop at a calendar day. Steam and GOG publish no unlock hour
-        and no timezone for that day, so an exact “release time” would be an unsupported claim. A clock time only
-        exists once a source names one; a bare date supplies none, which is why time-zone conversions of the date
-        produce derived hours rather than announced ones. The homepage timer follows the same limit: it counts to the
-        start of 27 October 2026 in UTC as a display boundary for the calendar day, not as a store unlock instant.
+        The announcement states 7 January 2027 and stops at a calendar day. Neither the studio nor the store pages
+        publish an unlock hour or a timezone for that day, so an exact “release time” would be an unsupported claim.
+        A clock time only exists once a source names one; a bare date supplies none, which is why time-zone
+        conversions of the date produce derived hours rather than announced ones. The homepage timer follows the
+        same limit: it counts to the start of 7 January 2027 in UTC as a display boundary for the calendar day, not
+        as a store unlock instant.
       </p>
 
       <h2>Emberville unlock time and regional availability</h2>
@@ -202,8 +221,7 @@ export default function ReleaseDatePage() {
         is published, we cannot say whether Emberville goes live at a single moment worldwide or rolls out region by
         region. Anyone who needs to know whether access is live should check the Steam or GOG listing directly rather
         than a calendar panel, since the storefront shows the real availability for your account and region. A
-        countdown timer can only mark the calendar day; the announcement history on this page explains how that day
-        was set in the first place.
+        countdown timer can only mark the calendar day; the date history above explains how that day was set.
       </p>
       <p>
         Neither Cygnus Cross nor the Steam or GOG store pages has announced an unlock hour. The table below projects
@@ -225,23 +243,23 @@ export default function ReleaseDatePage() {
           </thead>
           <tbody>
             <tr>
-              <td>10:00 AM · Oct 27</td>
-              <td>1:00 PM · Oct 27</td>
-              <td>17:00 · Oct 27</td>
-              <td>18:00 · Oct 27</td>
-              <td>01:00 · Oct 28</td>
-              <td>02:00 · Oct 28</td>
-              <td>04:00 · Oct 28</td>
+              <td>10:00 AM · Jan 7</td>
+              <td>1:00 PM · Jan 7</td>
+              <td>18:00 · Jan 7</td>
+              <td>19:00 · Jan 7</td>
+              <td>02:00 · Jan 8</td>
+              <td>03:00 · Jan 8</td>
+              <td>05:00 · Jan 8</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        Times assume the usual late-October clock state: Pacific and Eastern are on daylight saving, Europe is back on
-        standard time, and Australian east-coast clocks run on AEDT in Sydney and Melbourne, hence 04:00; Brisbane,
-        which stays on AEST (UTC+10) year-round, would see 03:00. On launch day the Steam page itself begins showing an
-        “unlocks in approximately X hours” counter; treat that storefront display as authoritative. Once Cygnus Cross
-        or Steam names an exact hour, that official figure replaces this table.
+        Times assume the usual January clock state: Pacific is on PST (UTC−8) rather than daylight time, Eastern is on
+        EST (UTC−5), central Europe is on CET, and Australian east-coast clocks run on AEDT in Sydney and Melbourne,
+        hence 05:00. Brisbane, which stays on AEST (UTC+10) year-round, would see 04:00. On launch day the Steam page
+        itself begins showing an “unlocks in approximately X hours” counter; treat that storefront display as
+        authoritative. Once Cygnus Cross or Steam names an exact hour, that official figure replaces this table.
       </p>
       <p>
         Dated announcements, including the demo window that runs ahead of launch, are collected on the{" "}
@@ -252,7 +270,7 @@ export default function ReleaseDatePage() {
       <p>
         For the confirmed platform set behind the date, see the{" "}
         <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platforms and console status</Link>; for
-        the pricing policy while the amount stays unannounced, see the{" "}
+        the launch price and discount terms, see the{" "}
         <Link href="/price" title={routeTitle("/price")}>Emberville price and purchase model</Link>. For a
         plain-language introduction to the features and their limits, see the{" "}
         <Link href="/guides" title={routeTitle("/guides")}>pre-launch systems guide</Link>.
@@ -266,10 +284,12 @@ export default function ReleaseDatePage() {
       <h2>Emberville release-date FAQ</h2>
       <FaqList faqs={FAQS} />
       <p>
-        Status on this page was verified on <b>2026-10-11</b> against the Steam store page, the GOG product page
-        and dated IGN reporting. Early Access date: 27 October 2026. Exact unlock time, specific price and
-        full-release date: unannounced in those sources. The unlock-time table above is a platform-convention
-        projection and is labeled as such.
+        Status on this page was verified on <b>2026-10-28</b> against the Steam store page, the GOG product page,
+        the studio&rsquo;s October 19 Early Access briefing, its October 26 delay announcement and dated IGN
+        reporting. Early Access date: 7 January 2027; launch price: $29.99, discounted 10% to $26.99; launch mode:
+        single-player, with co-op and console releases planned for 1.0. Exact unlock time and full-release date:
+        unannounced in those sources. The unlock-time table above is a platform-convention projection and is labeled
+        as such.
       </p>
     </AdArticle>
   );

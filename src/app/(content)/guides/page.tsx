@@ -17,7 +17,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "What is the confirmed release date?",
-    a: "The listed Early Access date is 27 October 2026. Steam does not state an exact unlock time.",
+    a: "The listed Early Access date is 7 January 2027, moved from 27 October 2026 on 26 October. Neither Steam nor the studio states an exact unlock time.",
   },
   {
     q: "What should a combat guide verify after launch?",
@@ -206,8 +206,8 @@ export default function GuidesPage() {
         delivery schedule for each item.
       </p>
       <p>
-        The announced Early Access date is 27 October 2026, with no exact unlock time specified by Steam. For the
-        date and scope table, see the{" "}
+        The announced Early Access date is 7 January 2027, postponed from 27 October 2026, with no exact unlock time
+        specified by either the studio or Steam. For the date and scope table, see the{" "}
         <Link href="/release-date" title={routeTitle("/release-date")}>release-date page</Link>. The
         <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platforms status page</Link> confirms
         that PC is the only announced platform. Minimum PC requirements are listed as

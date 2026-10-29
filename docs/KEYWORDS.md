@@ -28,8 +28,8 @@
 | /wiki | Emberville wiki database | 待测 | 待测 | **主承接 wiki 词**；与首页主词同族，靠 "database" 变体区分，不与首页抢同一词形 |
 | /guides | Emberville guide | 待测 | 待测 | 承接 "Emberville guide / walkthrough"；与首页主词区分：首页打 wiki，本页打 guide |
 | /release-date | Emberville release date | 待测 | 待测 | **上线前唯一有官方量支撑的词**，优先级最高；时效页，Title 必带年份。另以正文补 `Emberville release time` / `Emberville unlock time` 两个词面（规划师未收录，口径统一为「Steam 只给日历日、无解锁时刻」） |
-| /platforms | Emberville platforms | 20 | 待测 | **一页承接六个同义词面**：`Emberville ps5`(90) `Emberville switch`(110) `Emberville switch 2`(30，+333%) `Emberville console`(30) `Emberville xbox`(30) `Emberville mobile`(10)，美国口径合计约 320/月（2026-10 实测）；实测 KD：ps5 33.1（容易）/ switch 41.9（中等）。六词同答案（官方仅 PC，主机未公布），故合页 |
-| /price | Emberville price | 40 | 待测 | 全球口径 +186%（2026-01 起新词）；**只写官方口径**（未公布具体售价、一次性买断、无微交易），严禁引用任何第三方估算金额 |
+| /platforms | Emberville platforms | 20 | 待测 | **一页承接六个同义词面**：`Emberville ps5`(90) `Emberville switch`(110) `Emberville switch 2`(30，+333%) `Emberville console`(30) `Emberville xbox`(30) `Emberville mobile`(10)，美国口径合计约 320/月（2026-10 实测）；实测 KD：ps5 33.1（容易）/ switch 41.9（中等）。六词同答案（官方仅 PC 有档期；主机为 1.0 计划、未点名平台、无日期），故合页 |
+| /price | Emberville price | 40 | 待测 | 全球口径 +186%（2026-01 起新词）；**只写官方口径**：2026-10-19 官方公告给出 $29.99 + 首周 10% 折扣 = $26.99，区域定价有差异；严禁引用任何第三方估算金额。$25 上限仅作「2026-01 视频表述、已被取代」的历史口径出现 |
 | /map | Emberville map | 待测 | 待测 | 上线后需求最猛；与 /wiki 不重叠（wiki 管条目、map 管区域） |
 | /builds | Emberville builds | 待测 | 待测 | 承接 builds / best build / weapons 族词；与 /item-database 划界：builds 管配装、database 管条目数值 |
 | /item-database | Emberville items | 待测 | 待测 | 承接 items / weapons 词；是 /wiki 四大分组的明细落地页 |
@@ -47,7 +47,7 @@
 ## L2 栏目子页（从栏目页拆出，不进导航）
 | 页面 | 主词 | 月搜 | KD | 优先级 |
 | --- | --- | ---: | ---: | --- |
-| /platforms/multiplayer | Emberville multiplayer | 70 | 33.4 | 叠加 `is Emberville multiplayer`(40) `will Emberville be multiplayer`(30)，合计 140/月（2026-10 实测）。难度最低、意图最明确——首段一句结论即可答完。**口径**：Steam 明确标 Single-player，EA 阶段无联机；Workshop 模组（1.0 路线图）**≠联机**，不得混写 |
+| /platforms/multiplayer | Emberville multiplayer | 70 | 33.4 | 叠加 `is Emberville multiplayer`(40) `will Emberville be multiplayer`(30)，合计 140/月（2026-10 实测）。难度最低、意图最明确——首段一句结论即可答完。**口径**：EA 首发为单机（Steam 标 Single-player），合作（co-op）为 **1.0 计划**；不得再写「无联机计划」。玩家数、线上/本地、是否跨平台官方均未说，禁补 |
 
 ### 登记备注的固定写法（每页登记时补充）
 - **词形分工**：Title/H1/主词承接哪个词形；首段补哪些变体词形（单数/复数/省略形），
@@ -75,12 +75,14 @@
   平台词交 `/platforms`、价格词交 `/price`。
 - **/platforms**：承接 `Emberville platforms` 及六个平台词面（ps5 / xbox / switch / switch 2 / console / mobile）。
   **管**「哪些平台已确认」与「每个平台的最新官方口径」；口径一律写「未公布」而非「不会出」。
+  主机行按「1.0 计划内、未点名平台」表述：不可写成已确认，也不可写回「未公布」。
   **不管**联机状态（在 `/platforms/multiplayer`）、价格（在 `/price`）。商品页来源为 Steam 商店页。
 - **/platforms/multiplayer**：承接 `Emberville multiplayer`、`is Emberville multiplayer`、
   `will Emberville be multiplayer`。**管**单机/联机结论与理由；**不管**平台发售（在 `/platforms`）。
-  口径：Steam 商店页标 Single-player，EA 阶段无联机；Workshop 模组是 1.0 路线图内容，不等于联机。
-- **/price**：承接 `Emberville price`、`Emberville cost`。**管**购买模式（一次性买断、无微交易、EA 期可能折扣）；
-  **不管**具体金额——官方未公布，任何第三方估算（含标为 estimate 的）一律不引。
+  口径：EA 首发单机 + 合作（co-op）为 1.0 计划，两句必须同时出现，单写任一句都失真。
+- **/price**：承接 `Emberville price`、`Emberville cost`。**管**官方金额（$29.99 / 首周 10% 折后 $26.99 / 区域差异）
+  与购买模式（一次性买断、无微交易、无付费 DLC），以及「$25 上限 → $29.99」的变更说明；
+  **不管**发售日与解锁时刻（在 `/release-date`）。第三方估算（含标为 estimate 的）一律不引。
 - **/games-like-emberville**：承接 `games like Emberville`、`similar games to Emberville`。
   **管**按机制逐条对应到相似游戏（近战/魔法/远程、武器绑定连招、随时换职业继承技能、农耕建造救村民）；
   **不管**泛品类列表。与 `/stardew-valley-diablo` 区分：那页管「与两款具体游戏比」，本页管「玩什么下一款」。
@@ -96,13 +98,15 @@
 | slug | 主词 | 备注 |
 | --- | --- | --- |
 | /news/emberville-demo | `Emberville demo` | News L2 详情页；覆盖 Next Fest demo 内容/试玩范围/购前判断，不与 /news 泛新闻词或 /release-date 抢词；来源：IGN Oct 8 + Steamworks + Steam + IGN Sep 11 preview（限先期构建） |
+| /news/emberville-delay | `Emberville delay` | News L2 详情页（事件记录）；管「10/26 公告 → 1/7 延期这件事本身」——新旧日期对照、官方理由（弓箭战斗重做 / 系统级改动）、加时十周改什么、demo 是否继续可玩、哪些条款未变。**不管**发售日与解锁时刻的常驻口径（在 `/release-date`）、价格与购买模式（在 `/price`）、主机与联机（在 `/platforms`）。词形用 `delay`（媒体与玩家检索词），不得占用 `Emberville release date`——该词形归 `/release-date`。来源：Steam 2026-10-26 公告 + 全文转载（Bleeding Cool）+ CohhCarnage 视频 + GameSpot / The Outer Haven，verified 2026-10-28 |
+| /news/emberville-demo-launch | `Emberville Next Fest demo` | News L2 详情页（事件记录）；管「10/19 PT（=10/20 北京）开闸那一刻起发生了什么」——开闸时间、试玩内容、存档继承、首个补丁 0.20.17.x、10/27 EA 首日范围。**不管**购前判断与「值不值得玩」（在 `/news/emberville-demo`）；两页用 `Emberville Next Fest demo` / `Emberville demo` 词形划界，互挂一句区分链 |
 | /{hub}/{slug} | `Emberville {slug}` | 来源、上线日、Title 模板、互证关系 |
 
 > 详情页登记备注固定项：①内容出自什么来源，转写歧义名是否内联标注；
 > ②与父页/姊妹页的主词边界与互链关系；③Title 模板（一词一页让位见 SEO.md）；
 > ④赞助段（推广码内容）按惯例排除。
 
-> **已登记 L3 详情页**：`/news/emberville-demo`。后续新增详情页须先在此登记，并检查父页 Title 是否需要按 SEO.md「一词一页让位」退出该词形；游戏内具体条目仍须等到有可核验数据后再建。
+> **已登记 L3 详情页**：`/news/emberville-demo`、`/news/emberville-demo-launch`、`/news/emberville-delay`。后续新增详情页须先在此登记，并检查父页 Title 是否需要按 SEO.md「一词一页让位」退出该词形；游戏内具体条目仍须等到有可核验数据后再建。
 
 ## 政策页（合规页，不参与关键词竞争）
 | 页面 | 主词 | 备注 |
@@ -120,6 +124,6 @@
 | 任何 `/{lang}/` 多语言目录 | 本项目只做 en |
 | **游戏未上线前的任何具体条目页**（单个 boss / 单件装备） | 名称与数值不可核验，属编造（AGENT.md §1.1）。上线后随实测开放 |
 | **SITE.md 未定义的栏目页**（工具页 / 排行页 / 玩法专题页等） | 站点结构由 SITE.md 定；未登记即不得建（docs/README.md 维护约定） |
-| **单平台页**（如 `/platforms/ps5`、`/platforms/switch` 一类） | 六个平台词答案是同一个（官方仅 PC），拆页即同义内容互打；统一由 `/platforms` 一页承接 |
+| **单平台页**（如 `/platforms/ps5`、`/platforms/switch` 一类） | 六个平台词共用一个答案（PC 有档期，主机为 1.0 计划且未点名平台），拆页即同义内容互打；统一由 `/platforms` 一页承接 |
 
 > 不建页但页面要提的真实相关搜索：在对应父页写一小段说明即可——写了吃词、不写漏词。

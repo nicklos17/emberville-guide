@@ -21,7 +21,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Is Emberville multiplayer like Diablo?",
-    a: "The Steam listing describes Emberville as single-player. It does not confirm co-op or another multiplayer mode.",
+    a: "Not until 1.0. Steam lists the Early Access build as single-player, and the studio says co-op multiplayer is planned for the 1.0 release, so the Diablo comparison holds on combat and loot but not yet on party play.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ComparisonPage() {
         “Diablo Lite meets Stardew Valley” is press shorthand for Emberville’s mix of action-RPG combat, gathering,
         and town rebuilding—not an official genre label. IGN’s hands-on preview gives a more precise comparison:
         it contrasts Emberville’s two-button combos with Diablo’s main-attack pattern and likens its resource
-        gathering to farming-life sims, while noting that the game is single-player.
+        gathering to farming-life sims, while noting that the build is single-player, with co-op planned for 1.0.
       </p>
 
       <h2>Why Emberville is compared with Stardew Valley and Diablo</h2>
@@ -78,14 +78,15 @@ export default function ComparisonPage() {
         part of the comparison’s context, even though it is not captured by the two-game slogan.
       </p>
 
-      <h2>Emberville is a single-player experience</h2>
+      <h2>Emberville is single-player until 1.0</h2>
       <p>
-        One important difference is scope. Steam lists Emberville as single-player, so the Diablo comparison does
-        not imply online co-op or multiplayer. The store listing is the source for the mode; the shorthand from
-        press coverage is not evidence of shared progression or party play.
+        One important difference is scope. Steam lists the Early Access build as single-player, so the Diablo
+        comparison does not describe party play at launch. The studio has since said co-op multiplayer is planned
+        for the 1.0 release, which narrows the gap the slogan implies but does not close it yet: 1.0 has no date, and
+        the announcement gives no player count and no word on whether co-op is online or local.
       </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
-        <p>Steam lists Emberville as a single-player game.</p>
+      <DataBlock source="Steam store page and Early Access announcement" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-22">
+        <p>Steam lists Emberville as single-player. The studio’s announcement adds that co-op multiplayer is planned for the 1.0 release, while Early Access launches as a single-player experience.</p>
       </DataBlock>
 
       <p>

@@ -57,13 +57,13 @@ export default function WikiPage() {
       <h2>Emberville wiki at a glance: the announced game</h2>
       <p>
         Cygnus Cross is both developer and publisher. Emberville is planned for Early Access on Steam on
-        27 October 2026 and is listed as single-player. Its premise follows an amnesiac character who wakes in
+        7 January 2027, postponed from 27 October 2026 on 26 October, and is listed as single-player, with co-op multiplayer planned for the 1.0 release. Its premise follows an amnesiac character who wakes in
         the Vitromotus, a magical underground prison. The player explores its tunnels, ruins, survivor
         settlements, unusual biomes and monsters; the wider objective includes rescuing survivors and rebuilding
         Emberville. The description connects growth to combat, exploration, rebuilding and choices, so the
         overall design spans both action and community restoration.
       </p>
-      <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
+      <DataBlock source="Steam store page and the 26 October 2026 delay announcement" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-28">
         <div className="overflow-x-auto my-4">
           <table>
             <thead><tr><th scope="col">Wiki category</th><th scope="col">Confirmed scope</th></tr></thead>
@@ -73,7 +73,7 @@ export default function WikiPage() {
               <tr><td>Combat</td><td>Positioning, timing, perception, weapon-specific combos, combination attacks, melee, magic and ranged options</td></tr>
               <tr><td>Growth</td><td>Combat, exploration, rebuilding and choices contribute; skills include inherited active and passive abilities</td></tr>
               <tr><td>Making and building</td><td>Gathering, crafting, farming, cooking and customization of a personal estate</td></tr>
-              <tr><td>Release context</td><td>Single-player Early Access planned for 27 October 2026; the exact unlock time stays unannounced</td></tr>
+              <tr><td>Release context</td><td>Single-player Early Access dated 7 January 2027, moved from 27 October 2026; the exact unlock time stays unannounced</td></tr>
             </tbody>
           </table>
         </div>

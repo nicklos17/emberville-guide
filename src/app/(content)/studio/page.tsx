@@ -53,16 +53,19 @@ export default function StudioPage() {
       <h2>What game is CohhCarnage making?</h2>
       <p>
         CohhCarnage’s game is Emberville, a pixel-art dungeon-crawling action RPG from Cygnus Cross, an independent
-        studio in Cork, Ireland. It launches into Early Access on 27 October 2026 on Steam and GOG.
+        studio in Cork, Ireland. It launches into Early Access on 7 January 2027 on Steam and GOG — a date the studio
+        moved from 27 October 2026 on 26 October, the day before that launch was due.
       </p>
       <p>
         Ben “CohhCarnage” Cassell is a co-founder of Cygnus Cross and co-game director on Emberville, working
         alongside founder and lead game director Brynjar Gigja. He has documented the project on his own channel in
-        videos including “I Am Making A Game – Emberville” and “Answering Questions About My Game”.
+        videos including “I Am Making A Game – Emberville” and “Answering Questions About My Game”. The reveal is
+        covered in detail in our{" "}
+        <Link href="/news/emberville-announcement-video" title={routeTitle("/news/emberville-announcement-video")}>announcement video breakdown</Link>.
       </p>
       <p>
         “CohhCarnage’s game” can mean two different things. The games he streams are the daily variety lineup on his
-        channel, which recently has included Valheim and Windrose. The game he is making is Emberville. This page
+        channel, which has included Valheim and Windrose. The game he is making is Emberville. This page
         covers the second.
       </p>
 

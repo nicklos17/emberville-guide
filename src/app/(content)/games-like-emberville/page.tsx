@@ -17,7 +17,7 @@ const FAQS: Faq[] = [
   },
   {
     q: "Do the games on this list have co-op?",
-    a: "Some do and some do not. Necesse, Core Keeper and Dimraeth support online play, Witchbrook is built for up to four players, and DREDGE is single-player. Emberville is listed as single-player, so a co-op game is similar in mechanics but not in mode.",
+    a: "Some do and some do not. Necesse, Core Keeper and Dimraeth support online play, Witchbrook is built for up to four players, and DREDGE is single-player. Emberville launches single-player and adds co-op only at 1.0, so a co-op game is a closer match in mechanics than in mode for now.",
   },
 ];
 
@@ -39,9 +39,9 @@ export default function GamesLikePage() {
         each overlap on one of those layers, and each differs somewhere else.
       </p>
       <p>
-        Because Emberville arrives in Early Access on 27 October 2026, these comparisons describe the developer’s
-        announced design rather than a finished game. Each entry says which part of Emberville it echoes and where the
-        match stops, so you can pick by the loop you actually want.
+        Because Emberville is still unreleased — Early Access is now dated January 7, 2027 — these comparisons
+        describe the developer’s announced design rather than a finished game. Each entry says which part of
+        Emberville it echoes and where the match stops, so you can pick by the loop you actually want.
       </p>
 
       <h2>Emberville’s confirmed mechanics, in five parts</h2>
@@ -72,7 +72,8 @@ export default function GamesLikePage() {
         recruit experts for your settlement. Nearly every one of Emberville’s five layers keys on something in that
         sentence: boss combat, gathering and crafting, and a town you grow by bringing people into it. The
         differences are just as concrete. Necesse is a procedurally generated sandbox with online co-op and has been
-        released since 16 October 2025, while Emberville is single-player with a handcrafted town where survivors
+        released since 16 October 2025, while Emberville launches single-player — co-op arrives with 1.0 — with a
+        handcrafted town where survivors
         arrive with stories, diaries and quests rather than job assignments.
       </p>
       <DataBlock source="Necesse store page" url="https://store.steampowered.com/app/1169040/Necesse/" verified="2026-10-12">
@@ -85,8 +86,8 @@ export default function GamesLikePage() {
         mining sandbox adventure for one to eight players in which you “mine, build, fight, craft and farm to unravel
         the mystery of the ancient Core”. That is the same four-verb shape as Emberville’s loop — gather, build,
         fight, farm — set underground, much as Emberville’s Vitromotus is an underground prison. The difference worth
-        knowing: Core Keeper is built for online co-op, while Emberville is listed as single-player, so the loop
-        overlaps but the mode does not.
+        knowing: Core Keeper is built for online co-op, while Emberville launches single-player with co-op planned for
+        1.0, so the loop overlaps today and the mode may converge later.
       </p>
       <DataBlock source="Core Keeper store page" url="https://store.steampowered.com/app/1621690/Core_Keeper/" verified="2026-10-10">
         <p>Core Keeper, from Pugstorm, is described as a mining sandbox adventure for 1–8 players who mine, build, fight, craft and farm.</p>

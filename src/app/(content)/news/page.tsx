@@ -19,9 +19,29 @@ const NEWS_ITEMS: {
   internal: boolean;
 }[] = [
   {
+    date: "October 26, 2026",
+    title: "Emberville Early Access delayed to January 7, 2027",
+    summary: "One day before launch, Cygnus Cross moved Early Access from October 27 to January 7, 2027, citing Next Fest feedback and a bow combat rework. The demo stays up.",
+    href: "/news/emberville-delay",
+    linkTitle: "Emberville Delay: Early Access Now Launches January 7, 2027 | Emberville Guide",
+    source: "Steam, Emberville news hub (Cygnus Cross)",
+    sourceUrl: "https://store.steampowered.com/news/app/2295170",
+    internal: true,
+  },
+  {
+    date: "October 20, 2026",
+    title: "Emberville Next Fest demo goes live with carry-over saves",
+    summary: "The prologue demo opened with Steam Next Fest, averages 90 minutes, and its saves transfer into the Early Access release, now set for January 7, 2027.",
+    href: "/news/emberville-demo-launch",
+    linkTitle: "Emberville Next Fest Demo Live: Prologue & Save Transfer | Emberville Guide",
+    source: "Steam, “What to Expect from Emberville Early Access on October 27th” (Cygnus Cross)",
+    sourceUrl: "https://store.steampowered.com/news/app/2295170/view/760703279879423656",
+    internal: true,
+  },
+  {
     date: "October 8, 2026",
     title: "Emberville demo dates for Steam Next Fest",
-    summary: "The public demo is listed for October 19–26, ahead of PC Early Access on October 27.",
+    summary: "The public demo was listed for October 19–26, ahead of PC Early Access, which has since slipped from October 27 to January 7, 2027.",
     href: "/news/emberville-demo",
     linkTitle: "Emberville Demo Dates, Content & Early Access Explained | Emberville Guide",
     source: "IGN demo-announcement trailer listing",
@@ -51,6 +71,16 @@ const NEWS_ITEMS: {
     source: "IGN announcement report",
     sourceUrl: "https://nordic.ign.com/news/103247/emberville-announced-for-pc-aims-to-be-like-diablo-lite-meets-stardew-valley",
     internal: false,
+  },
+  {
+    date: "January 2026",
+    title: "CohhCarnage announces Emberville in first game update video",
+    summary: "The “Update #1” video introduced the game, its $25 price cap with zero microtransactions, and the open Early Access plan; wishlists opened on Steam.",
+    href: "/news/emberville-announcement-video",
+    linkTitle: "Emberville Announcement Video: What CohhCarnage Revealed",
+    source: "CohhCarnage announcement video (YouTube)",
+    sourceUrl: "https://www.youtube.com/watch?v=uJr15tyoe80",
+    internal: true,
   },
 ];
 

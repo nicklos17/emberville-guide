@@ -14,7 +14,7 @@ const route = getRoute("/");
 const FAQS: Faq[] = [
   {
     q: "When does Emberville enter Early Access?",
-    a: "The Steam store page gives 27 October 2026 as the Early Access date. It does not provide an exact unlock time.",
+    a: "7 January 2027, after the studio moved the date from 27 October 2026 on 26 October. The listing gives a calendar day and no exact unlock time.",
   },
   {
     q: "What is Emberville about?",
@@ -22,11 +22,11 @@ const FAQS: Faq[] = [
   },
   {
     q: "Can I play Emberville with other people?",
-    a: "Steam lists the game as single-player. No co-op or other multiplayer mode is confirmed by the cited store listing.",
+    a: "Not at launch. Steam lists the Early Access build as single-player, and the studio says co-op multiplayer is planned for the 1.0 release, which has no date.",
   },
   {
     q: "How much will Emberville cost?",
-    a: "A specific price has not been announced on the Steam store page as of 2026-10-10.",
+    a: "Emberville launches at $29.99 with a 10% launch discount, which puts the introductory price at $26.99; the studio flags regional pricing variation.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function HomePage() {
         <div aria-hidden="true" className="absolute inset-0 bg-linear-to-r from-canvas via-canvas/85 to-canvas/35" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20">
           <p className="mb-4 inline-block rounded-full border border-accent/35 bg-canvas/60 px-3.5 py-1.5 text-xs font-medium tracking-wide text-accent">
-            Early Access — 27 October 2026
+            Early Access — 7 January 2027
           </p>
           <h1 className="mb-5 max-w-3xl text-4xl leading-tight font-bold tracking-tight text-white sm:text-5xl">
             Emberville Wiki &amp; Guides
@@ -142,13 +142,14 @@ export default function HomePage() {
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-8 px-4 py-8">
           <div className="min-w-56 flex-1">
             <p className="mb-2 text-xs font-medium tracking-wide text-ink-dim">Announced Early Access date</p>
-            <p className="text-xl font-semibold text-white">27 October 2026</p>
+            <p className="text-xl font-semibold text-white">7 January 2027</p>
             <p className="mt-1 text-sm text-ink-muted">
-              Steam gives a calendar date; the release overview below separates confirmed details from unknowns, with the unlock time still open.
+              Moved from 27 October 2026 by the studio&rsquo;s 26 October announcement. Steam still gives a calendar
+              date only, so the unlock time stays open.
             </p>
           </div>
           <div>
-            <CountdownTimer target="2026-10-27T00:00:00Z" launched={false} />
+            <CountdownTimer target="2027-01-07T00:00:00Z" launched={false} />
             <p className="mt-2 text-xs text-ink-dim">Calendar-date start (00:00 UTC display boundary) only; a calendar reference, distinct from an unlock-time estimate.</p>
           </div>
         </div>
@@ -156,8 +157,8 @@ export default function HomePage() {
 
       <AdArticle className="article mx-auto w-full max-w-6xl px-4 py-12">
         <p className="answer">
-          Emberville is a single-player action RPG from Cygnus Cross, planned for Steam Early Access on 27 October
-          2026. You wake without memories in the Vitromotus, a magical prison, and set out to rescue survivors and
+          Emberville is a single-player action RPG from Cygnus Cross, launching in Steam Early Access on 7 January
+          2027, with co-op multiplayer planned for the 1.0 release. You wake without memories in the Vitromotus, a magical prison, and set out to rescue survivors and
           rebuild the town. The announced design joins exploration and action combat with crafting, farming,
           cooking and a personal estate. Curious about the streamer connection? The people behind it are covered
           in <Link href="/studio" title={routeTitle("/studio")}>CohhCarnage’s game</Link>, our profile of the
@@ -257,12 +258,21 @@ export default function HomePage() {
           content and meaningful updates planned during development. Its roadmap estimate is approximately
           eighteen months to reach what the developer calls the complete experience. That is an estimate, not a
           promised 1.0 launch date: the developer says community feedback may extend the period. The page lists
-          single-player play and support for keyboard, mouse and controller.
+          single-player play for the Early Access build, support for keyboard, mouse and controller, and co-op
+          multiplayer among the 1.0 additions.
         </p>
         <p>
-          The developer says the game will be a one-time purchase without microtransactions, and that its price
-          will remain stable while discounts may occur during Early Access. The actual price remains unannounced.
-          Planned 1.0 work includes Workshop modding, optimization, additional difficulty options, balancing,
+          The date has already moved once: on 26 October 2026 the studio pushed Early Access back ten weeks, citing
+          demo feedback and systems work it could not finish in time — the letter names a bow-combat rework. The{" "}
+          <Link href="/news/emberville-delay" title={routeTitle("/news/emberville-delay")}>Emberville delay record</Link>{" "}
+          keeps the timeline, the quoted reasons and the terms the delay left untouched.
+        </p>
+        <p>
+          The studio prices Early Access at $29.99 with a 10% launch discount, taking the introductory price to
+          $26.99, and describes a one-time purchase without microtransactions, battle passes or paid DLC. Regional
+          pricing may vary. That supersedes the $25 ceiling quoted in the January 2026 announcement video.
+          Planned 1.0 work includes co-op multiplayer, console releases and Workshop modding, alongside
+          optimization, additional difficulty options, balancing,
           creative-area implementation, bosses, biomes and monsters. These are intentions that may change; the
           roadmap sets no dated schedule and no order of delivery. For the
           individual
@@ -273,17 +283,17 @@ export default function HomePage() {
         </p>
 
         <h2>Emberville confirmed facts and open details</h2>
-        <DataBlock source="Steam store page" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-10">
+        <DataBlock source="Steam store page and the 26 October 2026 delay announcement" url="https://store.steampowered.com/app/2295170/Emberville/" verified="2026-10-28">
           <div className="overflow-x-auto my-4">
             <table>
               <thead><tr><th scope="col">Topic</th><th scope="col">What is confirmed</th></tr></thead>
               <tbody>
                 <tr><td>Developer and publisher</td><td>Cygnus Cross</td></tr>
-                <tr><td>Early Access date</td><td>27 October 2026; the exact unlock time stays unannounced</td></tr>
+                <tr><td>Early Access date</td><td>7 January 2027; the exact unlock time stays unannounced</td></tr>
                 <tr><td>Mode and controls</td><td>Single-player; keyboard, mouse and controller support</td></tr>
                 <tr><td>Setting</td><td>An amnesiac wakes in the Vitromotus; kymia is emotion-derived and returns prisoners to life</td></tr>
                 <tr><td>Minimum PC requirements</td><td>64-bit; Windows 10 or newer; Intel Core i5 3.2 GHz or equivalent; 4 GB RAM; DirectX 10-compatible graphics; DirectX 11; 4 GB storage</td></tr>
-                <tr><td>Still open</td><td>Exact price, full-release date, unlock time, complete item and character lists, and exact biome count</td></tr>
+                <tr><td>Still open</td><td>Full-release date, unlock time, complete item and character lists, and exact biome count</td></tr>
               </tbody>
             </table>
           </div>
@@ -316,9 +326,9 @@ export default function HomePage() {
           <Link href="/wiki" title={routeTitle("/wiki")}>Emberville wiki</Link> organizes the setting and systems,
           the{" "}
           <Link href="/platforms" title={routeTitle("/platforms")}>Emberville platforms status page</Link> separates
-          the confirmed PC release from the unannounced console versions, and the{" "}
-          <Link href="/price" title={routeTitle("/price")}>Emberville price page</Link> records the purchase model
-          while the amount is still unannounced.
+          the dated PC launch from the console versions planned for 1.0, and the{" "}
+          <Link href="/price" title={routeTitle("/price")}>Emberville price page</Link> records the $29.99 base
+          price, the 10% launch discount and the one-time purchase model.
         </p>
 
         <h2>Emberville comparison: Stardew Valley vs Diablo</h2>
@@ -348,9 +358,9 @@ export default function HomePage() {
         <h2>Emberville FAQ</h2>
         <FaqList faqs={FAQS} />
         <p className="text-sm text-ink-muted">
-        All game facts above were checked on <b>2026-10-10</b> against the Steam store page, the Cygnus Cross
-        official website, the developer press release and dated coverage from IGN, GameSpot, GamingTrend and Gamer
-        Social Club. Where those sources are silent, the page says so instead of substituting community claims or
+        All game facts above were checked on <b>2026-10-28</b> against the Steam store page, the Cygnus Cross
+        official website, the developer press release, the studio&rsquo;s 26 October 2026 delay announcement and
+        dated coverage from IGN, GameSpot, GamingTrend and Gamer Social Club. Where those sources are silent, the page says so instead of substituting community claims or
         estimates.
         </p>
 

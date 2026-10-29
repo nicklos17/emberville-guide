@@ -7,7 +7,7 @@ export const SITE = {
   game: "Emberville",
   locale: "en" as const,
   launchDate: "", // 正式版日期官方未定，不设（AGENT.md §0.2）
-  earlyAccessDate: "2026-10-27", // 计划 EA 发售日，Steam 官方（Verified: 2026-10-09）
+  earlyAccessDate: "2027-01-07", // EA 发售日：2026-10-26 官方公告由 2026-10-27 延期至 2027-01-07（Verified: 2026-10-28）
   developer: "Cygnus Cross",
   publisher: "Cygnus Cross",
   platform: "PC (Steam)",

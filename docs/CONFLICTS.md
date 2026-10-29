@@ -290,7 +290,51 @@
 
 ---
 
-## 待人工确认
+## C-14 价格口径冲突：官方 EA 公告 $29.99 vs 本站「$25 上限」
+
+- **冲突点**
+  - 本站 `/price`、首页 FAQ、`/release-date` FAQ、`/news/emberville-demo` FAQ 均写「官方上限 $25 + EA 入场折扣」，
+    依据是 2026-01 公告视频（CohhCarnage 原话 "not going to be more than $25"）。
+  - 2026-10-19 Steam 官方公告《What to Expect from Emberville Early Access on October 27th》FAQ 写明：
+    "Emberville launches at $29.99 USD, with a 10% launch discount, bringing the introductory price to $26.99 USD."
+    商店页 `price_overview` 仍未输出（发售前无价），故 Steam 页面上看不到金额，但开发者口径已变。
+- **裁决（2026-10-22 已执行）**
+  - 人工决策：按官方新口径统一，且**必须带变更说明**，不做静默替换。
+  - `/price` 重写为「$29.99 / 首周 10% 折后 $26.99 / 区域定价有差异 / 无微交易·无付费 DLC」，
+    新增 H2 `Emberville price change: from the $25 cap to $29.99`（两行日期表：2026-01 视频 vs 2026-10-19 官方公告），
+    并明写「官方未解释差异，本页不替它解释」；TDK 改为 `$29.99, 10% Off, No Microtransactions`。
+  - 同步面四处：首页 FAQ + 正文价格段、`/release-date` FAQ 与「Price and purchase model」节及总表 Price/Purchase 行、
+    `/news/emberville-announcement-video` 的 FAQ 与「business terms」段（标为历史表述、已被取代）。
+  - 口径细则：$25 只以「2026-01 视频中的表述，已被 10 月公告取代」出现；「价格长期稳定」同样降级为
+    「视频中的表述，10 月公告未重申」——不写成官方承诺。
+  - `/news/emberville-demo-launch` 仍不写价格（该页管试玩事件，价格词归 `/price`）。
+
+---
+
+## C-15 联机/主机口径反转：官方 10-19 公告把 co-op 与主机写入 1.0 计划，本站原写「无计划 / 未公布」
+
+- **冲突点**：`/platforms/multiplayer` 与 `/platforms` 原结论是「Steam 标 Single-player，无联机计划」「主机未公布」，
+  依据为 2026-10-10 的商店页。2026-10-19 官方 EA 公告（Steam news `760703279879423656`）新增两处明确表述：
+  - FAQ：「Will Emberville have co-op? **Yes! Co-op multiplayer is planned for the 1.0 release.**
+    Early Access launches as a single-player experience.」
+  - Road to 1.0：1.0 三大新增为 **Co-op multiplayer** / **Modding support** / **Console releases, bringing Emberville beyond PC**，
+    并附变更条款「These are part of our development plans, and we'll communicate progress and any changes…」；
+    FAQ 另答「Early Access launches on PC. **Console versions are planned for our 1.0 release.**」
+- **裁决（2026-10-22 已执行）**
+  - 两页均改为「双半句」结构：EA 首发单机 + 1.0 计划联机/主机。**禁止**再出现「无联机计划」「主机未公布」单句。
+  - `/platforms/multiplayer` 重写：H1 改 `Emberville is single-player at launch, with co-op planned for 1.0`，
+    TDK 改 `Emberville Co-op: Planned for 1.0, Not at Launch`；新增「公告未说什么」一节，
+    明写玩家数 / 线上或本地 / 分屏 / 专用服务器 / 跨平台 / 存档兼容均未公布，禁补。
+  - `/platforms` 重写：主机行统一为「Covered by the 1.0 plan, not named」，
+    移动端单列「Not announced」（1.0 计划只写 console，不外推到 mobile）。
+  - 同步面六处：首页 FAQ + 正文 1.0 清单 + answer、`/release-date` FAQ 两条 + 总表 Platform/Mode 行 + 正文段 + 1.0 清单 + 页尾核验句、
+    `/stardew-valley-diablo` FAQ/H2/DataBlock、`/games-like-emberville` FAQ + Necesse/Core Keeper 对比段、
+    `/news/emberville-announcement-video` 的「further down the road」句、`/wiki` at-a-glance 段。
+  - 口径边界：co-op 与 console 均**无日期、无点名平台、无玩家数**；1.0 时间仍只有「约 18 个月」的旧估算，不换算成日历日。
+    modding 在 Road to 1.0 列为 1.0 项，但 FAQ 写「long-term plans / still exploring scope」，故只写「1.0 计划内」不写「Workshop 已确定」。
+
+---
+
 
 1. ~~`/release` 路径~~ —— **已裁决（C-11）**：保留 `/release-date`，不改路径。
 2. ~~`/wiki` 与 `/item-database` 的边界~~ —— **已裁决（C-11）**：两页都保留，
